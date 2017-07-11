@@ -1,9 +1,4 @@
-//
-//  findTheDifference.cpp
-//  codefights
-//
-//  Created by YANGXIAOJUN on 2017/1/2.
-//  Copyright © 2017年 YANGXIAOJUN. All rights reserved.
+
 //  LeetCode  389. Find the Difference
 
 #include <string>

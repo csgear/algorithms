@@ -1,10 +1,5 @@
-//
-//  licenseKeyFormatting.cpp
-//  codefights
-//
-//  Created by YANGXIAOJUN on 2017/1/14.
-//  Copyright © 2017年 YANGXIAOJUN. All rights reserved.
-//  Leetcode: 482. License Key Formatting
+
+//  Leetcode.com  : 482. License Key Formatting
 
 #include <string>
 #include <cctype>
