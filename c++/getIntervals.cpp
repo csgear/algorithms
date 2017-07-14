@@ -1,10 +1,5 @@
-//
-//  getIntervals.cpp
-//  codefights
-//
-//  Created by YANGXIAOJUN on 2017/1/23.
-//  Copyright © 2017年 YANGXIAOJUN. All rights reserved.
-//  Leetcode: 352. Data Stream as Disjoint Intervals
+
+//  Leetcode.com:  352. Data Stream as Disjoint Intervals
 
 #include <vector>
 
