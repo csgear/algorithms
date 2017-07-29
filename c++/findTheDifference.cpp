@@ -3,14 +3,18 @@
 
 #include <string>
 
-using namespace std ;
+using namespace std;
 
-class Solution {
-public:
-    char findTheDifference(string s, string t) {
+class Solution
+{
+  public:
+    char findTheDifference(string s, string t)
+    {
         char ans = 0;
-        for (char c : s) ans -= c;
-        for (char c : t) ans += c;
+        for (char c : s)
+            ans -= c;
+        for (char c : t)
+            ans += c;
         return ans;
     }
 };
