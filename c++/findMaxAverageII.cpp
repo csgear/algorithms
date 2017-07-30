@@ -1,4 +1,6 @@
 
+// leetcode.com  644. Maximum Average Subarray II
+
 #include <vector>
 #include <unordered_map>
 
@@ -6,12 +8,14 @@ using namespace std ;
 
 class Solution {
 public:
+    // find the average value middle using binary search
     double findMaxAverage(vector<int>& nums, int k) {
         double mid = 0 ;
         
         double min_val = INT_MAX ;
         double max_val = INT_MIN ;
         
+        // find the min and max value of vector nums
         for(int i = 0 ; i < nums.size() ; i++)
         {
             min_val = std::min(nums[i], (int) min_val) ;

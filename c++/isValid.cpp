@@ -8,6 +8,7 @@ using namespace std;
 class Solution
 {
   public:
+    // using a stack the pair the {} [] ()
     bool isValid(string s)
     {
         stack<char> p;

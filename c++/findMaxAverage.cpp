@@ -1,7 +1,9 @@
 
+// leetcode.com 643. Maximum Average Subarray I
 
 class Solution {
 public:
+    // using sliding window of size k 
     double findMaxAverage(vector<int>& nums, int k) {
         double avg = 0 , result = INT_MIN ;
         

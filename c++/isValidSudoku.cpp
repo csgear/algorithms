@@ -1,40 +1,43 @@
 //
-//  leetcode.com  36. Valid Sudoku 
+//  leetcode.com  36. Valid Sudoku
 
 #include <vector>
 
-using namespace std ;
+using namespace std;
 
+class Solution
+{
+  public:
+    // state of art 
+    bool isValidSudoku(vector<vector<char>> &grid)
+    {
+        if (grid.empty() || grid[0].empty())
+            return false;
 
-class Solution {
-public:
-    bool isValidSudoku(vector<vector<char>>& grid) {
-        if(grid.empty() || grid[0].empty()) return false ;
-        
-        int m = grid.size(), n = grid[0].size() ;
-        
-        vector<vector<bool>> rows(m, vector<bool>(n, false)) ;
-        vector<vector<bool>> cols(m, vector<bool>(n, false)) ;
-        vector<vector<bool>> cells(m, vector<bool>(n, false)) ;
-        
-        for(int i = 0 ; i < m ; i++)
+        int m = grid.size(), n = grid[0].size();
+
+        vector<vector<bool>> rows(m, vector<bool>(n, false));
+        vector<vector<bool>> cols(m, vector<bool>(n, false));
+        vector<vector<bool>> cells(m, vector<bool>(n, false));
+
+        for (int i = 0; i < m; i++)
         {
-            for(int j = 0 ; j < n ; j++)
+            for (int j = 0; j < n; j++)
             {
-                if(grid[i][j] >= '1' && grid[i][j] <= '9')
+                if (grid[i][j] >= '1' && grid[i][j] <= '9')
                 {
-                    int c = grid[i][j] - '1' ;
-                    
-                    if(rows[i][c] || cols[j][c] || cells[3 * (i / 3) + j / 3][c]) return false ;
-                    
-                    rows[i][c] = true ;
-                    cols[j][c] = true ;
-                    cells[3 * (i / 3) + j / 3][c] = true ;
+                    int c = grid[i][j] - '1';
+
+                    if (rows[i][c] || cols[j][c] || cells[3 * (i / 3) + j / 3][c])
+                        return false;
+
+                    rows[i][c] = true;
+                    cols[j][c] = true;
+                    cells[3 * (i / 3) + j / 3][c] = true;
                 }
             }
         }
-        
-        return true ;
-        
+
+        return true;
     }
 };

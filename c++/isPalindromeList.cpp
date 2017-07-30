@@ -17,6 +17,7 @@ public:
         
         ListNode *last = slow->next, *pre = head;
         
+        // reverse the second half 
         while (last->next) {
             ListNode *tmp = last->next;
             last->next = tmp->next;
@@ -24,6 +25,7 @@ public:
             slow->next = tmp;
         }
         
+        // check two halves are equals 
         while (slow->next) {
             slow = slow->next;
             if (pre->val != slow->val) return false;

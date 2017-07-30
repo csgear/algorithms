@@ -1,6 +1,5 @@
-//
+
 //  leetcode.com 637. Average of Levels in Binary Tree
-//
 
 #include <vector>
 #include <numeric>
