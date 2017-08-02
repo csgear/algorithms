@@ -1,4 +1,5 @@
 
+// leetcode.com 47. Permutations II
 
 #include <vector>
 
@@ -6,7 +7,7 @@ using namespace std ;
 
 class Solution {
 public:
-    void privateP(vector<vector<int>> &res, vector<int> &nums, int start, int end)
+    void helper(vector<vector<int>> &res, vector<int> &nums, int start, int end)
     {
         if(start == end)
         {
@@ -31,7 +32,7 @@ public:
             
             swap(nums[start], nums[i]) ;
             
-            privateP(res, nums, start + 1, end) ;
+            helper(res, nums, start + 1, end) ;
             
             swap(nums[start], nums[i]) ;
         }
@@ -44,7 +45,7 @@ public:
         
         sort(nums.begin(), nums.end()) ;
         
-        privateP(result, nums, 0, nums.size() - 1) ;
+        helper(result, nums, 0, nums.size() - 1) ;
         
         return result ;
     }
