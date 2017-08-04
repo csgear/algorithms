@@ -6,29 +6,31 @@
 #include <unordered_map>
 #include <algorithm>
 
-using namespace std ;
+using namespace std;
 
-class Solution {
-public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        vector<vector<string>> result ;
-        
-        unordered_map<string, vector<string>> m ;
+class Solution
+{
+  public:
+    vector<vector<string>> groupAnagrams(vector<string> &strs)
+    {
+        vector<vector<string>> result;
 
-        for(auto s : strs) {
-            string t = s ;
+        unordered_map<string, vector<string>> m;
 
-            sort(t.begin(), t.end()) ;
-
-            m[t].push_back(s) ;
-            
-        }
-
-        for(auto s : m)
+        for (auto s : strs)
         {
-            result.push_back(s.second) ;
+            string t = s;
+
+            sort(t.begin(), t.end());
+
+            m[t].push_back(s);
         }
 
-        return result ;
+        for (auto s : m)
+        {
+            result.push_back(s.second);
+        }
+
+        return result;
     }
 };

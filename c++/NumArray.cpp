@@ -1,6 +1,8 @@
 
 //leetcode.com 303. Range Sum Query - Immutable
 
+#include <vector>
+
 class NumArray
 {
   public:

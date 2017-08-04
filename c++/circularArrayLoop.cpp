@@ -1,10 +1,7 @@
 //
 //  circularArrayLoop.cpp
 //  codefights
-//
-//  Created by YANGXIAOJUN on 2017/1/6.
-//  Copyright © 2017年 YANGXIAOJUN. All rights reserved.
-//
+
 
 #include <vector>
 
