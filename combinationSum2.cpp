@@ -1,12 +1,13 @@
 
-// leetcode.com  39. Combination Sum
+
+
+// leetcode.com  40. Combination Sum II
 
 class Solution
 {
   public:
-    vector<vector<int>> combinationSum(vector<int> &candidates, int target)
+    vector<vector<int>> combinationSum2(vector<int> &candidates, int target)
     {
-
         if (candidates.empty())
             return {};
 
@@ -34,8 +35,12 @@ class Solution
 
         for (int i = level; i < candidates.size(); i++)
         {
+            if (i > level && candidates[i] == candidates[i - 1]) continue;
+
             out.push_back(candidates[i]);
-            helper(candidates, target - candidates[i], i, out, res);
+
+            helper(candidates, target - candidates[i], i + 1, out, res);
+
             out.pop_back();
         }
     }
