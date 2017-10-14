@@ -1,10 +1,6 @@
 //
-//  findMaxForm.cpp
-//  codefights
-//
-//  Created by YANGXIAOJUN on 2017/1/3.
-//  Copyright © 2017年 YANGXIAOJUN. All rights reserved.
-//  Leetcode: 474. Ones and Zeroes
+//  Leetcode.com : 474. Ones and Zeroes
+// 
 
 #include <string>
 #include <vector>
