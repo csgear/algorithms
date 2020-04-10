@@ -1,4 +1,4 @@
-package com.vkeonline.learnjdk11;
+package com.vkeonline.leetcode;
 
 public class SellStockII {
     public int maxProfit(int[] prices) {

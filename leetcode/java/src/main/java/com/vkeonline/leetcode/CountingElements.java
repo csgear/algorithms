@@ -1,9 +1,6 @@
-package com.vkeonline.learnjdk11;
+package com.vkeonline.leetcode;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 

@@ -1,4 +1,4 @@
-package com.vkeonline.learnjdk11;
+package com.vkeonline.leetcode;
 
 import org.junit.jupiter.api.Test;
 

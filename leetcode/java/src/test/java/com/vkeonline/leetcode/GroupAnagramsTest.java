@@ -1,11 +1,9 @@
-package com.vkeonline.learnjdk11;
+package com.vkeonline.leetcode;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class GroupAnagramsTest {
     @Test

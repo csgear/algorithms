@@ -1,4 +1,4 @@
-package com.vkeonline.learnjdk11;
+package com.vkeonline.leetcode;
 
 public class MiddleofLinkedList {
     static class ListNode
