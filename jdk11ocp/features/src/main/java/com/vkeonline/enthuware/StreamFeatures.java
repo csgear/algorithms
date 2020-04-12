@@ -6,23 +6,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
-class Course {
-    private String id ;
-    private String name ;
 
-    public Course(String id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
 
 public class StreamFeatures {
     public double computeAverage() {
@@ -52,6 +36,24 @@ public class StreamFeatures {
     }
 
     public void checkJoining() {
+        class Course {
+            private String id ;
+            private String name ;
+
+            public Course(String id, String name) {
+                this.id = id;
+                this.name = name;
+            }
+
+            public String getId() {
+                return id;
+            }
+
+            public String getName() {
+                return name;
+            }
+        }
+        
         List<Course> cList = Arrays.asList(
                 new Course("803", "OCAJP 7"),
                 new Course("808", "OCAJP 8"),
