@@ -6,7 +6,8 @@ class Boo implements Serializable {
     transient int ti = 10 ;
     static int si = 20 ;
 }
-public class BasicIOFeature {
+
+public class BasicIOFeatures {
     /**
      * 1) the transient and static variable is not serializable
      * 2) Constructors of unserializable classes are called. But for serializable classes, their data members are set directly

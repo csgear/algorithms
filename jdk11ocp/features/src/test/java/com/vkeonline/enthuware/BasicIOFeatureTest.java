@@ -9,11 +9,11 @@ import java.io.InputStreamReader;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BasicIOFeatureTest {
-    static BasicIOFeature bio ;
+    static BasicIOFeatures bio ;
 
     @BeforeAll
     static void init() {
-        bio = new BasicIOFeature() ;
+        bio = new BasicIOFeatures() ;
     }
 
     @Test
