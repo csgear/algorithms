@@ -24,7 +24,7 @@ class Course {
     }
 }
 
-public class StreamFeature {
+public class StreamFeatures {
     public double computeAverage() {
         var nums = List.of(1,2,3,4).stream();
         double average = nums.parallel().mapToDouble(i->i).average().getAsDouble() ;

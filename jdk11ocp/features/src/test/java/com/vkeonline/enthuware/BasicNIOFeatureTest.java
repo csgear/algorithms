@@ -3,10 +3,8 @@ package com.vkeonline.enthuware;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class BasicNIOFeatureTest {
-    static BasicNIOFeature bio = new BasicNIOFeature() ;
+    static BasicNIOFeatures bio = new BasicNIOFeatures() ;
 
     @BeforeAll
     static void init() {

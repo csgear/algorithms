@@ -1,6 +1,6 @@
 package com.vkeonline.enthuware;
 
-public class LocalizationFeature {
+public class LocalizationFeatures {
     // Note:
     // 1. How to create a locale object
     // 2. How to pass locale the DateFormatter or NumberFormatter classes

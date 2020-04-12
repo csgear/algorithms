@@ -1,6 +1,6 @@
 package com.vkeonline.enthuware;
 
-public class ArraysFeature {
+public class ArraysFeatures {
     public void checkArrayFeature() {
 
     }

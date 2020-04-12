@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ConcurrencyFeature {
+public class ConcurrencyFeatures {
 
     class COWList {
         private CopyOnWriteArrayList<String> cal = new CopyOnWriteArrayList<>();

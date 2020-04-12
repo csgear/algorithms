@@ -2,10 +2,8 @@ package com.vkeonline.enthuware;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class StreamFeatureTest {
-    static StreamFeature sf = new StreamFeature() ;
+class StreamFeaturesTest {
+    static StreamFeatures sf = new StreamFeatures() ;
 
     @Test
     void testComputeAverage() {

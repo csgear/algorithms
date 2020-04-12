@@ -1,6 +1,6 @@
 package com.vkeonline.enthuware;
 
-public class AssertionFeature {
+public class AssertionFeatures {
 
     // Note:
     // 1) As a rule, assertion should not be used to assert the validity of the input

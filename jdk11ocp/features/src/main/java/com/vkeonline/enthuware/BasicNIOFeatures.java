@@ -3,7 +3,7 @@ package com.vkeonline.enthuware;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class BasicNIOFeature {
+public class BasicNIOFeatures {
     /**
      * returns "home/tstone10
      */
