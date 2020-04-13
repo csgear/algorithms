@@ -2,10 +2,10 @@ package com.vkeonline.enthuware;
 
 import org.junit.jupiter.api.Test;
 
-class ExceptionFeatureTest {
+class ExceptionsFeatureTest {
 
     @Test
     void arrayException() throws Exception{
-        ExceptionFeatures.arrayException();
+        ExceptionsFeatures.arrayException();
     }
 }

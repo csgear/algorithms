@@ -7,8 +7,10 @@ class AnotherException extends Exception {} ;
  * Notes:
  * 1) final will always execute unless System.exit(0) is called
  * 2) The exception which is thrown outside try block will be handled by caller
+ * 3) anything is throwable can be used in throw clause (Error, Exception, RuntimeException)
+ *
  */
-public class ExceptionFeatures {
+public class ExceptionsFeatures {
     public static void whichException(String[] args) throws Exception {
         try {
             m2();
