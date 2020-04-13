@@ -5,12 +5,20 @@ import java.util.List;
 import java.util.Set;
 
 
-
-
-
-
 // a method can not contain interface declaration
-interface I {}
+
+/**
+ * every method except default and static ones are abstract
+ */
+interface I {
+    static void staticMethod() {
+        System.out.println("static method") ;
+    }
+
+    default void defaultMethod() {
+        System.out.println("default method") ;
+    }
+}
 
 /**
  * 1) All variables in an interface are static and public
@@ -47,6 +55,10 @@ public class InheritanceFeatures {
     }
 
     /**
+     * 1) inheritance: override and overload (overload is not inheritance)
+     * 2) hide implementation and override implementation
+     * 3) static and final variables and methods are not inheritable
+     * 4) override: covariant / permission restriction / throw scope
      * an overriding method is allowed to return a sub-type of the
      * type returned by the overridden method
      *  1) A<S> <<< A<? extends S> <<< A<? extends T>
@@ -71,11 +83,9 @@ public class InheritanceFeatures {
         }
 
         class D2 extends D1 {
-
             public ArrayList<Number> transform1(Set list) {
                 return null ;
             }
-
             public ArrayList<CharSequence> transform2(Set<CharSequence> list) {
                 return null ;
             }

@@ -1,5 +1,8 @@
 package com.vkeonline.enthuware;
 
+/**
+ * String is a final class
+ */
 public class StringFeatures {
     public void checkStringBuilder() {
         StringBuilder sb = new StringBuilder("12345678") ;
