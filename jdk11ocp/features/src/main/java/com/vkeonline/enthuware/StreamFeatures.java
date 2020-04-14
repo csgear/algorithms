@@ -2,10 +2,11 @@ package com.vkeonline.enthuware;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
-
+import java.util.stream.Stream;
 
 
 public class StreamFeatures {
@@ -27,6 +28,13 @@ public class StreamFeatures {
         System.out.println(ls.stream().max( (a,b) -> a > b? a : b).get()) ;
     }
 
+    public void checkIntStream() {
+        Stream<Integer> si = Stream.iterate(1, x->x++) ;
+
+        Optional o = si.filter(x -> x < 5).limit(3).max( (x, y)-> x - y) ;
+
+        System.out.println(o.get());
+    }
     public void getTenRandomDoubles() {
         new Random().doubles(10).forEach(System.out::print);
         Random r = new Random() ;

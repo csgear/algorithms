@@ -24,4 +24,9 @@ class StreamFeaturesTest {
     void checkJoining() {
         sf.checkJoining();
     }
+
+    @Test
+    void checkIntStream() {
+        sf.checkIntStream();
+    }
 }

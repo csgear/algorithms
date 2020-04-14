@@ -1,5 +1,8 @@
 package com.vkeonline.enthuware;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -28,5 +31,22 @@ public class BasicNIOFeatures {
         Path p1 = Paths.get("x/y") ;
         Path p2 = Paths.get("z") ;
         return p1.relativize(p2).toString() ;
+    }
+
+    public void comparePaths() {
+        try {
+            Path path1 = Paths.get("/tmp/day", "../night").resolve(Paths.get("./sleep.txt")).normalize();
+
+            Path path2 = new File("/tmp/night/sleep.txt").toPath().toRealPath();
+
+            System.out.println(path1 + " " +  path2);
+
+            System.out.println(Files.isSameFile(path1, path2));
+
+            System.out.println(path1.equals(path2));
+        }
+        catch(IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
