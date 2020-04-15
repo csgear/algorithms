@@ -76,6 +76,7 @@ target
 
 # IntelliJ
 out/
+target/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
