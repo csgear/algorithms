@@ -1,5 +1,6 @@
 package com.vkeonline.enthuware;
 
+import java.util.List;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
@@ -7,6 +8,11 @@ class Employee {
     int age ;
 }
 
+/**
+ *  * 1) Lambda expression
+ *  *  1.1) the syntax  () -> { return xxx ; }
+ *  *  1.2) the variables can be used in lambda expression
+ */
 public class LambdaExpression {
     /**
      * The variable in lambda expression shall be final or treated as final
@@ -36,6 +42,27 @@ public class LambdaExpression {
         Employee e = new Employee() ;
         // System.out.println(validateEmployee(e, e->e.age < 1000)) ;
         System.out.println(validateEmployee(e, x->x.age < 1000)) ;
+    }
+
+    /**
+     * Note: any variables used by lambda function shall not be defined before
+     * and be effectively final
+     * @param chars
+     */
+    public void remove(List<Character> chars) {
+        char end = 'z' ;
+        // the following 2 lines will cause compilation error
+        // char start = 'a' ;
+        // char c = 'x' ;
+        chars.removeIf(c -> {
+            // start is effectively final since if it does not change after it's defined
+            // end shall not be changed anywhere within the method
+            char start = 'a' ;
+            return start <= c && c <= end ;
+        }) ;
+        // after lambda function, it's ok
+        char start = 'a' ;
+        char c = 'x' ;
     }
 
     static boolean validateEmployee(Employee e, Predicate<Employee> p) {
