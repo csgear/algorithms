@@ -1,4 +1,4 @@
-package com.vkeonline.studyguide.z10815;
+package com.vkeonline.studyguide;
 
 import java.io.IOException;
 import java.net.URI;
