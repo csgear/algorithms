@@ -2,7 +2,7 @@ package com.vkeonline.leetcode.thirtydays;
 
 public class SearchingRotatedSortedArray {
     public int Search(int[] nums, int target) {
-       return search(nums, 0, nums.length -1, target) ;
+        return search(nums, 0, nums.length -1, target) ;
     }
 
     private static int search(int[] nums, int l, int h, int key) {
