@@ -69,7 +69,7 @@ class FoundationTestTest {
     @Test
     public void checkEquals() {
         Integer i1 = 1 ;
-        Integer i2 = new Integer(1) ;
+        Integer i2 = Integer.valueOf(1) ;
         int i3 = 1 ;
         Byte b1 = 1 ;
         Long g1 = 1L ;

@@ -1,4 +1,4 @@
 package com.vkeonline.studyguide;
 
-public class JDBCFeatures {
+public class AssessmentTwo {
 }
