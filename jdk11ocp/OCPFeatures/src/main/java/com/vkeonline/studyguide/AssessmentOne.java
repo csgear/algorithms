@@ -1,5 +1,9 @@
 package com.vkeonline.studyguide;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 /**
  * The note for OCP Java SE 11 study guide
  * 1)  main, import, packages
@@ -40,6 +44,7 @@ public class AssessmentOne {
 }
 
 
+
 class PrimitiveClass {
     static boolean b;
     static int[] ia = new int[1];
@@ -58,14 +63,35 @@ class PrimitiveClass {
     }
 }
 
+class OverrideBase{
+    public  <T> Collection<T> getCollection(T t, Integer n)
+    {
+        return new ArrayList<T>();
+    }
+}
 
-class StaticA {
+class DerivedClass extends OverrideBase {
+
+    // this is overriding
+    public  <T> List<T> getCollection(T t, Integer m) { return new ArrayList<T>(); }; //1
+
+    // Stream is not a subclass of Collection, and not overload because their method signature is same
+    // public  <T> Stream<T> getCollection(T t, Integer m) { return new ArrayList<T>(); }; //2
+
+    // return type
+    //public  <T> void getCollection(T t, Integer m) { return new ArrayList<T>(); }; //3
+
+    // this is overloading
+    public  <T> List<T> getCollection(String t, Integer m) { return new ArrayList<T>(); }; //4
+}
+
+class BaseWithStatic {
     int i = 10;
     public static void m1(){  }
     public void m2() { }
 }
 
-class StaticB extends StaticA {
+class DerivedWithStatic extends BaseWithStatic {
     int i = 20;
     public static void m1() {  }
 
@@ -76,9 +102,29 @@ class StaticB extends StaticA {
     public void m2() { }
 
     public static void check() {
-        StaticA a  = new StaticB();
+        BaseWithStatic a  = new DerivedWithStatic();
         System.out.println(a.i)  ; //will print 10 instead of 20
         a.m1();  //will call A's m1
         a.m2();  //will call B's m2 as m2() is not static and so overrides A's m2()
+    }
+}
+
+class BaseWithException {
+    public void play() throws Exception{
+        System.out.println("Playing...");
+    }
+}
+
+class DerivedWithoutException extends BaseWithException{
+    public void play(){
+        System.out.println("Playing Soccer...");
+    }
+    public static void main(String[] args){
+        BaseWithException g = new BaseWithException();
+        // this line won't compile
+        // even in runtime, game.play() calls soccer.play()
+        // he class of the variable g is of class Game. Therefore, at compile time,
+        // compiler assumes that g.play() might throw an exception
+        // g.play();
     }
 }

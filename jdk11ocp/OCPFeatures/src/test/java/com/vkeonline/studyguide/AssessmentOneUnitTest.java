@@ -26,9 +26,50 @@ class AssessmentOneUnitTest {
      *     other package at all, not even with any import statement. So for example, if you have a class
      *     named SomeClass in package test, you cannot access TestClass defined in the problem statement
      *     (as it belongs to the unnamed package) at all because there is no way to import it.
-     * 6)
+     *  6) The name of the class to be executed must be specified in the --module option along with the module name. i.e.
+     *      in moduleName/className format. The class name can be avoided if the jar file's manifest has an
+     *      appropriate Main-Class entry. (not in module-info.java but in java manifest)
+     *  7) Instance methods are overridden and variables (and static methods) are hidden. Which instance method is invoked
+     *      depends on the class of the actual object, while which field (and static method) is accessed depends on
+     *      the class of the variable.
      */
 
+
+    /**
+     * Steps to check for valid override
+     *    1) First, check the method signature (i.e. method name and the parameter list). If the signature of
+     *      the method in the subclass matches the signature of the method in the super class, then it could be
+     *      a valid override, otherwise it is just an overloaded method. Note that signature does not include parameter
+     *      names and parameter's generic type specification.
+     *    2) Second, if it is a potential override, check the generic type specification of the parameters. If the
+     *      overriding method does not use a generic type specification for the parameter type, then it is valid.
+     *      The reverse is not valid i.e. the overriding method is allowed to erase the generic type specification
+     *      but is not allowed to add a generic type specification if the overridden method does not have it.
+     *      If both the methods have a generic type specification, then the specification must match exactly.
+     *      For example, if the overridden method has Set<Integer>, then the overriding method can use Set or Set<Integer>.
+     *      But if overridden method has Set, then the overriding method must also have Set for a valid override.
+     *    3) Third, if it is a potential override, check the return type. Java allows "covariant" returns, which means,
+     *      the return type of the overriding method must be the same or be a subtype of the return type mentioned in the
+     *      overridden method. Check the two return types without the generic type specification. If return type of the
+     *      overriding method is covariant with respect to the return type of the overriding method
+     *      (for example, ArrayList is covariant with List), then perform the same check including the generic type specification
+     *      (for example, ArrayList<CharSequence> is covariant with List<? extends CharSequence>).
+     */
+
+    /**
+     *  Rule of Covariant Returns
+     * 1) An overriding method (i.e. a sub class's method) is allowed to return a sub-type of the type returned by the overridden
+     *      method (i.e. super class's method).
+     * 2) so, first check whether the return type of the overriding method is a subtype. For example, if the overridden method returns List,
+     *      the overriding method can return ArrayList but not Object.
+     * 3) Next, you need to check the type specification of generic types.
+     *    3.1) assuming that S is a sub type of T and <<< means "is a subtype of", for example Integer is a sub type of Number
+     *    3.2) Hierarchy 1 : A<S> <<< A<? extends S> <<< A<? extends T>, List<Integer> is a sub type of List<? extends Integer>
+     *        and List<? extends Integer> is a sub type of List<? extends Number>
+     *    3.3) A<T> <<< A<? super T> <<< A<? super S>, List<Number> is a subtype of List<? super Number> and List<? super Number>
+     *        is a subtype of A<? super Integer>
+     *    3.4) List<Integer> is not a subtype of List<Number> even though Integer is a subtype of Number
+     */
     /**
      * 1) the comparision? between Integer and short, but not Short and Integer
      * 2)
