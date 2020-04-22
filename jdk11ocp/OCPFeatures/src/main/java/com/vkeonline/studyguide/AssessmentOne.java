@@ -8,7 +8,7 @@ package com.vkeonline.studyguide;
  *  2.2) java, -classpath, -cp, --class-path
  *  2.3) jar -c(reate) -v -f(ile) -C(ontain)
  */
-public class AssessmentTest {
+public class AssessmentOne {
 
     void printAnswers() {
         String answersChapter1 = "" ;
@@ -36,5 +36,49 @@ public class AssessmentTest {
 //                """ ;
 
 
+    }
+}
+
+
+class PrimitiveClass {
+    static boolean b;
+    static int[] ia = new int[1];
+    static char ch;
+    static boolean[] ba = new boolean[1];
+
+    public static void main(String[] args) throws Exception {
+        System.out.println((int)ch);
+
+        var x = false;
+        if( b ){
+            x = ( ch == ia[ch]);
+        }
+        else x = ( ba[ch] = b );
+        System.out.println(x+" "+ba[ch]);
+    }
+}
+
+
+class StaticA {
+    int i = 10;
+    public static void m1(){  }
+    public void m2() { }
+}
+
+class StaticB extends StaticA {
+    int i = 20;
+    public static void m1() {  }
+
+    /**
+     * static m1() in A cannot be overridden by non-static m1()
+     */
+//    public void m1() {}
+    public void m2() { }
+
+    public static void check() {
+        StaticA a  = new StaticB();
+        System.out.println(a.i)  ; //will print 10 instead of 20
+        a.m1();  //will call A's m1
+        a.m2();  //will call B's m2 as m2() is not static and so overrides A's m2()
     }
 }
