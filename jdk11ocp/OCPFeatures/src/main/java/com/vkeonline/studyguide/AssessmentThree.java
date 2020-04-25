@@ -5,136 +5,21 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-interface Flyer {
-}
 
-interface Tone {
-    void up();
-}
-
-class Speak {
-    public void Speak(String s) {
-        System.out.println("Method name is same as class name");
-    }
-
-    public static void main(String[] args) {
-
-        Speak s = new GoodSpeak();
-        s.Speak("You!");
-        ((GoodSpeak) s).up();
-        ((Tone) s).up();
-    }
-}
-
-class GoodSpeak extends Speak implements Tone {
-    public void up() {
-        System.out.println("UP UP UP");
-    }
-}
-
-interface House {
-    public default String getAddress() {
-        return "101 Main Str";
-    }
-}
-
-interface Bungalow extends House {
-    public default String getAddress() {
-        return "101 Smart Str";
-    }
-}
-
-class MyHouse implements Bungalow, House {
-}
-
-class ABCD {
-    int x = 10;
-    static int y = 20;
-}
-
-class MNOP extends ABCD {
-    int x = 30;
-    static int y = 40;
-}
-
-interface T1 {
-}
-
-interface T2 {
-    int VALUE = 10;
-
-    void m1();
-}
-
-interface T3 extends T1, T2 {
-    public void m1();
-
-    public void m1(int x);
-}
-
-
-
-class TestClass {
-    static TestClass ref;
-    String[] arguments;
-
-    public static void main(String args[]) {
-        ref = new TestClass();
-        ref.func(args);
-    }
-
-    public void func(String[] args) {
-        ref.arguments = args;
-    }
-}
-
-class Super { static String ID = "QBANK"; }
-
-class Sub extends Super{
-    static { System.out.print("In Sub"); }
-}
-
-class Game {
-    public void play() throws Exception   {
-        System.out.println("Playing...");
-    }
-}
-
-class Soccer extends Game {
-    public void play(String ball)    {
-        System.out.println("Playing Soccer with "+ball);
-    }
-}
-
-class A {
-    public List<? super Integer> getList() {
-        return null ;
-    }
-}
-
-
-class Test{
-    public static void main(String[] args){
-        System.out.println(Sub.ID);
-    }
-}
-
+/**
+ * Note:
+ * 1) javac --module-source-path src -d out src/foo.bar/f/b/Baz1.java src/foo.bar/f/c/Caz1.java
+ * or javac --module-source-path src -d out --module foo.bar
+ * 2) All the instance or static variables are given a default values if they are not explicitly initialized.
+ * All numeric variable are given a value of zero or equivalent to zero (i.e. 0 for integral types and 0.0 for
+ * double/float). Booleans are initialized to false and objects are initialized to null.
+ * 3) Note that a final variable can be hidden.
+ * 4) jdeps --module-path out out\moduleA\test\A.class The jdeps tool is used to find out all dependencies
+ *  of a class file or a jar file. It inspects the given class file (or all class files inside a jar files)
+ *  and finds out all the required modules and packages that are referred to by this class or jar file.
+ * 5) Modules are not allowed to have circular/cyclic dependencies.
+ */
 public class AssessmentThree {
-
-
-    public void checkHouse() {
-        House ci = new MyHouse();  //1
-        System.out.println(ci.getAddress()); //2
-
-        float f1 = 1;
-        float f2 = 0x0123;
-        var f3 = 1.0f;
-
-        StringBuilder sb = new StringBuilder(100);
-
-
-    }
-
     public void switchTest(byte x) {
         switch (x) {
             case 'b':   // 1
@@ -145,20 +30,6 @@ public class AssessmentThree {
     }
 
     public void checkInstanceOf() {
-        class Bird implements Flyer {
-        }
-        class Eagle extends Bird {
-        }
-        class Bat {
-        }
-
-        Flyer f = new Eagle();
-        Eagle e = new Eagle();
-        Bat b = new Bat();
-
-        if (f instanceof Bird) System.out.println("f is a Bird");
-        if (e instanceof Flyer) System.out.println("e is a Flyer");
-        if (b instanceof Flyer) System.out.println("b is a Flyer");
 
         class A {
         }
@@ -176,15 +47,6 @@ public class AssessmentThree {
         System.out.println(objectC1 instanceof B1);
     }
 
-    public void checkAssignAndComparision() {
-        boolean b1 = false;
-        boolean b2 = false;
-        if (b2 != (b1 = !b2)) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
-    }
 
     public void checkOverride() {
         class Base {
@@ -211,5 +73,28 @@ public class AssessmentThree {
         sb.append("a");
         sb.delete(0, sb.length());
         System.out.println(sb.toString());
+    }
+
+    /**
+     * To override a method in the subclass, the overriding method (i.e. the one in the subclass) MUST HAVE:
+     * 1) same name
+     * 2) same return type in case of primitives (a subclass is allowed for classes, this is also known as covariant return types).
+     * 3) same type and order of parameters
+     * 4) it may throw only those exceptions that are declared in the throws clause of the superclass's method
+     * or exceptions that are subclasses of the declared exceptions. It may also choose NOT to throw any exception
+     * 5) The names of the parameter types do not matter.
+     * 6) access level?
+     */
+    public void checkOverrideAgain() {
+        class Base {
+            public Set getSet(int a) {
+                return null ;
+            }
+        }
+
+        abstract class Derived extends Base {
+            @Override
+            public abstract Set getSet(int a) ;
+        }
     }
 }

@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class AssessmentThreeUnitTest {
     AssessmentThree at = new AssessmentThree();
 
-    
     @Test
     public void check1() {
         at.checkInstanceOf();
@@ -56,7 +55,52 @@ class AssessmentThreeUnitTest {
         }
         System.out.println(arr[counter]);
 
+        int count = 0, sum = 0;
+        do {
+            if (count % 3 == 0) continue;
+            sum += count;
+        }
+        while (count++ < 11);
+        System.out.println(sum);
+
+
     }
+
+    @Test
+    public void checkLoopWithVariableScope() {
+        class LoopTest {
+            int k = 5;
+
+            public boolean checkIt(int k) {
+                return k-- > 0 ? true : false;
+            }
+
+            public void printThem() {
+                while (checkIt(k)) {
+                    System.out.print(k--);
+                }
+            }
+        }
+        new LoopTest().printThem();
+    }
+
+    @Test
+    public void checkLoopWithBreakLabel() {
+        int c = 0;
+        A:
+        for (int i = 0; i < 2; i++) {
+            B:
+            for (int j = 0; j < 2; j++) {
+                C:
+                for (int k = 0; k < 3; k++) {
+                    c++;
+                    if (k > j) break;
+                }
+            }
+        }
+        System.out.println(c);
+    }
+
 
     @Test
     public void checkSwitch() {
@@ -91,8 +135,4 @@ class AssessmentThreeUnitTest {
         }
     }
 
-    @Test
-    void checkHouse() {
-        at.checkHouse();
-    }
 }
