@@ -1,6 +1,9 @@
 package com.vkeonline.studyguide;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,6 +42,29 @@ class AssessmentThreeUnitTest {
     }
 
     @Test
+    void stringTest() {
+        at.stringRecap();
+    }
+
+    @Test
+    void unaryTest() {
+        at.UnaryOpersRecap();
+        int number = 0;
+        int result;
+
+        result = --number - number--;
+        System.out.println(result);
+        result = number-- - --number;
+        System.out.println(result);
+    }
+
+    @Test
+    void arrayTest() {
+        at.ArraysRecap();
+    }
+
+    @Test
+
     public void checkLoop() {
         int[] arr = {1, 2, 3, 4, 5, 6};
         int counter = 0;
@@ -48,6 +74,7 @@ class AssessmentThreeUnitTest {
             } else {
                 continue;
             }
+            // this block is unreachable and will cause compilation error
 //            if (value > 4) {
 //                arr[counter] = value + 1;
 //            }
@@ -63,7 +90,17 @@ class AssessmentThreeUnitTest {
         while (count++ < 11);
         System.out.println(sum);
 
-
+        // now we have byte variables, overflow will cause infinite loop
+        assertTimeoutPreemptively(Duration.ofMillis(200), () -> {
+                    byte i, j;
+                    int variable = 0;
+                    for (i = 100, j = 0; i <= 300; i += 90, j++) {
+                        variable = i % 50;
+                        System.out.print(variable + " ");
+                    }
+                    System.out.println(j);
+                }
+        );
     }
 
     @Test
@@ -72,7 +109,7 @@ class AssessmentThreeUnitTest {
             int k = 5;
 
             public boolean checkIt(int k) {
-                return k-- > 0 ? true : false;
+                return k-- > 0;
             }
 
             public void printThem() {

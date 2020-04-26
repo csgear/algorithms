@@ -15,7 +15,6 @@ public class Car extends Vehicle {
         car.PrintOwner();
         System.out.println(car instanceof Vehicle);
         System.out.println(car instanceof Car);
-
     }
 }
 
