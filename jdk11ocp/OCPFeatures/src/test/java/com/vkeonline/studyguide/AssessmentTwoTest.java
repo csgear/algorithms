@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class AssessmentTwoUnitTest {
+class AssessmentTwoTest {
     /**
      * 1) compare:
      * 2) mismatch: Finds and returns the index of the first mismatch between two int arrays, otherwise return -1 if no

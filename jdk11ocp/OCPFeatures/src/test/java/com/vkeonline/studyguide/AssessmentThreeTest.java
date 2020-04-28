@@ -7,7 +7,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AssessmentThreeUnitTest {
+class AssessmentThreeTest {
     AssessmentThree at = new AssessmentThree();
 
     @Test

@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AssessmentOneUnitTest {
+class AssessmentOneTest {
 
 
     // Test1
