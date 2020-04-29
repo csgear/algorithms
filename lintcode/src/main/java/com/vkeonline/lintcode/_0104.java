@@ -1,5 +1,7 @@
 package com.vkeonline.lintcode;
 
+import com.vkeonline.lintcode.common.ListNode;
+
 import java.util.* ;
 
 public class _0104 {
