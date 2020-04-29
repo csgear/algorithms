@@ -1,7 +1,6 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.common ;
 
 import java.util.List;
-
 
 public class GraphNode {
     public int val;

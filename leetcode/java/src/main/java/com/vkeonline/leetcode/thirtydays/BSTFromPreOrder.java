@@ -1,15 +1,9 @@
 package com.vkeonline.leetcode.thirtydays;
 
-public class BSTFromPreOrder {
-    class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
+import com.vkeonline.leetcode.common.TreeNode;
 
-        public TreeNode(int x) {
-            val = x;
-        }
-    }
+public class BSTFromPreOrder {
+
 
     public TreeNode bstFromPreorder(int[] preorder) {
         int n = preorder.length;

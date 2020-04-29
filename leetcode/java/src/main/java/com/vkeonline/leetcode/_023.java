@@ -1,6 +1,8 @@
 package com.vkeonline.leetcode;
 
 
+import com.vkeonline.leetcode.common.ListNode;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
