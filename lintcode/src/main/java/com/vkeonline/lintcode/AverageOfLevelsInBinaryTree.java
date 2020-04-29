@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * Lintcode: 1115. Average of Levels in Binary Tree
+ */
 public class AverageOfLevelsInBinaryTree {
     public List<Double> averageOfLevels(TreeNode root) {
         if (root == null) return null ;
