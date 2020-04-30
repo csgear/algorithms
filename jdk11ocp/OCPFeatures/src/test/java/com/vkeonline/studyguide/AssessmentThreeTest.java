@@ -1,7 +1,7 @@
 package com.vkeonline.studyguide;
 
+import com.vkeonline.enthuware.z815.AssessmentThree;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
 
 import java.time.Duration;
 
