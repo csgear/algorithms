@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class _437 {
         }
 
         private void findSum(TreeNode head, int sum, ArrayList<Integer> buffer,
-                            int level, List<List<Integer>> results) {
+                             int level, List<List<Integer>> results) {
             if (head == null) return;
             int tmp = sum;
             buffer.add(head.val);
