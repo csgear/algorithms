@@ -1,5 +1,7 @@
 package com.vkeonline.lintcode;
 
+import com.vkeonline.lintcode.common.Interval;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,13 +11,6 @@ import java.util.List;
  */
 public class MergeIntervals {
 
-    class Interval {
-        int start, end;
-        Interval(int start, int end) {
-            this.start = start;
-            this.end = end;
-        }
-    }
 
     public List<Interval> merge(List<Interval> intervals) {
         if (intervals == null || intervals.size() <= 1) {
@@ -24,7 +19,7 @@ public class MergeIntervals {
 
         Collections.sort(intervals, (i1, i2) -> i1.start - i2.start);
 
-        List<Interval> result = new ArrayList<Interval>();
+        List<Interval> result = new ArrayList<>();
 
         Interval last = intervals.get(0);
 
@@ -38,6 +33,7 @@ public class MergeIntervals {
             }
         }
 
+        // Note: We need to add the last element here
         result.add(last);
 
         return result;
