@@ -1,7 +1,7 @@
 package com.vkeonline.lintcode;
 
 /**
- * 1046. Prime Number of Set Bits in Binary Representation
+ * LintCode: 046. Prime Number of Set Bits in Binary Representation
  */
 public class PrimeNumberOfSetBits {
     public int countPrimeSetBits(int L, int R) {

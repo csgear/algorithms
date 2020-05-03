@@ -1,7 +1,7 @@
 package com.vkeonline.lintcode;
 
 /**
- * Lintcode: 52. Next Permutation
+ * LintCode: 52. Next Permutation
  */
 public class NextPermutation {
         private void swap(int[] nums, int i, int j) {
