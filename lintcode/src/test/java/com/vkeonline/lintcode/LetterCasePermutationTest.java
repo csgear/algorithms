@@ -2,6 +2,8 @@ package com.vkeonline.lintcode;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LetterCasePermutationTest {
@@ -10,7 +12,7 @@ class LetterCasePermutationTest {
     @Test
     void letterCasePermutation() {
         String S = "a1b2" ;
-        var result = letterCasePermutation.letterCasePermutation(S) ;
+        List<String> result = letterCasePermutation.letterCasePermutation(S) ;
         result.stream().map(str -> str + " ").forEach(System.out::print);
     }
 }
