@@ -1,8 +1,9 @@
 package com.vkeonline.lintcode;
 
-public class _0052 {
-    public class Solution {
-
+/**
+ * LintCode: 52. Next Permutation
+ */
+public class NextPermutation {
         private void swap(int[] nums, int i, int j) {
             int temp = nums[i];
             nums[i] = nums[j];
@@ -35,5 +36,5 @@ public class _0052 {
 
             return nums;
         }
-    }
+
 }
