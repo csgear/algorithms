@@ -5,7 +5,7 @@ import com.vkeonline.lintcode.common.ListNode;
 import java.util.List;
 
 /**
- * lintcode: #167
+ * lintcode: #167, with Linked List
  */
 public class AddTwoNumbers {
     public ListNode addLists(ListNode l1, ListNode l2) {
