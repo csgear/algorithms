@@ -23,13 +23,13 @@ class BasicIOFeatureTest {
 
     @Test
     void checkedBufferedReader() {
-        try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
-            System.out.println("Enter Number: ");
-            String s = bfr.readLine() ;
-            System.out.println("Your number is :" + s);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
+//            System.out.println("Enter Number: ");
+//            String s = bfr.readLine() ;
+//            System.out.println("Your number is :" + s);
+//        }
+//        catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 }

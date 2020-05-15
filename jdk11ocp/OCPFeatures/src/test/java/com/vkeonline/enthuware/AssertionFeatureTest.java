@@ -31,23 +31,23 @@ class AssertionFeatureTest {
 
     @Test
     void testAssertionFailure() {
-        int counter = -4 ;
-        assert counter >= 0: "Less than zero" ;
-        for(int i = 0 ; i < counter ; i++) {}
+//        int counter = -4 ;
+//        assert counter >= 0: "Less than zero" ;
+//        for(int i = 0 ; i < counter ; i++) {}
     }
 
 
     // This junit 5 feature, passing an array to a test requires more efforts
     // So the following test case won't execute
-    @ParameterizedTest
-    @MethodSource("provideArgs")
-    void testArgLength(String[] args) {
-        assert args.length == 2: "Must given 2 arguments" ;
-    }
-
-    static private Stream<Arguments> provideArgs() {
-        return Stream.of(Arguments.of("aa", "bb")) ;
-    }
+//    @ParameterizedTest
+//    @MethodSource("provideArgs")
+//    void testArgLength(String[] args) {
+//        assert args.length == 2: "Must given 2 arguments" ;
+//    }
+//
+//    static private Stream<Arguments> provideArgs() {
+//        return Stream.of(Arguments.of("aa", "bb")) ;
+//    }
 
 
 }

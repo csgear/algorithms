@@ -91,16 +91,16 @@ class AssessmentThreeTest {
         System.out.println(sum);
 
         // now we have byte variables, overflow will cause infinite loop
-        assertTimeoutPreemptively(Duration.ofMillis(200), () -> {
-                    byte i, j;
-                    int variable = 0;
-                    for (i = 100, j = 0; i <= 300; i += 90, j++) {
-                        variable = i % 50;
-                        System.out.print(variable + " ");
-                    }
-                    System.out.println(j);
-                }
-        );
+//        assertTimeoutPreemptively(Duration.ofMillis(200), () -> {
+//                    byte i, j;
+//                    int variable = 0;
+//                    for (i = 100, j = 0; i <= 300; i += 90, j++) {
+//                        variable = i % 50;
+//                        System.out.print(variable + " ");
+//                    }
+//                    System.out.println(j);
+//                }
+//        );
     }
 
     @Test

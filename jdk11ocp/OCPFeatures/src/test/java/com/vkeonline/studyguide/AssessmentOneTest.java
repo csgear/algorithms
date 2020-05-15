@@ -153,15 +153,15 @@ class AssessmentOneTest {
 
     @Test
     public void checkArrayListAdd() {
-        List list = new ArrayList();
-        list.add("val1"); //1
-        list.add(2, "val2"); //2
-        list.add(1, "val3"); //3
-        System.out.println(list);
-
-        var values = new ArrayList<String>();
-
-        values.removeIf((var k)->k.equals("a")) ;
+//        List list = new ArrayList();
+//        list.add("val1"); //1
+//        list.add(2, "val2"); //2
+//        list.add(1, "val3"); //3
+//        System.out.println(list);
+//
+//        var values = new ArrayList<String>();
+//
+//        values.removeIf((var k)->k.equals("a")) ;
     }
 
     @Test
