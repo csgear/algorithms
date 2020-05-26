@@ -20,7 +20,9 @@ public class FirstBadVersion extends VersionControl{
             }
         }
 
-        if(isBadVersion(left)) return left ;
+        if(isBadVersion(left)) {
+            return left ;
+        }
 
         return right ;
     }
