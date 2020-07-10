@@ -82,23 +82,6 @@ interface ConstTest {
     public static final int H = 1;
 }
 
-interface Device {
-    public abstract void switchOn();
-}
-
-abstract class Router /* LOCATION 1 */ {    /* LOCATION 2 */
-    public void switchOn() {
-    }
-
-    public abstract void reset();
-}
-
-class MimoRouter extends Router implements Device {
-
-    @Override
-    public void reset() {
-    }
-}
 
 class TestClass {
     public static void main(String[] args) {

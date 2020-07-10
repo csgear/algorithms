@@ -14,4 +14,12 @@ public class StringFeatures {
         String s = "0123456" ;
         char ch = s.charAt(0) ;
     }
+
+    public static void main(String[] args) {
+        String s = "string" ;
+        System.out.println(s.replace('g', 'g') == s) ;
+        System.out.println("String".replace('g','g')=="String") ;
+        System.out.println("String".replace("g","g")=="String");
+    }
+
 }
