@@ -1,12 +1,11 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam816.BasicIOFeatures;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BasicIOFeatureTest {
     static BasicIOFeatures bio ;

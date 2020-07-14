@@ -1,4 +1,4 @@
-package com.vkeonline.enthuware;
+package com.vkeonline.enthuware.exam815;
 
 class ScopeTest {
     static int x = 5 ;

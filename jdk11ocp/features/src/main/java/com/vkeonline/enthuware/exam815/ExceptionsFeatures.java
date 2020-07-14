@@ -1,4 +1,4 @@
-package com.vkeonline.enthuware;
+package com.vkeonline.enthuware.exam815;
 
 class NewException extends Exception {}
 class AnotherException extends Exception {} ;

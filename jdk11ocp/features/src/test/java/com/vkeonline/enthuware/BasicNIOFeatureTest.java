@@ -1,5 +1,6 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam816.BasicNIOFeatures;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

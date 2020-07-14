@@ -1,7 +1,4 @@
-package com.vkeonline.enthuware;
-
-import java.util.* ;
-import java.sql.* ;
+package com.vkeonline.enthuware.exam815;
 
 interface Otter {
     default void play() {}
