@@ -1,4 +1,4 @@
-package com.vkeonline.enthuware;
+package com.vkeonline.enthuware.exam815;
 
 /**
  * You need to know about three command line options for running a class that is contained in a module:

@@ -1,10 +1,9 @@
 package com.vkeonline.studyguide;
 
+import com.vkeonline.enthuware.exam816.NIO2Features;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class NIO2FeaturesTest {
     static NIO2Features nio2Features = new NIO2Features() ;

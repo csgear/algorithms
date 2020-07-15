@@ -1,4 +1,4 @@
-package com.vkeonline.enthuware;
+package com.vkeonline.enthuware.exam815;
 
 /**
  * String is a final class

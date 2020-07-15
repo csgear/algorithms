@@ -1,6 +1,5 @@
-package com.vkeonline.enthuware;
+package com.vkeonline.enthuware.exam816;
 
-import java.util.List;
 import java.util.function.* ;
 
 class Panda {
