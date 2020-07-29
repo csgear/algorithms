@@ -1,120 +1,58 @@
 package com.vkeonline.enthuware.exam815;
 
 
-class Game {
-    static int x = 5;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void play() throws Exception {
-        System.out.println("Playing...");
-
-        int x = (x = 3) * 4;
-    }
-
-
-    void test(int x) {
-        switch (x) {
-            case 1:
-            case 2:
-            case 0:
-            default:
-            case 4:
-            case 'a' | 'b':
-                System.out.println('c');
-        }
+class Base {
+    public <T> List<T> transform(List<T> list) {
+        return new ArrayList<T>();
     }
 }
 
-class Soccer extends Game {
+class Derived extends Base {
+//    public ArrayList<Number> transform(List<Number> list) {
+//        return new ArrayList<Number>();
+//    }
 
+//    public ArrayList<Object> transform(List<Object> list) {
+//        return new ArrayList<Object>();
+//    }
 
-    @Override
-    public void play() {
-        System.out.println("Playing Soccer...");
-    }
-
-
-    public static void main(String[] args) throws Exception {
-
-        int index = 1;
-        String[] strArr = new String[5];
-        String myStr = strArr[index];
-        System.out.println(myStr);
-
-    }
+//    public <T> ArrayList<T> transform(List<T> list) {
+//        return new ArrayList<T>();
+//    }
 }
 
-
-class ParamTest {
-    public static void printSum(int a, int b) {
-        System.out.println("In int " + (a + b));
-    }
-
-    public static void printSum(Integer a, Integer b) {
-        System.out.println("In Integer " + (a + b));
-    }
-
-    public static void printSum(double a, double b) {
-        System.out.println("In double " + (a + b));
-    }
-
-    public static void main(String[] args) {
-        Integer val1 = Integer.valueOf(5) ;
-        int val2 = 9;
-        testInts(val1++, ++val2);
-        System.out.println(val1 + " " + val2);
-    }
-
-    public static void testInts(Integer obj, int var) {
-        obj = var++;
-        obj++;
-    }
+class A {
+    public int getCode(){ return 2;}
 }
 
-
-interface ConstTest {
-    public int A = 1;
-    int B = 1;
-    static int C = 1;
-    final int D = 1;
-    public static int E = 1;
-    public final int F = 1;
-    static final int G = 1;
-    public static final int H = 1;
-}
-
-
-class TestClass {
-    public static void main(String[] args) {
-        try {
-            doTest();
-        } catch (MyException me) {
-            System.out.println(me);
-        }
-    }
-
-    static void doTest() throws MyException {
-        int[] array = new int[10];
-        array[10] = 1000;
-        doAnotherTest();
-    }
-
-    static void doAnotherTest() throws MyException {
-        throw new MyException("Exception from doAnotherTest");
+class AA extends A {
+    public void doStuff() {
     }
 }
+class Test {
+    static String str;
+    static Float f = null;
 
-class MyException extends Exception {
-    public MyException(String msg) {
-        super(msg);
+    public static Integer wiggler(Integer x) {
+        Integer y = x + 10;
+        x++;
+        System.out.println(x);
+        return y;
+    }
+
+
+    final static public void main(String[] args) {
+        A a = null ;
+        AA aa = null ;
+
+        a = (AA)aa ;
+        a = new AA() ;
+        aa = (AA)a ;
+        ((AA)a).doStuff(); 
     }
 
 }
 
-interface Account {
-    public default String getId() {
-        return "0000";
-    }
-}
-
-interface PremiumAccount extends Account {
-}

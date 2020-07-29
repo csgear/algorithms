@@ -8,7 +8,7 @@ class StreamFeaturesTest {
 
     @Test
     void testComputeAverage() {
-        sf.computeAverage() ;
+        StreamFeatures.computeAverage() ;
     }
 
     @Test

@@ -1,5 +1,8 @@
 package com.vkeonline.enthuware.exam816;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class LocalizationFeatures {
     // Note:
     // 1. How to create a locale object
@@ -9,5 +12,12 @@ public class LocalizationFeatures {
     // 5.
     public void localDate() {
 
+    }
+
+    public static void main(String[] args) {
+        LocalDate d = LocalDate.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("eeee d'st day of' MMMM yyyy");
+        String s = dtf.format(d);
+        System.out.println(s);
     }
 }

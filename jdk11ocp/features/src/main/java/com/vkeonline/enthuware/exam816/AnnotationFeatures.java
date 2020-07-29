@@ -18,75 +18,29 @@ import java.util.Map;
  */
 public class AnnotationFeatures {
     public void printAnnotations() {
-        Authors authors = Book.class.getAnnotation(Authors.class);
-        for(Author author: authors.value()){
-            System.out.println(author.value());
-        }
-        Author author = Book.class.getAnnotation(Author.class) ;
-    }
-
-    /**
-     * Annotation keys
-     */
-    @Table( length = 1, primaryKey = "id", columns = {/*"col1", "col2"*/})
-    public void checkTable() {
-
-    }
-
-    /**
-     * type annotation can be used in simple type, nested type,
-     * constructor, type casting, generic type, throw exception,
-     * instanceOf, and methods
-     */
-    public void checkTypeAnnotation() {
-        @NotEmpty String s = "" ;
-        Map<@NotEmpty String, Integer> map = new HashMap<>() ;
-
-        map.put("a", 1) ;
-        map.put("", 1) ;
-
-        boolean isNotEmpty = s instanceof String ;
-        System.out.println(isNotEmpty);
-        isNotEmpty = s instanceof @NotEmpty String ;
-        System.out.println(isNotEmpty);
-
     }
 }
 
 /**
- * all props must be a function
+ * @author csgear
  */
-@interface Table {
-    String primaryKey()  default "' ";
-    int length() default 0;
-    String[] columns() ;
+@interface Exercise {
+    int hoursPerDay() ;
+    int startHour() default 6 ;
 }
 
 /**
- * value() must be provided for repeatable annotation
+ * @author csgear
  */
-@Repeatable(value = Authors.class)
-@interface Author {
-    String value();
-
-};
-
-@Retention(RetentionPolicy.RUNTIME)
-@interface Authors {
-    Author[] value() default {};
+@interface Strong {
+    int force() ;
 }
 
-
-@Authors({
-        @Author("Range Rover"), @Author("Mercedes Benz"),
-        @Author("Toyota"),
-        @Author("BMW")}
-)
-@Author("Peter")
-interface Book {
-}
-
-@Target({ElementType.TYPE_USE, ElementType.TYPE_PARAMETER})
-@interface NotEmpty {
-
+/**
+ * @author csgear
+ */
+@interface Wind {
+    public static final int temperature = 20 ;
+    int size = 10 ;
+    Strong power() default @Strong(force=10) ;
 }

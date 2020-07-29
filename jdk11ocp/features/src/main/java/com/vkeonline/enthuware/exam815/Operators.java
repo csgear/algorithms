@@ -11,12 +11,11 @@ public class Operators {
         sb.setLength(5);
         sb.setLength(10);
         System.out.println(sb.length());
-        Exception e = null;
-        throw e;
-//        System.out.println(null + true);
-//        System.out.println(true + null);
-//        System.out.println(null + null);
-    }
 
+        float foo = 2, bar = 3, baz = 4;
+        float mod1 = foo % baz, mod2 = baz % foo;
+        float val = mod1 > mod2 ? bar : baz;
+        System.out.println(val);
+    }
 }
 

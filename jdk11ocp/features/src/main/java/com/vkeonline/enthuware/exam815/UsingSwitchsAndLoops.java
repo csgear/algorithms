@@ -1,6 +1,20 @@
 package com.vkeonline.enthuware.exam815;
 
+/**
+ * @author csgear
+ */
 public class UsingSwitchsAndLoops {
+    public static void main(String[] args) {
+        switch (5) {
+            default:
+        }
+
+        switch (5) {
+            default: break ;
+        }
+
+        var x = 0; switch(x){ }
+    }
     /**
      * check the existing condition
      */

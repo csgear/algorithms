@@ -13,6 +13,6 @@ class AnnotationFeaturesTest {
 
     @Test
     void checkTypeAnnotation() {
-        af.checkTypeAnnotation();
+
     }
 }
