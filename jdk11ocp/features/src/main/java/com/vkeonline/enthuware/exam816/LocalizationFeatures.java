@@ -1,7 +1,9 @@
 package com.vkeonline.enthuware.exam816;
 
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class LocalizationFeatures {
     // Note:
@@ -19,5 +21,8 @@ public class LocalizationFeatures {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("eeee d'st day of' MMMM yyyy");
         String s = dtf.format(d);
         System.out.println(s);
+
+        DateTimeFormatter df = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+        System.out.println(df.format(d));
     }
 }

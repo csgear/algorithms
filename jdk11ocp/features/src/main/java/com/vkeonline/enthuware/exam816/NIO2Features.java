@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class NIO2Features {
     public void comparePathObjects() throws IOException {
@@ -50,7 +52,28 @@ public class NIO2Features {
         return root;
     }
 
-    public static void main(String[] args) {
-        System.out.println(getRoot());
+    public static void readCsvContent() throws IOException {
+        String file = "/tmp/food.csv";
+        var path = Path.of(file);
+        Files.readAllLines(path).stream().flatMap(p -> Stream.of(p.split(",")))
+                .map(q -> q.toUpperCase()).forEach(System.out::println);
+    }
+
+    public static void checkPathIsSame() throws IOException {
+        var p1 = Path.of("/tmp", ".").resolve(Path.of("walking.txt"));
+        var p2 = new File("/tmp/././actions/../walking.txt").toPath();
+
+        System.out.println(Files.isSameFile(p1, p2));
+        System.out.println(p1.equals(p2));
+        System.out.println(p1.normalize().equals(p2.normalize()));
+
+    }
+
+    public static void main(String[] args) throws IOException {
+        Path p1 = Paths.get("/finance/data/reports/daily/pnl.txt");
+        System.out.println(p1.subpath(0, 2));
+
+        String sentence = "Life is a box of chocolates, Forrest. You never know what you're gonna get.";
+
     }
 }
