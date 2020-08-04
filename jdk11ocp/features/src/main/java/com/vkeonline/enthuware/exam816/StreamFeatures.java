@@ -135,17 +135,17 @@ public class StreamFeatures {
 
 
     public static void main(String[] args) {
+        List<StringBuilder> messages = Arrays.asList(new StringBuilder(), new StringBuilder());
+        messages.stream().forEach(s -> s.append("helloworld"));
+        messages.forEach(s -> {
+            s.insert(5, ",");
+            System.out.println(s);
+        });
 
-        List<String> vals = Arrays.asList("a", "b");
-        String join = vals.parallelStream()
-                .reduce("_",
-                        (a, b)->a.concat(b)
-                );
-        System.out.println(join);
+        new Random().doubles(10).forEach(System.out::print);
+        Random r = new Random(); DoubleStream.generate(()->r.nextDouble()).limit(10).forEach(System.out::print);
 
     }
-
-
 }
 
 class Person {
