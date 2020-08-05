@@ -14,7 +14,7 @@ public class StreamFeatures {
 
     public static double computeAverage() {
         var nums = List.of(1, 2, 3, 4).stream();
-        double average = nums.parallel().mapToDouble(i -> i).average().getAsDouble();
+        double average = nums.parallel().mapToDouble(i -> i).average().getAsDouble() ;
         System.out.println(average);
         var nums2 = List.of(1, 2, 3, 4).stream();
         average = nums2.collect(Collectors.averagingInt(i -> i));
@@ -32,14 +32,16 @@ public class StreamFeatures {
 
     public void checkIntStream() {
         Stream<Integer> si = Stream.iterate(1, x -> x++);
-        Optional o = si.filter(x -> x < 5).limit(3).max((x, y) -> x - y);
-        System.out.println(o.get());
+        Optional<Integer> o = si.filter(x -> x < 5).limit(3).max(Comparator.comparingInt(x -> x));
+        if(o.isPresent()) {
+            System.out.println(o.get());
+        }
     }
 
     public void getTenRandomDoubles() {
         new Random().doubles(10).forEach(System.out::print);
         Random r = new Random();
-        DoubleStream.generate(() -> r.nextDouble()).limit(10).forEach(System.out::print);
+        DoubleStream.generate(r::nextDouble).limit(10).forEach(System.out::print);
         DoubleStream rStream = r.doubles().limit(10);
         rStream.forEach(System.out::print);
     }
@@ -69,8 +71,8 @@ public class StreamFeatures {
                 new Course("809", "OCPJP 8")
         );
 
-        var result = cList.stream().filter(c -> c.getName().indexOf("8") > -1)
-                .map(c -> c.getId())
+        var result = cList.stream().filter(c -> c.getName().contains("8"))
+                .map(Course::getId)
                 .collect(Collectors.joining("1Z0-"));
         System.out.println(result);
     }
@@ -88,7 +90,7 @@ public class StreamFeatures {
         List<Integer> l2 = List.of(4, 5, 6);
         List<Integer> l3 = List.of();
 
-        Stream.of(l1, l2, l3).flatMap(x -> x.stream()).map(x -> x + 1).forEach(System.out::println);
+        Stream.of(l1, l2, l3).flatMap(Collection::stream).map(x -> x + 1).forEach(System.out::println);
     }
 
     static void filterWithOptional() {
@@ -133,18 +135,41 @@ public class StreamFeatures {
         System.out.println(b1 + " " + b2);
     }
 
-
-    public static void main(String[] args) {
+    static void streamForEachMethod() {
         List<StringBuilder> messages = Arrays.asList(new StringBuilder(), new StringBuilder());
-        messages.stream().forEach(s -> s.append("helloworld"));
+        messages.forEach(s -> s.append("helloworld"));
         messages.forEach(s -> {
             s.insert(5, ",");
             System.out.println(s);
         });
+    }
+
+    static void doubleStreamGenerator() {
 
         new Random().doubles(10).forEach(System.out::print);
-        Random r = new Random(); DoubleStream.generate(()->r.nextDouble()).limit(10).forEach(System.out::print);
+        Random r = new Random();
+        DoubleStream.generate(r::nextDouble).limit(10).forEach(System.out::print);
 
+    }
+
+    static void printElements(List<String>... la) {
+        for (List<String> l : la) {
+            System.out.println(l);
+        }
+    }
+
+    static void synchronizeList() {
+        ArrayList<Integer> source = new ArrayList<>();
+        source.addAll(Arrays.asList(1, 2, 3, 4, 5, 6));
+        List<Integer> destination = Collections.synchronizedList(new ArrayList<>());
+        source.stream().peek(destination::add).forEachOrdered(System.out::print);
+        System.out.println();
+        destination.stream().forEach(System.out::print);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        printElements();
     }
 }
 
@@ -167,7 +192,7 @@ class Person {
                 new Person("Bob", 31),
                 new Person("Paul", 32),
                 new Person("John", 33));
-        double averageAge = friends.stream().filter(f -> f.getAge() < 30).mapToInt(f -> f.getAge()).average().getAsDouble();
+        double averageAge = friends.stream().filter(f -> f.getAge() < 30).mapToInt(Person::getAge).average().getAsDouble();
         System.out.println(averageAge);
     }
 }

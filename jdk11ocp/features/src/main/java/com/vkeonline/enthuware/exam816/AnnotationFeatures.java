@@ -40,7 +40,18 @@ public class AnnotationFeatures {
  * @author csgear
  */
 @interface Wind {
-    public static final int temperature = 20 ;
+    int temperature = 20 ;
     int size = 10 ;
     Strong power() default @Strong(force=10) ;
+}
+
+/**
+ * @author tstone10
+ */
+@Target({ElementType.LOCAL_VARIABLE, ElementType.FIELD, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@interface DebugInfo {
+//    String name() default="";
+//    String[][] params();//6
+//    java.util.Date entryTime();
 }

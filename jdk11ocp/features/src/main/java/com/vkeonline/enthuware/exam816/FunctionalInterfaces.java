@@ -1,8 +1,6 @@
 package com.vkeonline.enthuware.exam816;
 
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 class Panda {
     int age;
@@ -15,7 +13,10 @@ class Panda {
     private static void check(Panda panda, Predicate<Panda> pred) {
         String result = pred.test(panda) ? "match" : "not match";
         System.out.println(result);
+
     }
+
+
 }
 
 class MyProcessor {
@@ -54,5 +55,14 @@ public class FunctionalInterfaces {
         Function<Integer, MyProcessor> f = MyProcessor::new;
         MyProcessor mp2 = f.apply(10);
         mp2.process();
+
+        IntFunction<IntUnaryOperator> fo = a -> b -> a - b;
+        int x = operate(fo.apply(20));
+        System.out.println(x);
+    }
+
+
+    public static int operate(IntUnaryOperator iuo) {
+        return iuo.applyAsInt(5);
     }
 }
