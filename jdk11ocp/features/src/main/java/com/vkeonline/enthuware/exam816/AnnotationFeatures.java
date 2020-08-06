@@ -5,6 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * @author csgear
+ */
+public class AnnotationFeatures {
+    public void printAnnotations() {
+    }
+}
+
+
+/**
  * 1) how to define an annotation, which is @interface
  * 1.1) primitive type, enum type can be used inside of annotation
  * 1.2) can provide default value
@@ -16,42 +25,4 @@ import java.util.Map;
  * 3.2) pre-defined annotations, @Deprecated, @Override , @SuppressWarning
  * 4) Repeatable annotations
  */
-public class AnnotationFeatures {
-    public void printAnnotations() {
-    }
-}
 
-/**
- * @author csgear
- */
-@interface Exercise {
-    int hoursPerDay() ;
-    int startHour() default 6 ;
-}
-
-/**
- * @author csgear
- */
-@interface Strong {
-    int force() ;
-}
-
-/**
- * @author csgear
- */
-@interface Wind {
-    int temperature = 20 ;
-    int size = 10 ;
-    Strong power() default @Strong(force=10) ;
-}
-
-/**
- * @author tstone10
- */
-@Target({ElementType.LOCAL_VARIABLE, ElementType.FIELD, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-@interface DebugInfo {
-//    String name() default="";
-//    String[][] params();//6
-//    java.util.Date entryTime();
-}
