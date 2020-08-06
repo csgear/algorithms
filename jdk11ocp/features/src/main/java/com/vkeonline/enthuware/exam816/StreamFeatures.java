@@ -1,5 +1,6 @@
 package com.vkeonline.enthuware.exam816;
 
+import java.io.*;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -14,7 +15,7 @@ public class StreamFeatures {
 
     public static double computeAverage() {
         var nums = List.of(1, 2, 3, 4).stream();
-        double average = nums.parallel().mapToDouble(i -> i).average().getAsDouble() ;
+        double average = nums.parallel().mapToDouble(i -> i).average().getAsDouble();
         System.out.println(average);
         var nums2 = List.of(1, 2, 3, 4).stream();
         average = nums2.collect(Collectors.averagingInt(i -> i));
@@ -33,7 +34,7 @@ public class StreamFeatures {
     public void checkIntStream() {
         Stream<Integer> si = Stream.iterate(1, x -> x++);
         Optional<Integer> o = si.filter(x -> x < 5).limit(3).max(Comparator.comparingInt(x -> x));
-        if(o.isPresent()) {
+        if (o.isPresent()) {
             System.out.println(o.get());
         }
     }
@@ -145,18 +146,11 @@ public class StreamFeatures {
     }
 
     static void doubleStreamGenerator() {
-
         new Random().doubles(10).forEach(System.out::print);
         Random r = new Random();
         DoubleStream.generate(r::nextDouble).limit(10).forEach(System.out::print);
-
     }
 
-    static void printElements(List<String>... la) {
-        for (List<String> l : la) {
-            System.out.println(l);
-        }
-    }
 
     static void synchronizeList() {
         ArrayList<Integer> source = new ArrayList<>();
@@ -168,31 +162,48 @@ public class StreamFeatures {
         System.out.println();
     }
 
-    public static void main(String[] args) {
-        printElements();
-    }
-}
 
-class Person {
-    private String name;
+    static class Person {
+        private String name;
 
-    public int getAge() {
-        return age;
-    }
+        public int getAge() {
+            return age;
+        }
 
-    private int age;
+        private int age;
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
     }
 
-    public static void main(String[] args) {
+    static void computePersonAverage() {
         List<Person> friends = Arrays.asList(
                 new Person("Bob", 31),
                 new Person("Paul", 32),
                 new Person("John", 33));
-        double averageAge = friends.stream().filter(f -> f.getAge() < 30).mapToInt(Person::getAge).average().getAsDouble();
+        double averageAge = friends
+                .stream()
+                .filter(f -> f.getAge() < 30)
+                .mapToInt(Person::getAge).average()
+                .getAsDouble();
         System.out.println(averageAge);
+    }
+
+    static void printElements(List<String>... la) {
+        for (List<String> l : la) {
+            System.out.println(l);
+        }
+    }
+
+    public void testCodota() throws IOException {
+        try(InputStream in = new FileInputStream("/tmp/hello")){
+            BufferedReader bf = new BufferedReader(new InputStreamReader(in));
+        }
+    }
+
+    public static void main(String[] args) {
+        printElements();
     }
 }
