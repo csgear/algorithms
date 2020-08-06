@@ -197,13 +197,19 @@ public class StreamFeatures {
         }
     }
 
-    public void testCodota() throws IOException {
-        try(InputStream in = new FileInputStream("/tmp/hello")){
+    static void joiningWithMoreThanOne() {
+        Stream<String> ss = Stream.of("a", "b", "c");
+        String str = ss.collect(Collectors.joining(",", "-", "+"));
+        System.out.println(str);
+    }
+
+    void testCodota() throws IOException {
+        try (InputStream in = new FileInputStream("/tmp/hello")) {
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
         }
     }
 
     public static void main(String[] args) {
-        printElements();
+        joiningWithMoreThanOne() ;
     }
 }

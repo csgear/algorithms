@@ -2,6 +2,7 @@ package com.vkeonline.enthuware.exam816;
 
 import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
@@ -16,7 +17,12 @@ public class LocalizationFeatures {
 
     }
 
-    public static void main(String[] args) {
+    static void dateFormatWithShortMonthName() {
+        DateTimeFormatter sdf = DateTimeFormatter.ofPattern("MM/YY");
+        System.out.println(sdf.format(LocalDateTime.now()));
+    }
+
+    static void dateTimeFormatWithInsertedText() {
         LocalDate d = LocalDate.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("eeee d'st day of' MMMM yyyy");
         String s = dtf.format(d);
@@ -24,5 +30,10 @@ public class LocalizationFeatures {
 
         DateTimeFormatter df = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
         System.out.println(df.format(d));
+    }
+    public static void main(String[] args) {
+        dateFormatWithShortMonthName() ;
+        StringBuilder sb = new StringBuilder("abcde");
+
     }
 }

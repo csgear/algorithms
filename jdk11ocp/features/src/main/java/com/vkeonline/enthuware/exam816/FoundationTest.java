@@ -1,13 +1,12 @@
 package com.vkeonline.enthuware.exam816;
 
-import java.io.IOException;
 
 /**
  * @author csgear
  */
 public class FoundationTest {
     static class Device implements AutoCloseable {
-        boolean open = false;
+        boolean open ;
         int index;
 
         public Device(int index) {
@@ -15,7 +14,7 @@ public class FoundationTest {
             open = true;
         }
 
-        public void write() throws IOException {
+        public void write()  {
             throw new RuntimeException("Can't write!");
         }
 
@@ -25,19 +24,37 @@ public class FoundationTest {
             System.out.println("Device closed " + index);
         }
 
+        static class SpecialPicker<K> {
+            public K pickOne(K k1, K k2) {
+                return k1.hashCode() > k2.hashCode() ? k1 : k2;
+            }
+        }
+
         public static void main(String[] args) {
             Device d1 = new Device(1);
-            try (d1; Device d2 = new Device(2); Device d3 = new Device(3)) {
+            try (d1; Device d2 = new Device(2) ) {
                 d2.write();
-                d1.close();
             } catch (Exception e) {
                 System.out.println("Got Exception " + e.getMessage());
             }
 
-
+            SpecialPicker<Integer> specialPicker = new SpecialPicker<>();
+            System.out.println(specialPicker.pickOne(1, 2) + 1);
         }
     }
 
 }
 
+interface Eatable {
+    int types = 10;
+}
 
+class Food implements Eatable {
+    public static int types = 20;
+}
+
+class Fruit extends Food implements Eatable {
+    public static void main(String[] args) {
+
+    }
+}

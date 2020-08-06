@@ -7,8 +7,15 @@ import java.util.*;
  */
 public class GenericsFeature {
     public static void main(String[] args) {
-        wildcardTest();
-        checkCollectionApis();
+        sortWithNullFunctions();
+        checkTParameter() ;
+        var numA = new Integer[]{1, 2};
+        var list1 = new ArrayList<Integer>(List.of(numA));
+        list1.add(null);
+        var list2 = Collections.unmodifiableList(list1);
+        list1.set(2, 3);
+        List<List<Integer>> list3 = List.of(list1, list2);
+        System.out.println(list3);
     }
 
     static void wildcardTest() {
@@ -24,6 +31,13 @@ public class GenericsFeature {
         ls.stream().map(a -> a * 2).forEach(System.out::print);
     }
 
+    static void sortWithNullFunctions() {
+        String[] sa = {"charlie", "bob", "andy", "dave"};
+        Collections.sort(Arrays.asList(sa), null);
+        Arrays.asList(sa).sort(null);
+        System.out.println(sa[0]);
+    }
+
     static void checkCollectionApis() {
         Deque<Integer> d = new ArrayDeque<>();
         d.add(1);
@@ -34,7 +48,20 @@ public class GenericsFeature {
         System.out.println(d);
     }
 
+    static void checkTParameter() {
+        MyGenericClass gc = new MyGenericClass();
+        System.out.println(gc.transform(1));
+        System.out.println(gc.transform("hello"));
+        MyGenericClass<String> gcStr = new MyGenericClass<String>();
+        System.out.println(gcStr.transform(1.1));
+    }
 
+}
+
+class MyGenericClass<T> {
+    public <T> String transform(T t) {
+        return t.toString() + "-" + t.hashCode();
+    }
 }
 
 class PlaceHolder<K, V> {
@@ -56,7 +83,7 @@ class PlaceHolder<K, V> {
 
     public static void main(String[] args) {
         PlaceHolder<String, String> ph1 = PlaceHolder.getDuplicateHolder("b");
-//        PlaceHolder<String, String> ph2 = PlaceHolder < String >.getDuplicateHolder("b"); //2
+        PlaceHolder<String, String> ph2 = PlaceHolder.<String>getDuplicateHolder("b");
 //        PlaceHolder<String, String> ph3 = PlaceHolder <>.getDuplicateHolder("b"); //3
 //        PlaceHolder<> ph4 = new PlaceHolder<String, String>("a", "b"); //4
         PlaceHolder<?, ?> ph5 = new PlaceHolder(10, 10);
