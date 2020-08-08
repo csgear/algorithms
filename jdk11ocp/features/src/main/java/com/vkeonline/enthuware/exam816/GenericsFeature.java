@@ -8,14 +8,9 @@ import java.util.*;
 public class GenericsFeature {
     public static void main(String[] args) {
         sortWithNullFunctions();
-        checkTParameter() ;
-        var numA = new Integer[]{1, 2};
-        var list1 = new ArrayList<Integer>(List.of(numA));
-        list1.add(null);
-        var list2 = Collections.unmodifiableList(list1);
-        list1.set(2, 3);
-        List<List<Integer>> list3 = List.of(list1, list2);
-        System.out.println(list3);
+        checkTypeParameter() ;
+        wildcardTest();
+        checkGenericList() ;
     }
 
     static void wildcardTest() {
@@ -26,10 +21,17 @@ public class GenericsFeature {
         System.out.println(l2.get(0));
     }
 
+    static void checkGenericList() {
+        String[] p = {"1", "2", "3" };
+        List<?> list2 = new ArrayList<>(Arrays.asList(p));
+        list2.stream().forEach(System.out::println);
+    }
+
     static void streamOpOnClosed() {
         List<Integer> ls = Arrays.asList(1, 2, 3);
         ls.stream().map(a -> a * 2).forEach(System.out::print);
     }
+
 
     static void sortWithNullFunctions() {
         String[] sa = {"charlie", "bob", "andy", "dave"};
@@ -48,7 +50,8 @@ public class GenericsFeature {
         System.out.println(d);
     }
 
-    static void checkTParameter() {
+
+    static void checkTypeParameter() {
         MyGenericClass gc = new MyGenericClass();
         System.out.println(gc.transform(1));
         System.out.println(gc.transform("hello"));

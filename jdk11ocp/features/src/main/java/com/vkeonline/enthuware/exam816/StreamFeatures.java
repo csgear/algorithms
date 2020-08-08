@@ -3,10 +3,8 @@ package com.vkeonline.enthuware.exam816;
 import java.io.*;
 import java.util.*;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
+import java.util.function.Supplier;
+import java.util.stream.*;
 
 /**
  * @author csgear
@@ -209,7 +207,28 @@ public class StreamFeatures {
         }
     }
 
+    static void computerAverage() {
+        var nums = List.of(1, 2, 3, 4) ;
+        System.out.println(nums.stream().mapToDouble(x-> x).average());
+        System.out.println(nums.stream().collect(Collectors.averagingInt(x -> x)));
+
+    }
+
+    static void supplierWithNull() {
+        Supplier s = () -> null ;
+
+        System.out.println(s.get());
+    }
+
+    static void contactUsingStream() {
+        List<String> letters = List.of("j", "a", "v", "a") ;
+        System.out.println(letters.stream().reduce("", (a,b) -> a + b));
+        System.out.println(letters.stream().collect(Collectors.joining()));
+    }
     public static void main(String[] args) {
         joiningWithMoreThanOne() ;
+        computeAverage() ;
+        supplierWithNull();
+        contactUsingStream();
     }
 }

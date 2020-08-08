@@ -1,10 +1,12 @@
 package com.vkeonline.enthuware.exam816;
 
-import java.text.DateFormat;
+import java.text.Format;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Locale;
 
 public class LocalizationFeatures {
     // Note:
@@ -31,9 +33,23 @@ public class LocalizationFeatures {
         DateTimeFormatter df = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
         System.out.println(df.format(d));
     }
+
+    static void formatNumberWithJPNLocale() {
+        double amount = 5000.05;
+        Locale jp = new Locale("jp", "JP");
+        NumberFormat formatter = NumberFormat.getInstance(jp);
+        System.out.println(formatter.format(amount));
+        Format formatter2 = NumberFormat.getCurrencyInstance(jp) ;
+        System.out.println(formatter2.format(amount));
+    }
+
     public static void main(String[] args) {
-        dateFormatWithShortMonthName() ;
+        dateFormatWithShortMonthName();
         StringBuilder sb = new StringBuilder("abcde");
 
+        Locale.setDefault(Locale.US);
+        Locale.setDefault(Locale.Category.FORMAT, Locale.CANADA);
+
+        formatNumberWithJPNLocale();
     }
 }

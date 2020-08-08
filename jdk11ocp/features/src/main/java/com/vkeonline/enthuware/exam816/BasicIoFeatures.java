@@ -45,11 +45,44 @@ public class BasicIoFeatures {
         }
     }
 
+    static void readAndWriteBytes() {
+        final String fileName = "/tmp/data.bin";
+        String s = "hello";
+        byte i = 100;
 
-    void outputText(PrintWriter pw, String text) {
+        try {
+            FileOutputStream fos = new FileOutputStream(fileName);
+            DataOutputStream dos = new DataOutputStream(fos);
+            dos.writeByte(i);
+            dos.writeUTF(s);
+            dos.flush();
+            dos.close();
+            fos.close();
+            DataInputStream dis = new DataInputStream(new FileInputStream(fileName));
+            i = dis.readByte();
+            s = dis.readUTF();
+            System.out.println(i + " " + s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    static void outputText(PrintWriter pw, String text) {
         pw.write(text);
         if (pw.checkError()) {
             System.out.println("exception in writing");
+        }
+    }
+
+    public static void main(String[] args) {
+        readAndWriteBytes();
+        try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
+            System.out.println("Enter Number:");
+            String s = bfr.readLine();
+            System.out.println("Your Number is : " + s);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
