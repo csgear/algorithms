@@ -1,5 +1,6 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam816.StreamFeatures;
 import org.junit.jupiter.api.Test;
 
 class StreamFeaturesTest {
@@ -7,7 +8,7 @@ class StreamFeaturesTest {
 
     @Test
     void testComputeAverage() {
-        sf.computeAverage() ;
+        StreamFeatures.computeAverage() ;
     }
 
     @Test

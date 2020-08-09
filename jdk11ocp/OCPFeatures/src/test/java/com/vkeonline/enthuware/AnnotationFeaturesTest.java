@@ -1,8 +1,7 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam816.AnnotationFeatures;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AnnotationFeaturesTest {
     static AnnotationFeatures af = new AnnotationFeatures() ;
@@ -14,6 +13,6 @@ class AnnotationFeaturesTest {
 
     @Test
     void checkTypeAnnotation() {
-        af.checkTypeAnnotation();
+
     }
 }

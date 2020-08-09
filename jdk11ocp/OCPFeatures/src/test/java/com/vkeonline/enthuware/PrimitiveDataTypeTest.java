@@ -1,8 +1,7 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam815.PrimitiveDataType;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PrimitiveDataTypeTest {
     static PrimitiveDataType pdt = new PrimitiveDataType() ;

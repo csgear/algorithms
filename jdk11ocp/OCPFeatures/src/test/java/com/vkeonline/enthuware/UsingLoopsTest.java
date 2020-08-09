@@ -1,5 +1,6 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam815.UsingSwitchsAndLoops;
 import org.junit.jupiter.api.Test;
 
 class UsingLoopsTest {

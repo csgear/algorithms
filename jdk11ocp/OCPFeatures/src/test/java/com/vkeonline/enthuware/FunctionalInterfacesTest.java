@@ -1,8 +1,7 @@
 package com.vkeonline.enthuware;
 
+import com.vkeonline.enthuware.exam816.FunctionalInterfaces;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FunctionalInterfacesTest {
     static FunctionalInterfaces fi = new FunctionalInterfaces() ;
