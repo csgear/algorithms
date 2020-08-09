@@ -7,7 +7,21 @@ import java.util.*;
  */
 public class CollectionFeatures {
     public static void main(String[] args) {
-        listOfAndCopyOf();
+        String[] arrays = new String[] {"a", "b", "c"} ;
+        List<String> list1 = Arrays.asList(arrays) ;
+        List<String> list2 = List.of(arrays) ;
+        List<String> list3 = List.copyOf(list2) ;
+        System.out.println("list 1 " + list1);
+        System.out.println("list2 " + list2);
+        System.out.println("list3 " + list3);
+        list1.set(0, "Hello") ;
+        System.out.println(list1);
+        Arrays.stream(arrays).forEach(System.out::print);
+        System.out.println();
+        arrays[0] = "World" ;
+        System.out.println(list1);
+        System.out.println(list2);
+
     }
 
     static void subSetFunction() {
