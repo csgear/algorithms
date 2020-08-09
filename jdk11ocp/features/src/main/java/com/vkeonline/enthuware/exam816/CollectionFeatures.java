@@ -49,7 +49,7 @@ public class CollectionFeatures {
         // the elements of immutable list can be changed
         var numA = new Integer[]{1, 2};
         var list1 = List.of(numA);
-        numA[0] = 2;
+        numA[0] = Integer.valueOf(0);
         var list2 = List.copyOf(list1);
         System.out.println(list1 + " " + list2);
 
