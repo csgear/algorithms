@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.TreeNode;
+
 public class _235 {
     class Solution {
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

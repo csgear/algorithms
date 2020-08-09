@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.ListNode;
+
 public class _160 {
     public class Solution {
         public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

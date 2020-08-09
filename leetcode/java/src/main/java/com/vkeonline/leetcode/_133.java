@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.GraphNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

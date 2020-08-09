@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

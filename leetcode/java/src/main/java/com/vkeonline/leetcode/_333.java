@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.TreeNode;
+
 public class _333 {
     public class Solution1 {
         class ExtraInfoNode {

@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode;
 
+import com.vkeonline.leetcode.common.ListNode;
+
 public class _019 {
     class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
