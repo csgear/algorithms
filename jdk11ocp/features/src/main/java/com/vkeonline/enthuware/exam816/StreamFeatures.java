@@ -76,12 +76,15 @@ public class StreamFeatures {
         System.out.println(result);
     }
 
+
     static void groupOnStream() {
         List<String> names = Arrays.asList("greg", "dave", "don", "ed", "fred");
         Map<Integer, Long> data = names.stream().collect(Collectors.groupingBy(
                 String::length,
                 Collectors.counting()));
         System.out.println(data.values());
+
+
     }
 
     static void flatMapOutput() {
@@ -195,6 +198,15 @@ public class StreamFeatures {
         }
     }
 
+    static void checkWhatAllMatchReturns() {
+        List<String> values = Arrays.asList("Java EE", "C#", "Python");
+        boolean flag = values.stream().allMatch(str -> {
+            System.out.println("Testing: " + str);
+            return str.equals("Java");
+        });
+        System.out.println(flag);
+    }
+
     static void joiningWithMoreThanOne() {
         Stream<String> ss = Stream.of("a", "b", "c");
         String str = ss.collect(Collectors.joining(",", "-", "+"));
@@ -208,27 +220,111 @@ public class StreamFeatures {
     }
 
     static void computerAverage() {
-        var nums = List.of(1, 2, 3, 4) ;
-        System.out.println(nums.stream().mapToDouble(x-> x).average());
+        var nums = List.of(1, 2, 3, 4);
+        System.out.println(nums.stream().mapToDouble(x -> x).average());
         System.out.println(nums.stream().collect(Collectors.averagingInt(x -> x)));
 
     }
 
     static void supplierWithNull() {
-        Supplier s = () -> null ;
+        Supplier s = () -> null;
 
         System.out.println(s.get());
     }
 
     static void contactUsingStream() {
-        List<String> letters = List.of("j", "a", "v", "a") ;
-        System.out.println(letters.stream().reduce("", (a,b) -> a + b));
+        List<String> letters = List.of("j", "a", "v", "a");
+        System.out.println(letters.stream().reduce("", (a, b) -> a + b));
         System.out.println(letters.stream().collect(Collectors.joining()));
     }
+
     public static void main(String[] args) {
-        joiningWithMoreThanOne() ;
-        computeAverage() ;
+        joiningWithMoreThanOne();
+        computeAverage();
         supplierWithNull();
         contactUsingStream();
+        checkWhatAllMatchReturns();
+        primitiveStreamContact();
+        IntStream is1 = IntStream.range(0, 5);
+        OptionalDouble x = is1.average();
+        System.out.println(x);
+
+        List<String> names = Arrays.asList("charles", "chuk", "cynthia", "cho", "cici");
+        Long cnt = names.stream().filter(name -> name.length() > 4).collect(Collectors.counting());
+        System.out.println(cnt);
+        int setSize = names.stream().collect(Collectors.toSet()).size();
+        names.stream().distinct().count();
+    }
+
+    static void primitiveStreamContact() {
+        IntStream is1 = IntStream.range(1, 3);
+        IntStream is2 = IntStream.rangeClosed(1, 3);
+        IntStream is3 = IntStream.concat(is1, is2);
+        Object val = is3.boxed().collect(Collectors.groupingBy(k -> k));
+        System.out.println(val);
     }
 }
+
+class StudentSteam {
+    public static enum Grade {A, B, C, D, F}
+
+    private String name;
+    private Grade grade;
+
+    public StudentSteam(String name, Grade grade) {
+        this.name = name;
+        this.grade = grade;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Grade getGrade() {
+        return grade;
+    }
+
+    @Override
+    public String toString() {
+        return name + ":" + grade;
+    }
+
+    public static void main(String[] args) {
+        List<StudentSteam> ls = Arrays.asList(new StudentSteam("S1", StudentSteam.Grade.A),
+                new StudentSteam("S2", StudentSteam.Grade.A),
+                new StudentSteam("S3", StudentSteam.Grade.C));
+        var grouping = ls.stream().
+                collect(Collectors.groupingBy(x -> x.getGrade(),
+                        Collectors.mapping(StudentSteam::getName, Collectors.toList())));
+        System.out.println(grouping);
+
+        Stream<Integer> strm1 = Stream.of(2, 3, 5, 7, 11, 13);
+        double av = strm1.filter(x -> {
+            if (x > 10) {
+                return true;
+            } else {
+                return false;
+            }
+        }).peek(System.out::println).collect(Collectors.averagingInt(y->y));
+
+        System.out.println(av);
+    }
+}
+
+class MySteamProcessor {
+    Integer value;
+
+    public MySteamProcessor(Integer value) {
+        this.value = value;
+    }
+
+    public void process() {
+        System.out.println(value + " ");
+    }
+
+    public static void main(String[] args) {
+        List<Integer> ls = Arrays.asList(1, 2, 3);
+        ls.stream().map(x -> new MySteamProcessor(x)).forEach(MySteamProcessor::process);
+    }
+}
+
