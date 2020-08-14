@@ -3,7 +3,7 @@ package com.vkeonline.enthuware.exam816;
 import java.text.DateFormat;
 import java.text.Format;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -66,13 +66,23 @@ public class LocalizationFeatures {
         Locale l = Locale.getDefault();
         DateFormat df = DateFormat.getDateInstance();
         System.out.println(l.getCountry() + " " + df.format(dt));
+
+
     }
 }
 
 class Formatter {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         LocalDate d = LocalDate.now();
-        DateFormat df = DateFormat.getDateInstance(DateFormat.LONG) ;
+        DateFormat df = DateFormat.getDateInstance(DateFormat.LONG);
         System.out.println(df.format(d));
+
+        double amount = 123456.789;
+        Locale fr = new Locale("fr", "FR");
+        NumberFormat formatter = NumberFormat.getInstance(fr);
+        String s = formatter.format(amount);
+        formatter = NumberFormat.getInstance();
+        Number amount2 = formatter.parse(s);
+        System.out.println(amount + " " + amount2);
     }
 }

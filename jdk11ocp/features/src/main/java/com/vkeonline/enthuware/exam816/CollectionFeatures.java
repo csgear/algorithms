@@ -9,6 +9,19 @@ import java.util.stream.Collectors;
  */
 public class CollectionFeatures {
     public static void main(String[] args) {
+        TreeSet<Integer> s = new TreeSet<>();
+        TreeSet<Integer> subs = new TreeSet<>();
+        for (int i = 324; i <= 328; i++) {
+            s.add(i);
+        }
+        subs = (TreeSet) s.subSet(326, true, 328, true);
+        subs.add(329);
+        System.out.println(s + " " + subs);
+        HashMap<?, List<String>> box = new HashMap<String, List<String>>(10);
+
+    }
+
+    static void checkOfAndCopyOf() {
         String[] arrays = new String[]{"a", "b", "c"};
         List<String> list1 = Arrays.asList(arrays);
         List<String> list2 = List.of(arrays);
@@ -23,16 +36,6 @@ public class CollectionFeatures {
         arrays[0] = "World";
         System.out.println(list1);
         System.out.println(list2);
-
-        List<Integer> names = Arrays.asList(1, 2, 3);
-        names.stream().forEach(x -> x = x + 1);
-        names.stream().forEach(System.out::print);
-
-        checkHowToChangeListElements();
-        checkOptionalWithNull();
-
-        HashMap<?, List<String>> box = new HashMap<String, List<String>>(10);
-        
     }
 
     static void checkHowToChangeListElements() {

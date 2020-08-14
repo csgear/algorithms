@@ -66,3 +66,6 @@ public class FunctionalInterfaces {
         return iuo.applyAsInt(5);
     }
 }
+
+
+

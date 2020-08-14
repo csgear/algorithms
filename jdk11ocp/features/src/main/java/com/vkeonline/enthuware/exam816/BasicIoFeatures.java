@@ -1,6 +1,8 @@
 package com.vkeonline.enthuware.exam816;
 
 import java.io.*;
+import java.nio.file.AccessDeniedException;
+import java.nio.file.NoSuchFileException;
 
 
 /**
@@ -32,6 +34,15 @@ public class BasicIoFeatures {
         is.close();
         System.out.println(boo.ti + " " + Boo.si);
 
+    }
+
+    static void checkIfAFileWillBeCreated() {
+        File file;
+        try (FileWriter fw = new FileWriter("/tmp/test1.txt");) {
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void processLines(File f) throws IOException {
@@ -80,9 +91,22 @@ public class BasicIoFeatures {
         System.out.println("Pwd is " + new String(line));
     }
 
+    static void checkRAFWriteUTF() {
+        try (RandomAccessFile raf = new RandomAccessFile("/tmp/test.txt", "rwd")) {
+            raf.writeUTF("hello world");
+            DataInputStream dis = new DataInputStream(new FileInputStream("/tmp/test.txt"));
+            byte[] data = new byte[1024];
+            if (dis.read(data) != -1) {
+                System.out.print(data);
+            }
+            dis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
-        consoleTest();
+        checkIfAFileWillBeCreated();
     }
 }
 
@@ -102,17 +126,6 @@ class FileCopier {
 
     public static void main(String[] args) {
 
-        try (RandomAccessFile raf = new RandomAccessFile("/tmp/test.txt", "rwd")) {
-            raf.writeUTF("hello world");
-            DataInputStream dis = new DataInputStream(new FileInputStream("/tmp/test.txt"));
-            byte[] data = new byte[1024];
-            if (dis.read(data) != -1) {
-                System.out.print(data);
-            }
-            dis.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 }
