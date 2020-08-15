@@ -9,15 +9,57 @@ import java.util.stream.Collectors;
  */
 public class CollectionFeatures {
     public static void main(String[] args) {
-        TreeSet<Integer> s = new TreeSet<>();
-        TreeSet<Integer> subs = new TreeSet<>();
-        for (int i = 324; i <= 328; i++) {
-            s.add(i);
+        List<Integer> list = List.of(1,2,3,4,5,6,7) ;
+        double ave1 = list.stream().mapToDouble(x->x).average().getAsDouble() ;
+        double ave2 = list.stream().collect(Collectors.averagingDouble(x->x)) ;
+        System.out.println(ave1 + " " + ave2) ;
+    }
+
+    static class Customer {
+        String name ;
+        List<Book> books ;
+
+        public Customer(String name, List<Book> books) {
+            this.name = name;
+            this.books = books;
         }
-        subs = (TreeSet) s.subSet(326, true, 328, true);
-        subs.add(329);
-        System.out.println(s + " " + subs);
-        HashMap<?, List<String>> box = new HashMap<String, List<String>>(10);
+
+        public List<Book> getBooks() {
+            return books;
+        }
+
+        public String getName() {
+            return name;
+        }
+    } ;
+
+    static class Book {
+        String title ;
+        double price ;
+
+        public Book(String title, double price) {
+            this.title = title;
+            this.price = price;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public double getPrice() {
+            return price;
+        }
+    }
+    static void calculatorSumByCustomer() {
+        List<Book> books1 = List.of(new Book("book1", 100),
+                new Book("book2", 200)) ;
+
+        List<Book> books2 = List.of(new Book("book1", 100),
+                new Book("book2", 200),
+                new Book("book3", 300)) ;
+
+        List<Customer> customers = List.of(new Customer("cust1", books1),
+                new Customer("cust2", books2)) ;
 
     }
 
