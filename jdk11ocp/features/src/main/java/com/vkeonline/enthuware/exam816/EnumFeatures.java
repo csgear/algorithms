@@ -61,7 +61,10 @@ public class EnumFeatures {
     }
 
     public static void main(String[] args) {
+        for(var c: Coffee.values()) {
+            System.out.print( c+ " " + c.name()) ;
 
+        }
     }
 
 
