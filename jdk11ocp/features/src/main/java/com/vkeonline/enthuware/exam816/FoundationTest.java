@@ -59,16 +59,41 @@ public class FoundationTest {
     }
 }
 
-interface Eatable {
-    int types = 10;
-}
 
-class Food implements Eatable {
-    public static int types = 20;
-}
+class OptionalClass {
+    public static Optional<String> getGrade(int marks) {
+        Optional<String> grade = Optional.empty();
+        if (marks > 50) {
+            grade = Optional.of("PASS");
+        } else {
+            Optional.of("FAIL");
+        }
+        return grade;
+    }
 
-class Fruit extends Food implements Eatable {
     public static void main(String[] args) {
-
+        Optional<String> grade1 = getGrade(50);
+        Optional<String> grade2 = getGrade(55);
+        System.out.println(grade1.orElse("UNKNOWN"));
+        if (grade2.isPresent()) {
+            grade2.ifPresent(System.out::println);
+        } else {
+            System.out.println(grade2.orElse("Empty"));
+        }
     }
 }
+
+class Outer {
+    int i = 10;
+
+    /**
+     * access outer class variable
+     */
+    class Inner {
+        public void methodA() {
+            System.out.println(i);
+            System.out.println(Outer.this.i);
+        }
+    }
+}
+

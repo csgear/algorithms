@@ -1,6 +1,8 @@
 package com.vkeonline.enthuware.exam816;
 
 import java.io.*;
+import java.nio.file.AccessDeniedException;
+import java.nio.file.NoSuchFileException;
 
 
 /**
@@ -16,8 +18,6 @@ public class BasicIoFeatures {
      * 1) the transient and static variable is not serializable
      * 2) Constructors of unserializable classes are called. But for serializable classes, their data members are set directly
      * from the values presented in serialized data
-     *
-     * @throws Exception
      */
     public void checkFileStream() throws Exception {
         Boo boo = new BasicIoFeatures.Boo();
@@ -36,10 +36,19 @@ public class BasicIoFeatures {
 
     }
 
+    static void checkIfAFileWillBeCreated() {
+        File file;
+        try (FileWriter fw = new FileWriter("/tmp/test1.txt");) {
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void processLines(File f) throws IOException {
         FileReader fr = new FileReader(f);
         BufferedReader bfr = new BufferedReader(fr);
-        String s = null;
+        String s;
         while ((s = bfr.readLine()) != null) {
             System.out.println(s);
         }
@@ -75,14 +84,95 @@ public class BasicIoFeatures {
         }
     }
 
-    public static void main(String[] args) {
-        readAndWriteBytes();
-        try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
-            System.out.println("Enter Number:");
-            String s = bfr.readLine();
-            System.out.println("Your Number is : " + s);
-        } catch (Exception e) {
+
+    public static void consoleTest() {
+        Console c = System.console();
+        char[] line = c.readPassword("Please enter your pwd:");
+        System.out.println("Pwd is " + new String(line));
+    }
+
+    static void checkRAFWriteUTF() {
+        try (RandomAccessFile raf = new RandomAccessFile("/tmp/test.txt", "rwd")) {
+            raf.writeUTF("hello world");
+            DataInputStream dis = new DataInputStream(new FileInputStream("/tmp/test.txt"));
+            byte[] data = new byte[1024];
+            if (dis.read(data) != -1) {
+                System.out.print(data);
+            }
+            dis.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        checkIfAFileWillBeCreated();
+    }
+}
+
+class FileCopier {
+    static void copy(String records1, String records2) throws IOException {
+        try (InputStream is = new FileInputStream(records1);
+             OutputStream os = new FileOutputStream(records2)) {
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = is.read(buffer)) != -1) {
+                os.write(buffer, 0, bytesRead);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+
+    }
+
+}
+
+class StudentSerialization implements Serializable {
+    public static final long serialVersionUID = 1;
+//    public String name;
+//    public String grade;
+
+//    @Override
+//    public String toString() {
+//        return "[" + name + ", " + grade + "]";
+//    }
+
+    public String id = "S111";
+    public String name;
+    public String grade;
+    public int age = 15;
+
+    @Override
+    public String toString() {
+        return "[" + id + ", " + name + ", " + grade + ", " + age + "]";
+    }
+
+    static void writeOldStudentObject() {
+        try (FileOutputStream fos = new FileOutputStream("/tmp/student.ser");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            StudentSerialization s = new StudentSerialization();
+            s.name = "bob";
+            s.grade = "10";
+            oos.writeObject(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    static void readNewStudentObject() {
+        try (FileInputStream fis = new FileInputStream("/tmp/student.ser");
+             ObjectInputStream os = new ObjectInputStream(fis)) {
+            StudentSerialization s = (StudentSerialization) os.readObject();
+            System.out.println(s);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        readNewStudentObject();
     }
 }

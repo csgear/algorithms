@@ -7,10 +7,19 @@ import java.util.*;
  */
 public class GenericsFeature {
     public static void main(String[] args) {
-        sortWithNullFunctions();
-        checkTypeParameter() ;
-        wildcardTest();
-        checkGenericList() ;
+
+        rawTypeList();
+    }
+
+    static void rawTypeList() {
+        var data = new ArrayList<>();
+        data.add("A");
+        data.add(100);
+        data.add("C");
+        data.set(0, 200);
+        data.remove(2);
+        data.set(2, 101L);
+        System.out.println(data);
     }
 
     static void wildcardTest() {
@@ -22,7 +31,7 @@ public class GenericsFeature {
     }
 
     static void checkGenericList() {
-        String[] p = {"1", "2", "3" };
+        String[] p = {"1", "2", "3"};
         List<?> list2 = new ArrayList<>(Arrays.asList(p));
         list2.stream().forEach(System.out::println);
     }
@@ -61,6 +70,8 @@ public class GenericsFeature {
 
 }
 
+//
+
 class MyGenericClass<T> {
     public <T> String transform(T t) {
         return t.toString() + "-" + t.hashCode();
@@ -90,5 +101,6 @@ class PlaceHolder<K, V> {
 //        PlaceHolder<String, String> ph3 = PlaceHolder <>.getDuplicateHolder("b"); //3
 //        PlaceHolder<> ph4 = new PlaceHolder<String, String>("a", "b"); //4
         PlaceHolder<?, ?> ph5 = new PlaceHolder(10, 10);
+
     }
 }

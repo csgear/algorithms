@@ -10,16 +10,6 @@ public class EnumFeatures {
         SPADE
     }
 
-    public static void main(String[] args) {
-        System.out.println(WorkingHours.Monday);
-        System.out.println(WorkingHours.valueOf("Monday"));
-        printEnumsNames();
-
-
-        for (Card c : Card.values()) {
-            System.out.print(c + " ");
-        }
-    }
 
     static void printEnumsNames() {
         List.of(Coffee.values()).stream().forEach(e -> {
@@ -32,18 +22,52 @@ public class EnumFeatures {
          * ESPRESSO, MOCHA, LATTE
          */
         ESPRESSO("Very Strong"), MOCHA("Bold"), LATTE("Mild");
-        public String strength;
+        private String strength;
 
         Coffee(String strength) {
             this.strength = strength;
         }
-
 
         @Override
         public String toString() {
             return strength;
         }
     }
+
+    static enum Title {
+        MR("Mr. "), MRS("Mrs. "), MS("Ms. ");
+        private String title;
+
+        Title(String s) {
+            title = s;
+        }
+
+        public String format(String first, String last) {
+            return title + " " + first + " " + last;
+        }
+    }
+
+    static enum Title1 {
+        DR;
+        private Title t = Title.MR;
+        public String format(String s) {
+            return t.format(s, s);
+        }
+    }
+
+    static void someMethod1() {
+        System.out.println(Title.MR.format("Rob", "Miller"));
+
+    }
+
+    public static void main(String[] args) {
+        for(var c: Coffee.values()) {
+            System.out.print( c+ " " + c.name()) ;
+
+        }
+    }
+
+
 }
 
 /**
@@ -52,16 +76,5 @@ public class EnumFeatures {
 enum WorkingHours {
     Monday,
     Tuesday
-}
-
-class Outer {
-    int i = 10;
-
-    class Inner {
-        public void methodA() {
-            System.out.println(i);
-            System.out.println(Outer.this.i);
-        }
-    }
 }
 

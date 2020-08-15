@@ -1,13 +1,58 @@
 package com.vkeonline.enthuware.exam816;
 
 import java.util.*;
+import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
 
 /**
  * @author csgear
  */
 public class CollectionFeatures {
     public static void main(String[] args) {
-        listOfAndCopyOf();
+        TreeSet<Integer> s = new TreeSet<>();
+        TreeSet<Integer> subs = new TreeSet<>();
+        for (int i = 324; i <= 328; i++) {
+            s.add(i);
+        }
+        subs = (TreeSet) s.subSet(326, true, 328, true);
+        subs.add(329);
+        System.out.println(s + " " + subs);
+        HashMap<?, List<String>> box = new HashMap<String, List<String>>(10);
+
+    }
+
+    static void checkOfAndCopyOf() {
+        String[] arrays = new String[]{"a", "b", "c"};
+        List<String> list1 = Arrays.asList(arrays);
+        List<String> list2 = List.of(arrays);
+        List<String> list3 = List.copyOf(list2);
+        System.out.println("list 1 " + list1);
+        System.out.println("list2 " + list2);
+        System.out.println("list3 " + list3);
+        list1.set(0, "Hello");
+        System.out.println(list1);
+        Arrays.stream(arrays).forEach(System.out::print);
+        System.out.println();
+        arrays[0] = "World";
+        System.out.println(list1);
+        System.out.println(list2);
+    }
+
+    static void checkHowToChangeListElements() {
+        List<String> letters = Arrays.asList("j", "a", "v", "a");
+
+        System.out.println(letters.stream().collect(Collectors.joining()).toUpperCase());
+        letters.forEach(letter -> System.out.print(letter.toUpperCase()));
+
+        UnaryOperator<String> uo = str -> str.toUpperCase();
+        letters.replaceAll(uo);
+        letters.forEach(System.out::print);
+    }
+
+    static void checkOptionalWithNull() {
+        List<Integer> list = Arrays.asList(2, 3, 4);
+        double d = list.stream().filter(x -> x < 1).mapToInt(x -> x).average().getAsDouble();
+        System.out.println(d);
     }
 
     static void subSetFunction() {
@@ -61,7 +106,7 @@ public class CollectionFeatures {
         col.add(2);
         var list4 = List.copyOf(col);
         System.out.println("size of list3 : " + list3.size());
-        System.out.println(list3+", "+list4);
+        System.out.println(list3 + ", " + list4);
     }
 
     static void checkPollMethod() {
