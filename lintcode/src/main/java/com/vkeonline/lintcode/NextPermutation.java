@@ -2,6 +2,7 @@ package com.vkeonline.lintcode;
 
 /**
  * LintCode: 52. Next Permutation
+ * @author csgear
  */
 public class NextPermutation {
         private void swap(int[] nums, int i, int j) {
@@ -18,17 +19,23 @@ public class NextPermutation {
             }
         }
 
-        /**
-         * @param nums: A list of integers
-         * @return: A list of integers
-         */
         public int[] nextPermutation(int[] nums) {
             int n = nums.length, k, l;
 
-            for (k = n - 2; k >= 0; k--) if (nums[k] < nums[k + 1]) break;
+            k = n - 2;
+            while (k >= 0) {
+                if (nums[k] < nums[k + 1]) {
+                    break;
+                }
+                k--;
+            }
 
             if (k >= 0) {
-                for (l = n - 1; l > k; l--) if (nums[l] > nums[k]) break;
+                for (l = n - 1; l > k; l--) {
+                    if (nums[l] > nums[k]) {
+                        break;
+                    }
+                }
                 swap(nums, k, l);
             }
             

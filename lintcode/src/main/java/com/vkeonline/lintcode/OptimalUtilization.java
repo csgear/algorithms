@@ -2,6 +2,7 @@ package com.vkeonline.lintcode;
 
 /**
  * LintCode: 1797. optimalUtilization
+ * @author csgear
  */
 public class OptimalUtilization {
 
@@ -15,9 +16,13 @@ public class OptimalUtilization {
         int[] res = new int[2];
 
         while (i < A.length && j >= 0) {
-            if (A[i] + B[j] > K) j--;
+            if (A[i] + B[j] > K) {
+                j--;
+            }
             else {
-                while (j > 0 && B[j] == B[j - 1]) j--;
+                while (j > 0 && B[j] == B[j - 1]) {
+                    j--;
+                }
                 if (A[i] + B[j] > sum) {
                     sum = A[i] + B[j];
                     res = new int[]{i, j};

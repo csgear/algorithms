@@ -5,6 +5,9 @@ import com.vkeonline.lintcode.common.Interval;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author csgear
+ */
 public class MeetingRooms {
     public boolean canAttendMeetings(List<Interval> intervals) {
         if(intervals == null || intervals.size() == 0) return true;

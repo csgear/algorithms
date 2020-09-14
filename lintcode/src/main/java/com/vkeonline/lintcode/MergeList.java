@@ -6,6 +6,7 @@ import java.util.*;
 
 /**
  * Lintcode: 104. Merge K Sorted Lists
+ * @author csgear
  */
 public class MergeList {
 

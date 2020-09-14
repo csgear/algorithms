@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * LintCode: 860. Number of Distinct Islands
+ * @author csgear
  */
 public class NumberDistinctIslands {
     public int numberofDistinctIslands(int[][] grid) {
