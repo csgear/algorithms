@@ -1,9 +1,6 @@
-package com.vkeonline.leetcode.Sept;
+package com.vkeonline.leetcode.sept;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CompareVersionNumbersTest {
     final static CompareVersionNumbers compareVersions = new CompareVersionNumbers() ;

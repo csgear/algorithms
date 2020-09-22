@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.Sept;
+package com.vkeonline.leetcode.sept;
 
 /**
  * @author csgear

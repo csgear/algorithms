@@ -1,9 +1,8 @@
-package com.vkeonline.leetcode.Sept;
+package com.vkeonline.leetcode.sept;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author csgear

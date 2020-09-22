@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.Sept;
+package com.vkeonline.leetcode.sept;
 
 import java.util.ArrayList;
 import java.util.List;
