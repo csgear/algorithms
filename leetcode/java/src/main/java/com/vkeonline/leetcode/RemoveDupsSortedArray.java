@@ -1,6 +1,9 @@
 package com.vkeonline.leetcode;
 
-public class _026 {
+/**
+ * @author csgear
+ */
+public class RemoveDupsSortedArray {
     public class Solution {
         public int removeDuplicates(int[] nums) {
             // write your code here
