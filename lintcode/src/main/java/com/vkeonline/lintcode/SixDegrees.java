@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * LintCode: 531. Six Degrees
+ * @author csgear
  */
 public class SixDegrees {
 
@@ -11,7 +12,9 @@ public class SixDegrees {
                           UndirectedGraphNode s,
                           UndirectedGraphNode t) {
 
-        if (s == t) return 0;
+        if (s == t) {
+            return 0;
+        }
 
         Set<UndirectedGraphNode> visited = new HashSet<>();
         Queue<UndirectedGraphNode> queue = new ArrayDeque<>();

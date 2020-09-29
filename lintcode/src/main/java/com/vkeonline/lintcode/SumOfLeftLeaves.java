@@ -5,7 +5,9 @@ import com.vkeonline.lintcode.common.TreeNode;
 public class SumOfLeftLeaves {
 
     public int sumOfLeftLeaves(TreeNode root) {
-        if(root == null) return 0 ;
+        if(root == null) {
+            return 0 ;
+        }
 
         int sum = 0 ;
 
