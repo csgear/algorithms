@@ -1,4 +1,4 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p1800;
 
 import java.util.*;
 

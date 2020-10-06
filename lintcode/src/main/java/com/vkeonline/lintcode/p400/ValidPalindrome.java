@@ -1,4 +1,4 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p400;
 
 /**
  * @author csgear

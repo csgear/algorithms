@@ -1,6 +1,6 @@
 package com.vkeonline.lintcode.p000;
 
-import com.vkeonline.lintcode.TopKMentionedKeywords;
+import com.vkeonline.lintcode.p1800.TopKMentionedKeywords;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

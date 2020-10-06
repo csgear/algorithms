@@ -1,6 +1,6 @@
 package com.vkeonline.lintcode.p000;
 
-import com.vkeonline.lintcode.TopKElements;
+import com.vkeonline.lintcode.p1200.TopKElements;
 import org.junit.jupiter.api.Test;
 
 class TopKElementsTest {

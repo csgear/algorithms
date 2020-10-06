@@ -1,4 +1,6 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p500;
+
+import com.vkeonline.lintcode.common.UndirectedGraphNode;
 
 import java.util.*;
 
@@ -29,8 +31,12 @@ public class SixDegrees {
             for (int i = 0; i < size; i++) {
                 UndirectedGraphNode current = queue.poll();
                 for (UndirectedGraphNode node : current.neighbors) {
-                    if (node == t) return res;
-                    if (visited.contains(node)) continue;
+                    if (node == t) {
+                        return res;
+                    }
+                    if (visited.contains(node)) {
+                        continue;
+                    }
                     queue.offer(node);
                     visited.add(node);
                 }

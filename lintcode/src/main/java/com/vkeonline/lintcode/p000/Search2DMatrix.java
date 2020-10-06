@@ -1,4 +1,4 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p000;
 
 /**
  * Lintcode: 28. Search a 2D Matrix

@@ -1,6 +1,6 @@
 package com.vkeonline.lintcode.p000;
 
-import com.vkeonline.lintcode.ValidString;
+import com.vkeonline.lintcode.p1800.ValidString;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

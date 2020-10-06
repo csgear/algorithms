@@ -1,4 +1,4 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p1200;
 
 import java.util.*;
 
@@ -15,9 +15,8 @@ public class TopKElements {
             map.put(num, map.getOrDefault(num, 0) + 1) ;
         }
 
-        PriorityQueue<Map.Entry<Integer, Integer>> queue = new PriorityQueue<>((o1, o2) -> {
-            return o1.getValue() - o2.getValue() ;
-        }) ;
+        PriorityQueue<Map.Entry<Integer, Integer>> queue =
+                new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue)) ;
 
         for(Map.Entry<Integer, Integer> entry: map.entrySet()) {
             if(queue.size() < k) {

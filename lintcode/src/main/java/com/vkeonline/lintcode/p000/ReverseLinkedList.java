@@ -1,12 +1,15 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p000;
 
 import com.vkeonline.lintcode.common.ListNode;
 
+/**
+ * lintcode: 35. Reverse Linked List
+ * @author csgear
+ */
 public class ReverseLinkedList {
     public ListNode reverse(ListNode head) {
         ListNode prev = null;
         while (head != null) {
-            //temp记录下一个节点，head是当前节点
             ListNode temp = head.next;
             head.next = prev;
             prev = head;
