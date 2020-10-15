@@ -2,7 +2,10 @@ package com.vkeonline.leetcode;
 
 import java.util.Arrays;
 
-public class _062 {
+/**
+ * @author csgear
+ */
+public class UniquePaths {
     class Solution {
         public int uniquePaths(int m, int n) {
             int[] mat = new int[m];
