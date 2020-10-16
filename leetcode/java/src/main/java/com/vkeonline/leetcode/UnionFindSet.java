@@ -2,22 +2,30 @@ package com.vkeonline.leetcode;
 
 import java.util.*;
 
+/**
+ * @author csgear
+ */
 public class UnionFindSet {
     private int[] parents;
     private int[] ranks;
 
-    UnionFindSet(int n) {
+    public UnionFindSet(int n) {
         parents = new int[n];
         ranks = new int[n];
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) {
             parents[i] = i;
+        }
         Arrays.fill(ranks, 0);
     }
 
-    /*
-    @return true: if merged, false if already in one set
+
+    /**
+     *
+     * @param u
+     * @param v
+     * @return true: if merged, false if already in one set
      */
-    boolean union(int u, int v) {
+    public boolean union(int u, int v) {
         int rootU = find(u);
         int rootV = find(v);
         if (rootU == rootV) return false;
@@ -32,9 +40,11 @@ public class UnionFindSet {
         return true;
     }
 
-    int find(int u) {
+    public int find(int u) {
         if (u != parents[u])
+        {
             parents[u] = find(parents[u]);
+        }
         return parents[u];
     }
 }
