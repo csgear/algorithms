@@ -3,6 +3,9 @@ package com.vkeonline.leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author csgear
+ */
 public class NumUniqueEmails929 {
     public static void main(String[] args) {
         String[] emails = {

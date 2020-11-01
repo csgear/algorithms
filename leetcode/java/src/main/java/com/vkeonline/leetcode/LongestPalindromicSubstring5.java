@@ -1,14 +1,13 @@
 package com.vkeonline.leetcode;
 
+/**
+ * @author csgear
+ */
 public class LongestPalindromicSubstring5 {
-    public static void main(String[] args) {
-        LongestPalindromicSubstring5 longestPalindromicSubstring5 = new LongestPalindromicSubstring5() ;
-        String s = "abccba" ;
-        System.out.println(longestPalindromicSubstring5.longestPalindrome(s));
-    }
-
     public String longestPalindrome(String s) {
-        if(s == null || s.length() == 0) return s ;
+        if(s == null || s.length() == 0) {
+            return s ;
+        }
 
         int n = s.length() ;
 
