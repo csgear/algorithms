@@ -1,10 +1,71 @@
 package com.vkeonline.lintcode.p400;
 
 /**
+ * Lintcode: 460 Find K Closest Elements
+ *
  * @author csgear
  */
 public class KClosestElements {
     public int[] kClosestNumbers(int[] data, int target, int k) {
+        if (data == null || data.length == 0) {
+            return null;
+        }
+
+        int left = binarySearch(data, target);
+        int right = left + 1;
+
+        int[] res = new int[k];
+
+        for (int i = 0; i < k; i++) {
+            if (isLeftCloser(data, target, left, right)) {
+                res[i] = data[left--];
+            } else {
+                res[i] = data[right++];
+            }
+        }
+
+        return res;
+    }
+
+    private boolean isLeftCloser(int[] data, int target, int l, int r) {
+        if (l < 0)
+        {
+            return false;
+        }
+
+        if (r > data.length - 1)
+        {
+            return true;
+        }
+
+        return target - data[l] <= data[r] - target;
+    }
+
+    private int binarySearch(int[] A, int target) {
+        int left = 0;
+        int right = A.length - 1;
+
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+
+            if (A[mid] == target)
+            {
+                return mid;
+            }
+            else if (A[mid] > target)
+            {
+                right = mid;
+            }
+            else
+            {
+                left = mid;
+            }
+        }
+
+        return left;
+    }
+
+    public int[] kClosestNumbers1(int[] data, int target, int k) {
         int[] result = new int[k];
 
         if (data == null || data.length == 0) {
