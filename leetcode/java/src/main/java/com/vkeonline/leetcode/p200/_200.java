@@ -19,7 +19,9 @@ public class _200 {
         }
 
         public int numIslands(char[][] grid) {
-            if (grid == null || grid[0] == null || grid[0].length == 0) return 0;
+            if (grid == null || grid[0] == null || grid[0].length == 0) {
+                return 0;
+            }
 
             int row = grid.length;
             int col = grid[0].length;
