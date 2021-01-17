@@ -1,6 +1,6 @@
 package com.vkeonline.lintcode.p000;
 
-import com.vkeonline.lintcode.ValidParentheses;
+import com.vkeonline.lintcode.p1000.ValidParentheses;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

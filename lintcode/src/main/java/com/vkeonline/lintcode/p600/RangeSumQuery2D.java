@@ -1,4 +1,4 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p600;
 
 /**
  * LintCode: 665. Range Sum Query 2D - Immutable
@@ -8,7 +8,7 @@ public class RangeSumQuery2D {
 
 class NumMatrix {
 
-    private int[][] dp = null;
+    private int[][] dp ;
 
     public NumMatrix(int[][] matrix) {
         int m = matrix.length;
