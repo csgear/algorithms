@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.common;
 
 class Trie {
     private TrieNode root;
