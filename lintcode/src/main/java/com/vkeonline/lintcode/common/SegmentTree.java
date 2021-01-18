@@ -6,7 +6,7 @@ package com.vkeonline.lintcode.common;
 public class SegmentTree {
     private static final int NOT_FOUND = -1;
 
-    public SegmentTreeNode buildMinTree(int start, int end, int[] A) {
+    public SegmentTreeNode buildMinTree(int start, int end, int[] nums) {
         if (start > end) {
             return null;
         }
@@ -14,11 +14,11 @@ public class SegmentTree {
         SegmentTreeNode root = new SegmentTreeNode(start, end, Integer.MIN_VALUE);
 
         if (start == end) {
-            root.min = A[start];
+            root.min = nums[start];
         } else {
             int middle = (start + end) / 2;
-            root.left = buildMinTree(start, middle, A);
-            root.right = buildMinTree(middle + 1, end, A);
+            root.left = buildMinTree(start, middle, nums);
+            root.right = buildMinTree(middle + 1, end, nums);
             root.min = Math.min(root.left.min, root.right.min);
         }
 

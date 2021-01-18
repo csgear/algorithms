@@ -10,16 +10,18 @@ public class DiameterBinaryTree {
     int ans = 0;
 
     public int diameterOfBinaryTree(TreeNode root) {
-        ans = 1;
         depth(root);
-        return ans - 1;
+        return ans ;
     }
 
     private int depth(TreeNode node) {
-        if (node == null) return 0;
-        int L = depth(node.left);
-        int R = depth(node.right);
-        ans = Math.max(ans, L + R + 1);
-        return Math.max(L, R) + 1;
+        if (node == null) {
+            return 0;
+        }
+        int left = depth(node.left);
+        int right = depth(node.right);
+        // the length of path = left + right
+        ans = Math.max(ans, left + right);
+        return Math.max(left, right) + 1;
     }
 }

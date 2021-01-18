@@ -6,63 +6,48 @@ package com.vkeonline.lintcode.p400;
  * @author csgear
  */
 public class KClosestElements {
+
     public int[] kClosestNumbers(int[] data, int target, int k) {
-        if (data == null || data.length == 0) {
-            return null;
-        }
-
-        int left = binarySearch(data, target);
-        int right = left + 1;
-
-        int[] res = new int[k];
+        // using 2 pointers to get k elements
+        int left = binarySearch(data, target) ;
+        int right = left + 1 ;
+        int[] result = new int[k] ;
 
         for (int i = 0; i < k; i++) {
-            if (isLeftCloser(data, target, left, right)) {
-                res[i] = data[left--];
-            } else {
-                res[i] = data[right++];
+            if(left < 0) {
+                result[i] = data[right++] ;
+            }
+            else if(right > data.length - 1) {
+                result[i] = data[left--] ;
+            }
+            else if( target - data[left] <= data[right] - target) {
+                result[i] = data[left--] ;
+            }
+            else {
+                result[i] = data[right++] ;
             }
         }
-
-        return res;
+        return result ;
     }
 
-    private boolean isLeftCloser(int[] data, int target, int l, int r) {
-        if (l < 0)
-        {
-            return false;
-        }
 
-        if (r > data.length - 1)
-        {
-            return true;
-        }
-
-        return target - data[l] <= data[r] - target;
-    }
-
-    private int binarySearch(int[] A, int target) {
-        int left = 0;
-        int right = A.length - 1;
-
-        while (left + 1 < right) {
-            int mid = left + (right - left) / 2;
-
-            if (A[mid] == target)
-            {
-                return mid;
+    private int binarySearch(int[] data, int target) {
+        int left = 0 ;
+        int right = data.length - 1 ;
+        while(left + 1 < right) {
+            int middle = (right + left) / 2 ;
+            if(data[middle] == target) {
+                return middle ;
             }
-            else if (A[mid] > target)
-            {
-                right = mid;
+            else if (data[middle] > target){
+                right = middle ;
             }
-            else
-            {
-                left = mid;
+            else {
+                left = middle ;
             }
         }
 
-        return left;
+        return left ;
     }
 
     public int[] kClosestNumbers1(int[] data, int target, int k) {

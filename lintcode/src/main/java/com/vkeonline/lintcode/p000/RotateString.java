@@ -1,6 +1,7 @@
-package com.vkeonline.lintcode;
+package com.vkeonline.lintcode.p000;
 
 /**
+ * Lint code: 8. Rotate String
  * @author csgear
  */
 public class RotateString {

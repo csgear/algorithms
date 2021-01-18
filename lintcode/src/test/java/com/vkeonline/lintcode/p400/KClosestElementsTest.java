@@ -11,7 +11,8 @@ class KClosestElementsTest {
         KClosestElements kClosestElements = new KClosestElements() ;
         int[] data = {1, 4, 6, 8} ;
         int target = 3, k = 3 ;
-
-        kClosestElements.kClosestNumbers(data, target, k) ;
+        int[] expected = {4, 1, 6} ;
+        assertArrayEquals(expected, kClosestElements.kClosestNumbers(data, target, k)) ;
     }
+
 }
