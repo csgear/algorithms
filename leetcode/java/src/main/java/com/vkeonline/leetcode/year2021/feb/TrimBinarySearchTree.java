@@ -5,10 +5,10 @@ import com.vkeonline.leetcode.common.TreeNode;
 /**
  * @author csgear
  */
-public class TrimBST {
+public class TrimBinarySearchTree {
     public TreeNode trimBST(TreeNode root, int low, int high) {
         if(root == null)  {
-            return root ;
+            return null;
         }
         if(root.val > high) {
             return trimBST(root.left, low, high) ;
