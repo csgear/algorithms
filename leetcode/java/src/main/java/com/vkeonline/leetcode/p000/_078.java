@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.p100;
+package com.vkeonline.leetcode.p000;
 
 import java.util.ArrayList;
 import java.util.List;
