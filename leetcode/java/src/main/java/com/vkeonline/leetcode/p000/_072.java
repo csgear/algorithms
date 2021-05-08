@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.p100;
+package com.vkeonline.leetcode.p000;
 
 public class _072 {
     class Solution {
