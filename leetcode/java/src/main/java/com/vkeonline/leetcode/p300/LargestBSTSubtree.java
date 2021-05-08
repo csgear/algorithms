@@ -2,7 +2,11 @@ package com.vkeonline.leetcode.p300;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
-public class _333 {
+/**
+ * Leetcode [M]: 333. Largest BST Subtree
+ * @author csgear
+ */
+public class LargestBSTSubtree {
     public class Solution1 {
         class ExtraInfoNode {
             int count;

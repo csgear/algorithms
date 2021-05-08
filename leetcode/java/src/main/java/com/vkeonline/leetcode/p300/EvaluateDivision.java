@@ -3,7 +3,7 @@ package com.vkeonline.leetcode.p300;
 import java.util.HashMap;
 import java.util.List;
 
-public class _399 {
+public class EvaluateDivision {
     class UnionFind {
         HashMap<String, String> parent = new HashMap<>();
         HashMap<String, Double> map = new HashMap<>();
@@ -20,7 +20,7 @@ public class _399 {
             String rootj = find(j);
 
             if (!rooti.equals(rootj)) {
-                if (parent.containsKey(j) && parent.get(j) != j) {
+                if (parent.containsKey(j) && !parent.get(j).equals(j)) {
                     parent.put(i, j);
                     map.put(i, 1.0 / val);
                 } else {
