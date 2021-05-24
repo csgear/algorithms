@@ -1,10 +1,11 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.p000;
 
 import com.vkeonline.leetcode.common.ListNode;
 
 /**
+ * Leetcode: 19. Remove Nth Node From End of List
+ *
  * @author csgear
- * leetcode: 19. Remove Nth Node From End of List
  */
 class RemoveNthNode {
     public ListNode removeNthFromEnd(ListNode head, int n) {
