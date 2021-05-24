@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.p000;
 
 import java.util.HashMap;
 import java.util.Map;
