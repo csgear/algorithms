@@ -1,9 +1,11 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.p000;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Leetcode: 89. Gray Code
+ *
  * @author csgear
  */
 public class GreyCode {
