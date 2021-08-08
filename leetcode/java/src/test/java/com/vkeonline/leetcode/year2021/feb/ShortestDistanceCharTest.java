@@ -1,8 +1,9 @@
 package com.vkeonline.leetcode.year2021.feb;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.vkeonline.leetcode.p800.ShortestDistanceChar;
+import org.junit.jupiter.api.Test;
 
 class ShortestDistanceCharTest {
 

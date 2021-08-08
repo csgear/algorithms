@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p800;
 
 import java.util.Arrays;
 
 /**
+ * Leetcode [M]: 881. Boats to Save People
  * @author csgear
  */
 public class BoatsSavePeople {

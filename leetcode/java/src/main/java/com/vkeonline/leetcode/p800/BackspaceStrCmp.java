@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p800;
 
 import java.util.Stack;
 
 /**
+ * Leetcode [E]: 844. Backspace String Compare
  * @author csgear
  */
 public class BackspaceStrCmp {

@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p100;
 
 /**
+ * Leetcode [E]: 191. Number of 1 Bits
  * @author csgear
  */
 public class HammingWeight {

@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p1300;
 
 import java.util.Arrays;
 
 /**
+ * Leetcode [E]: 1337. The K Weakest Rows in a Matrix
  * @author csgear
  */
 public class KWeakestRows {

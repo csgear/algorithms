@@ -1,13 +1,13 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p100;
 
 import com.vkeonline.leetcode.common.TreeNode;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 /**
+ * Leetcode [M]: 199. Binary Tree Right Side View
  * @author csgear
  */
 public class BSTRightSideView {

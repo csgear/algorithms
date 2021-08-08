@@ -1,8 +1,9 @@
 package com.vkeonline.leetcode.year2021.feb;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.vkeonline.leetcode.p000.SimplifyPath;
+import org.junit.jupiter.api.Test;
 
 class SimplifyPathTest {
 

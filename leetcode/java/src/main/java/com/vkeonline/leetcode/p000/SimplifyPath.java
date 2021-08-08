@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p000;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
 /**
+ * Leetcode [M]: 71. Simplify Path
  * @author csgear
  */
 public class SimplifyPath {
