@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p800;
 
 /**
+ * Leetcode [E]: 821. Shortest Distance to a Character
  * @author csgear
  */
 public class ShortestDistanceChar {

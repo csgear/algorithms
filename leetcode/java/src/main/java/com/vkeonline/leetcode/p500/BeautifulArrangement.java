@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p500;
 
 /**
+ * Leetcode [M]: 526. Beautiful Arrangement
  * @author csgear
  */
 public class BeautifulArrangement {

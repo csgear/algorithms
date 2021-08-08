@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p100;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Leetcode [M]: 138. Copy List with Random Pointer
  * @author csgear
  */
 public class RandomNodeCopier {

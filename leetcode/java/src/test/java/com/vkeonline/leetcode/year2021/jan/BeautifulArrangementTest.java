@@ -1,8 +1,9 @@
 package com.vkeonline.leetcode.year2021.jan;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.vkeonline.leetcode.p500.BeautifulArrangement;
+import org.junit.jupiter.api.Test;
 
 class BeautifulArrangementTest {
 

@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2021.feb;
+package com.vkeonline.leetcode.p600;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [M]: 669. Trim a Binary Search Tree
  * @author csgear
  */
 public class TrimBinarySearchTree {
