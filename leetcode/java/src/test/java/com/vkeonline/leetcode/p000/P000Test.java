@@ -59,4 +59,20 @@ public class P000Test {
         boolean expected = true ;
         assertEquals(expected, search2DMatrix.searchMatrix(matrix,target));
     }
+
+    @Test
+    void climbStairsTestCase1() {
+        ClimbingStairs climbingStairs = new ClimbingStairs() ;
+        int n = 3 ;
+        int expected = 3 ;
+        assertEquals(expected, climbingStairs.climbStairs(n));
+    }
+
+    @Test
+    void minCostClimbingStairsTestCase1() {
+        MinCostClimbingStairs minCostClimbingStairs = new MinCostClimbingStairs() ;
+        int[] cost = {1,100,1,1,1,100,1,1,100,1} ;
+        int expected = 6 ;
+        assertEquals(expected, minCostClimbingStairs.minCostClimbingStairs(cost));
+    }
 }
