@@ -17,6 +17,8 @@ package com.vkeonline.leetcode.p000;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 
@@ -74,5 +76,17 @@ public class P000Test {
         int[] cost = {1,100,1,1,1,100,1,1,100,1} ;
         int expected = 6 ;
         assertEquals(expected, minCostClimbingStairs.minCostClimbingStairs(cost));
+    }
+
+    @Test
+    void threeSum() {
+        ThreeSum threeSum = new ThreeSum() ;
+
+        List<Integer> list1 = Arrays.asList(-1, -1, 2) ;
+        List<Integer> list2 = Arrays.asList(-1,0,1) ;
+        List<List<Integer>> expected = Arrays.asList(list1, list2) ;
+        int[] nums = {-1,0,1,2,-1,-4} ;
+
+        assertEquals(expected, threeSum.threeSum(nums));
     }
 }

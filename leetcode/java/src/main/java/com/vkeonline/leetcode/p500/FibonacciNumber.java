@@ -23,7 +23,6 @@ public class FibonacciNumber {
         if (N <= 1) {
             return N;
         }
-
         int[] dp = new int[N + 1];
         dp[1] = 1;
         for (int i = 2; i <= N; i++) {

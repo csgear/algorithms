@@ -15,7 +15,7 @@ public class FindPeakElement {
             if(mid > 0 && nums[mid-1] > nums[mid]) {
                 end = mid - 1;
             }
-            else if(mid < nums.length && nums[mid+1] > nums[mid]) {
+            else if(mid < nums.length - 1 && nums[mid+1] > nums[mid]) {
                 start = mid + 1;
             }
         }
