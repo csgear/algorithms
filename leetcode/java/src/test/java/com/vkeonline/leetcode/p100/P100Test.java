@@ -41,4 +41,12 @@ class P100Test {
         int expected = 2 ;
         assertEquals(expected, findPeakElement.findPeakElement(nums));
     }
+
+    @Test
+    void rob() {
+        HouseRobber houseRobber = new HouseRobber() ;
+        int[] nums = {1,2,3,1} ;
+        int expected = 4 ;
+        assertEquals(expected, houseRobber.rob(nums));
+    }
 }

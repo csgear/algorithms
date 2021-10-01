@@ -89,4 +89,12 @@ public class P000Test {
 
         assertEquals(expected, threeSum.threeSum(nums));
     }
+
+    @Test
+    void maxSubArray() {
+        MaximumSubarray maximumSubarray = new MaximumSubarray() ;
+        int[] nums = {2,1,1,2} ;
+        int expected = 4 ;
+        assertEquals(expected, maximumSubarray.maxSubArray(nums));
+    }
 }
