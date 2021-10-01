@@ -97,4 +97,12 @@ public class P000Test {
         int expected = 4 ;
         assertEquals(expected, maximumSubarray.maxSubArray(nums));
     }
+
+    @Test
+    void maxArea() {
+        int[] height = {1,8,6,2,5,4,8,3,7} ;
+        int expected = 49 ;
+        ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater() ;
+        assertEquals(expected, containerWithMostWater.maxArea(height));
+    }
 }
