@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * Leetcode [E]: 204. Count Primes
- *
  * @author csgear
  */
 public class CountPrimes {
@@ -18,15 +17,19 @@ public class CountPrimes {
         for (int i = 2; i <= upper; i++) {
             if (isPrime[i]) {
                 for (int j = i * i; j < n; j += i)
+                {
                     isPrime[j] = false;
+                }
             }
         }
 
         int result = 0;
 
-        for (boolean b : isPrime)
-            if (b) result++;
-
+        for (boolean b : isPrime) {
+            if (b) {
+                result++;
+            }
+        }
         return result;
     }
 
