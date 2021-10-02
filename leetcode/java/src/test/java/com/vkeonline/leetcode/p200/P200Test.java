@@ -29,4 +29,29 @@ class P200Test {
         assertEquals(expected.length, result.length);
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    void numIslands() {
+        NumberofIslands numberofIslands = new NumberofIslands() ;
+        char[][] grid = new char[][]{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'},
+                {'0', '0', '0', '0', '0'}};
+        int expected = 1 ;
+        assertEquals(expected, numberofIslands.numIslands(grid));
+    }
+
+    @Test
+    void minCostII() {
+        PaintHouseII paintHouseII = new PaintHouseII() ;
+        int[][] costs = {{1,5,3},{2,9,4}} ;
+        int expected = 5 ;
+        assertEquals(expected, paintHouseII.minCostII(costs));
+    }
+
+    @Test
+    void minCost() {
+        PaintHouse paintHouse = new PaintHouse() ;
+        int[][] costs = {{17,2,17},{16,16,5},{14,3,19}} ;
+        int expected = 10 ;
+        assertEquals(expected, paintHouse.minCost(costs));
+    }
 }
