@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.sept;
+package com.vkeonline.leetcode.p700;
 
 /**
+ * Leetcode [M]: 713. Subarray Product Less Than K
  * @author csgear
  */
 public class SubArrayProd {
@@ -11,10 +12,8 @@ public class SubArrayProd {
         if (k <= 1) {
             return 0;
         }
-
         int left = 0, result = 0;
         int current = 1;
-
         for (int i = 0; i < nums.length; i++) {
             current *= nums[i];
 
