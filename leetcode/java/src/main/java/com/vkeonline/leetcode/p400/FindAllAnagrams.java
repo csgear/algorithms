@@ -1,14 +1,35 @@
-package com.vkeonline.leetcode.year2020.may;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// File: FindAllAnagrams.java
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Author: xiaoyang
+//
+// Nokia - Confidential
+// Do not use, distribute, or copy without consent of Nokia.
+// Copyright (c) 2021 Nokia. All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+package com.vkeonline.leetcode.p400;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * Leetcode [M]: 438. Find All Anagrams in a String
+ * @author csgear
+ */
 public class FindAllAnagrams {
     public List<Integer> findAnagrams(String s, String p) {
         int m = p.length(), n = s.length();
-        List<Integer> result = new ArrayList<Integer>();
-        if (m > n) return result;
+        List<Integer> result = new ArrayList<>();
+        if (m > n) {
+            return result;
+        }
 
         int[] cntArray = new int[26];
 
