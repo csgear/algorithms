@@ -32,7 +32,7 @@ class P200Test {
 
     @Test
     void numIslands() {
-        NumberofIslands numberofIslands = new NumberofIslands() ;
+        NumberOfIslands numberofIslands = new NumberOfIslands() ;
         char[][] grid = new char[][]{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}};
         int expected = 1 ;
