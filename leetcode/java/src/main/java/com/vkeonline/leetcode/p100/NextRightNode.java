@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p100;
 
 /**
+ * Leetcode [M]: 117. Populating Next Right Pointers in Each Node II
  * @author csgear
  */
 public class NextRightNode {

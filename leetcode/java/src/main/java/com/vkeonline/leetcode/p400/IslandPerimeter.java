@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p400;
 
 /**
+ * Leetcode [M]: 463. Island Perimeter
  * @author csgear
  */
 public class IslandPerimeter {
