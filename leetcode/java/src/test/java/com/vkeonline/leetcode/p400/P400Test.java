@@ -14,4 +14,12 @@ class P400Test {
         int expected = 4 ;
         assertEquals(expected, maxConsecutiveOnesII.findMaxConsecutiveOnes(nums));
     }
+
+    @Test
+    void arrangeCoins() {
+        int n = 5 ;
+        int expected = 2 ;
+        ArrangeCoins arrangeCoins = new ArrangeCoins() ;
+        assertEquals(expected, arrangeCoins.arrangeCoins(n));
+    }
 }
