@@ -28,13 +28,6 @@ class P100Test {
     }
 
     @Test
-    void permutation2TestCase1() {
-        Permutation2 permutation2 = new Permutation2() ;
-        int[] nums = {1,2,3} ;
-        permutation2.permuteUnique(nums).forEach(System.out::println);
-    }
-
-    @Test
     void findPeakElement() {
         FindPeakElement findPeakElement = new FindPeakElement() ;
         int[] nums = {1,2,3,1} ;
@@ -48,5 +41,14 @@ class P100Test {
         int[] nums = {1,2,3,1} ;
         int expected = 4 ;
         assertEquals(expected, houseRobber.rob(nums));
+    }
+
+    @Test
+    void wordBreak() {
+        WordBreak wordBreak = new WordBreak() ;
+        String s = "leetcode" ;
+        List<String> wordDict = Arrays.asList("leet","code") ;
+        boolean expected = true ;
+        assertEquals(expected, wordBreak.wordBreak(s, wordDict)) ;
     }
 }
