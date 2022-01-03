@@ -1,7 +1,12 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p1000;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
+/**
+ * Leetcode [M]: 1008. Construct Binary Search Tree from Preorder Traversal
+ *
+ * @author csgear
+ */
 public class BSTFromPreOrder {
     public TreeNode bstFromPreorder(int[] preorder) {
         if(preorder == null || preorder.length == 0){

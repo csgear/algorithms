@@ -14,12 +14,13 @@
 
 package com.vkeonline.leetcode.p000;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class P000Test {
@@ -100,9 +101,18 @@ public class P000Test {
 
     @Test
     void maxArea() {
-        int[] height = {1,8,6,2,5,4,8,3,7} ;
-        int expected = 49 ;
-        ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater() ;
+        int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        int expected = 49;
+        ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
         assertEquals(expected, containerWithMostWater.maxArea(height));
+    }
+
+    @Test
+    void findMedianSortedArrays() {
+        int[] nums1 = {1, 3};
+        int[] nums2 = {2};
+        FindMedianSortedArrays findMedianSortedArrays = new FindMedianSortedArrays();
+        double expected = 2.0;
+        assertEquals(expected, findMedianSortedArrays.findMedianSortedArrays(nums1, nums2));
     }
 }

@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode.year2020.april;
 
+import com.vkeonline.leetcode.p100.MaximumSubarray;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,35 +17,36 @@ public class Judge {
 
     static void judgeSingleNumber() {
         SingleNumber sn = new SingleNumber() ;
-        int[] numbers = {4,1,2,1,2} ;
-        System.out.println(sn.singleNumber(numbers)) ;
+        int[] numbers = {4, 1, 2, 1, 2};
+        System.out.println(sn.singleNumber(numbers));
     }
 
     static void judgeHappyNumber() {
-        HappyNumber hn = new HappyNumber() ;
+        HappyNumber hn = new HappyNumber();
 
-        int n = 19 ;
+        int n = 19;
         System.out.println(hn.isHappy(n));
     }
-    static  void judgeMaximumSubarray() {
-        MaximumSubarray ms = new MaximumSubarray() ;
-        int[] nums =  {-2,1,-3,4,-1,2,1,-5,4} ;
+
+    static void judgeMaximumSubarray() {
+        MaximumSubarray ms = new MaximumSubarray();
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
         System.out.println((ms.maxSubArray(nums)));
     }
 
-    static  void judegMoveZeroes() {
-        MoveZeroes mz = new MoveZeroes() ;
-        int[] nums = {0,1,0,3,12} ;
-        mz.moveZeroes(nums) ;
-        Arrays.asList(nums).forEach(System.out::println);
+    static void judegMoveZeroes() {
+        MoveZeroes mz = new MoveZeroes();
+        int[] nums = {0, 1, 0, 3, 12};
+        mz.moveZeroes(nums);
+        List.of(nums).forEach(System.out::println);
     }
 
     static void judgeSellStockII() {
-        SellStockII stii = new SellStockII() ;
-        System.out.println(stii.maxProfit(new int[]{7,1,5,3,6,4}))  ;
-        System.out.println(stii.maxProfit(new int[]{1, 2, 3, 4, 5})) ;
-        System.out.println(stii.maxProfit(new int[]{7,6,4,3,1})) ;
+        SellStockII stii = new SellStockII();
+        System.out.println(stii.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+        System.out.println(stii.maxProfit(new int[]{1, 2, 3, 4, 5}));
+        System.out.println(stii.maxProfit(new int[]{7, 6, 4, 3, 1}));
     }
 
     static void judgeGroupAnagrams() {
