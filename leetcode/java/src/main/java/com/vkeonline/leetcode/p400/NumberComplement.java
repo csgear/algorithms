@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p400;
 
 /**
+ * Leetcode [E]: 476. Complement of Base 10 Integer
  * @author csgear
  */
 public class NumberComplement {
