@@ -1,7 +1,8 @@
 package com.vkeonline.leetcode.p1400;
 
 /**
- * Leetcode [easy]: 1480. Running Sum of 1d Array
+ * Leetcode [E]: 1480. Running Sum of 1d Array
+ *
  * @author csgear
  */
 public class RunningSum {
