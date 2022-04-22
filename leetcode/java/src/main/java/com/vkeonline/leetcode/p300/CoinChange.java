@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * Leetcode [M]: 322. Coin Change
- *
  * @author csgear
  */
 public class CoinChange {
@@ -34,9 +33,9 @@ public class CoinChange {
 
         dp[0] = 0;
         for (int i = 1; i <= amount; i++) {
-            for (int j = 0; j < coins.length; j++) {
-                if (i - coins[j] >= 0)
-                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+            for (int coin : coins) {
+                if (i - coin >= 0)
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
             }
         }
 
