@@ -115,4 +115,13 @@ public class P000Test {
         double expected = 2.0;
         assertEquals(expected, findMedianSortedArrays.findMedianSortedArrays(nums1, nums2));
     }
+
+    @Test
+    void isMatch() {
+        WildcardMatching wildcardMatching = new WildcardMatching() ;
+        String s = "aa" ;
+        String p = "*" ;
+        boolean expected = true ;
+        assertEquals(expected, wildcardMatching.isMatch(s,p));
+    }
 }
