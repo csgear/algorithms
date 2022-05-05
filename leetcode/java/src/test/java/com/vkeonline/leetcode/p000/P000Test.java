@@ -115,7 +115,6 @@ public class P000Test {
         double expected = 2.0;
         assertEquals(expected, findMedianSortedArrays.findMedianSortedArrays(nums1, nums2));
     }
-<<<<<<< HEAD
 
     @Test
     void isMatch() {
@@ -125,6 +124,4 @@ public class P000Test {
         boolean expected = true ;
         assertEquals(expected, wildcardMatching.isMatch(s,p));
     }
-=======
->>>>>>> Jan 3, move files.
 }
