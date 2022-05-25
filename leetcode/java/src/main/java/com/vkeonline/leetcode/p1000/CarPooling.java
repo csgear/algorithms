@@ -1,24 +1,27 @@
 package com.vkeonline.leetcode.p1000;
 
+import java.util.Map;
+import java.util.TreeMap;
+
+
 /**
- * Leetcode: 1094. Car Pooling
- *
+ * Leetcode [M]: 1094. Car Pooling
  * @author csgear
  */
 public class CarPooling {
     public boolean carPooling(int[][] trips, int capacity) {
-        int[] passenger = new int[1001];
-        int lastStop = 0;
+        Map<Integer, Integer> timestamp = new TreeMap<>();
         for (int[] trip : trips) {
-            passenger[trip[1]] = passenger[trip[1]] + trip[0];
-            passenger[trip[2]] = passenger[trip[2]] - trip[0];
-            lastStop = Math.max(lastStop, trip[2]);
-
+            int startPassenger = timestamp.getOrDefault(trip[1], 0) + trip[0];
+            timestamp.put(trip[1], startPassenger);
+            int endPassenger = timestamp.getOrDefault(trip[2], 0) - trip[0];
+            timestamp.put(trip[2], endPassenger);
         }
-        int passengerCount = 0;
-        for (int i = 0; i < lastStop; i++) {
-            passengerCount = passengerCount + passenger[i];
-            if (passengerCount > capacity) {
+
+        int usedCapacity = 0;
+        for (int passengerChange : timestamp.values()) {
+            usedCapacity += passengerChange;
+            if (usedCapacity > capacity) {
                 return false;
             }
         }

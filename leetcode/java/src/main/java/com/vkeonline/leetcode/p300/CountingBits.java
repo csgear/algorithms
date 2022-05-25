@@ -1,6 +1,8 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p300;
 
 /**
+ * Leetcode [E]: 338. Counting Bits
+ *
  * @author csgear
  */
 public class CountingBits {

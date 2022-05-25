@@ -1,10 +1,12 @@
 package com.vkeonline.leetcode.p200;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import org.junit.jupiter.api.Test;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class P200Test {
 
@@ -40,18 +42,27 @@ class P200Test {
     }
 
     @Test
-    void minCostII() {
-        PaintHouseII paintHouseII = new PaintHouseII() ;
-        int[][] costs = {{1,5,3},{2,9,4}} ;
-        int expected = 5 ;
+    void minCostIITest() {
+        PaintHouseII paintHouseII = new PaintHouseII();
+        int[][] costs = {{1, 5, 3}, {2, 9, 4}};
+        int expected = 5;
         assertEquals(expected, paintHouseII.minCostII(costs));
     }
 
     @Test
-    void minCost() {
-        PaintHouse paintHouse = new PaintHouse() ;
-        int[][] costs = {{17,2,17},{16,16,5},{14,3,19}} ;
-        int expected = 10 ;
+    void minCostTest() {
+        PaintHouse paintHouse = new PaintHouse();
+        int[][] costs = {{17, 2, 17}, {16, 16, 5}, {14, 3, 19}};
+        int expected = 10;
         assertEquals(expected, paintHouse.minCost(costs));
+    }
+
+    @Test
+    void combinationSum3Test() {
+        CombinationSum3 combinationSum3 = new CombinationSum3();
+        int k = 3;
+        int n = 7;
+        List<Integer> expected = List.of(1, 2, 4);
+        assertEquals(expected, combinationSum3.combinationSum3(k, n).get(0));
     }
 }

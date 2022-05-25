@@ -1,10 +1,11 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p500;
 
 import java.util.HashMap;
 
 /**
- * @author csgear
  * Leetcode: 525 Contiguous Array
+ *
+ * @author csgear
  */
 public class ContiguousArray {
     public int findMaxLength(int[] nums) {
@@ -14,7 +15,7 @@ public class ContiguousArray {
         int sum = 0;
         for(int i=0;i<nums.length;i++) {
             if(nums[i] == 0) {
-                sum += -1;
+                sum -= 1;
             } else {
                 sum += 1;
             }

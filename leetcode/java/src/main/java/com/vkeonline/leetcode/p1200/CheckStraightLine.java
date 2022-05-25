@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p1200;
 
 /**
+ * LeetCode [M] : 1232. Check If It Is a Straight Line
+ *
  * @author csgear
- * LeetCode: 1232. Check If It Is a Straight Line
  */
 public class CheckStraightLine {
     public boolean checkStraightLine(int[][] coordinates) {

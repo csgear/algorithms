@@ -1,20 +1,21 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p200;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
+ * Leetcode [M]: 207. Course Schedule
+ *
  * @author csgear
  */
 public class CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        ArrayList[] graph = new ArrayList[numCourses];
+        ArrayList<Integer>[] graph = new ArrayList[numCourses];
         int[] inDegree = new int[numCourses];
 
         for (int i = 0; i < numCourses; i++) {
-            graph[i] = new ArrayList<Integer>();
+            graph[i] = new ArrayList<>();
         }
 
         for (int[] edge: prerequisites) {
@@ -23,7 +24,7 @@ public class CourseSchedule {
         }
 
         int numChoose = 0;
-        Queue queue = new LinkedList();
+        Queue<Integer> queue = new ArrayDeque<>();
 
         for(int i = 0; i < inDegree.length; i++){
             if (inDegree[i] == 0) {
@@ -32,11 +33,11 @@ public class CourseSchedule {
         }
 
         while (! queue.isEmpty()) {
-            int now = (int)queue.poll();
+            int now = queue.poll();
             numChoose++;
 
             for (int i = 0; i < graph[now].size(); i++) {
-                int nxt = (int)graph[now].get(i);
+                int nxt = graph[now].get(i);
                 inDegree[nxt]--;
                 if (inDegree[nxt] == 0) {
                     queue.add(nxt);

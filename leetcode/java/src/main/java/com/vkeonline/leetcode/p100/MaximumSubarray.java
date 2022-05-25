@@ -1,6 +1,8 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p100;
 
 /**
+ * Leetcode [E]: 53. Maximum Subarray
+ *
  * @author csgear
  */
 public class MaximumSubarray {

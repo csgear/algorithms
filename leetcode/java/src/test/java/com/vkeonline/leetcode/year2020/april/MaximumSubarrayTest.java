@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.year2020.april;
 
+import com.vkeonline.leetcode.p100.MaximumSubarray;
 import org.junit.jupiter.api.Test;
 
 class MaximumSubarrayTest {

@@ -4,8 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Leetcode [easy]: 1461. Check If a String Contains All Binary Codes of Size K
+ *
  * @author csgear
- * 1461. Check If a String Contains All Binary Codes of Size K
  */
 public class AllBinaryCodes {
     public boolean hasAllCodes(String s, int k) {

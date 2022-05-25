@@ -1,9 +1,11 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p500;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Leetcode [M]: 560. Subarray Sum Equals K
+ *
  * @author csgear
  */
 public class SubarraySum {

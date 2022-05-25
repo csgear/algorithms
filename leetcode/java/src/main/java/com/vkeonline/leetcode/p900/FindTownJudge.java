@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p900;
 
 /**
+ * Leetcode [E]: 997. Find the Town Judge
+ *
  * @author csgear
- * Leetcode: 997. Find the Town Judge
  */
 public class FindTownJudge {
     public int findJudge(int N, int[][] trust) {
