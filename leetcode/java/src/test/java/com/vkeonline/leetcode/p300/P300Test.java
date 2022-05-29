@@ -15,12 +15,21 @@ class P300Test {
         assertEquals(expected, wiggleSubsequence.wiggleMaxLength(nums));
     }
 
-    @test
+    @Test
     void longestIncreasingSubsequence() {
         int[] nums = {10,9,2,5,3,7,101,18} ;
         int expected = 4 ;
         LongestIncreasingSubsequence longestIncreasingSubsequence = new LongestIncreasingSubsequence() ;
         assertEquals(expected,
                 longestIncreasingSubsequence.longestIncreasingSubsequence(nums));
+    }
+
+
+    @Test
+    void maxProduct() {
+        MaximumProductWordLengths maximumProductWordLengths = new MaximumProductWordLengths() ;
+        String[] words = {"a","ab","abc","d","cd","bcd","abcd"} ;
+        int expected = 4 ;
+        assertEquals(expected, maximumProductWordLengths.maxProduct(words));
     }
 }
