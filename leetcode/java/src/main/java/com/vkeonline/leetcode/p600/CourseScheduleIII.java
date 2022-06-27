@@ -6,20 +6,23 @@ import java.util.PriorityQueue;
 
 /**
  * Leetcode: Course Schedule III
+ *
  * @author csgear
  */
 public class CourseScheduleIII {
     public int scheduleCourse(int[][] courses) {
-        Arrays.sort(courses, Comparator.comparingInt(a -> a[1])) ;
-        PriorityQueue<int[]> heap = new PriorityQueue<>( (a,b) -> b[0] - a[0]) ;
-        int currentTime = 0 ;
-        for (int[] course : courses) {
-            currentTime += course[0];
-            heap.add(course);
-            if (currentTime > course[1]) {
-                currentTime -= heap.poll()[0];
+        Arrays.sort(courses, (a, b) -> a[1] - b[1]);
+        PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
+        int time = 0;
+        for (int[] c : courses) {
+            if (time + c[0] <= c[1]) {
+                queue.offer(c[0]);
+                time += c[0];
+            } else if (!queue.isEmpty() && queue.peek() > c[0]) {
+                time += c[0] - queue.poll();
+                queue.offer(c[0]);
             }
         }
-        return heap.size() ;
+        return queue.size();
     }
 }
