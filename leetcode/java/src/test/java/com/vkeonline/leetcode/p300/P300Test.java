@@ -1,8 +1,8 @@
 package com.vkeonline.leetcode.p300;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class P300Test {
@@ -27,9 +27,17 @@ class P300Test {
 
     @Test
     void maxProduct() {
-        MaximumProductWordLengths maximumProductWordLengths = new MaximumProductWordLengths() ;
-        String[] words = {"a","ab","abc","d","cd","bcd","abcd"} ;
-        int expected = 4 ;
+        MaximumProductWordLengths maximumProductWordLengths = new MaximumProductWordLengths();
+        String[] words = {"a", "ab", "abc", "d", "cd", "bcd", "abcd"};
+        int expected = 4;
         assertEquals(expected, maximumProductWordLengths.maxProduct(words));
+    }
+
+    @Test
+    void testWiggleMaxLength() {
+        WiggleSubsequence wiggleSubsequence = new WiggleSubsequence();
+        int[] nums = {1, 17, 5, 10, 13, 15, 10, 5, 16, 8};
+        int expected = 7;
+        assertEquals(expected, wiggleSubsequence.wiggleMaxLength(nums));
     }
 }
