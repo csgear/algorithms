@@ -1,10 +1,11 @@
 package com.vkeonline.leetcode.p100;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class P100Test {
 
@@ -45,10 +46,26 @@ class P100Test {
 
     @Test
     void wordBreak() {
-        WordBreak wordBreak = new WordBreak() ;
-        String s = "leetcode" ;
-        List<String> wordDict = Arrays.asList("leet","code") ;
-        boolean expected = true ;
-        assertEquals(expected, wordBreak.wordBreak(s, wordDict)) ;
+        WordBreak wordBreak = new WordBreak();
+        String s = "leetcode";
+        List<String> wordDict = Arrays.asList("leet", "code");
+        boolean expected = true;
+        assertEquals(expected, wordBreak.wordBreak(s, wordDict));
+    }
+
+    @Test
+    void candy() {
+        Candy candy = new Candy();
+        int[] ratings = {1, 0, 2};
+        int expected = 5;
+        assertEquals(expected, candy.candy(ratings));
+    }
+
+    @Test
+    void candy2() {
+        Candy candy = new Candy();
+        int[] ratings = {1, 0, 2};
+        int expected = 5;
+        assertEquals(expected, candy.candy2(ratings));
     }
 }
