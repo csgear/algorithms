@@ -15,7 +15,7 @@ class P300Test {
         assertEquals(expected, wiggleSubsequence.wiggleMaxLength(nums));
     }
 
-    @test
+    @Test
     void longestIncreasingSubsequence() {
         int[] nums = {10,9,2,5,3,7,101,18} ;
         int expected = 4 ;

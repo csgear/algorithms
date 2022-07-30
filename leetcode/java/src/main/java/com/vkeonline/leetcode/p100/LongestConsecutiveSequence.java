@@ -1,8 +1,7 @@
 package com.vkeonline.leetcode.p100;
 
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * Leetcode [M]: 128. Longest Consecutive Sequence
@@ -11,7 +10,12 @@ import java.util.stream.Collectors;
  */
 public class LongestConsecutiveSequence {
     public int longestConsecutive(int[] nums) {
-        Set<Integer> numSet = Arrays.stream(nums).boxed().collect(Collectors.toSet());
+        Set<Integer> numSet = new HashSet<>() ;
+
+        for (int num: nums) {
+            numSet.add(num) ;
+        }
+
         int longestStreak = 0;
 
         for (int num : numSet) {

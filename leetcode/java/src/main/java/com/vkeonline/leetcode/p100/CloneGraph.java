@@ -12,7 +12,7 @@ import java.util.List;
  * @author csgear
  */
 public class CloneGraph {
-    static HashMap<GraphNode, GraphNode> map = new HashMap<>();
+            static HashMap<GraphNode, GraphNode> map = new HashMap<>();
 
     public GraphNode cloneGraph(GraphNode node) {
         if (node == null) {
