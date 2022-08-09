@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * @author Xiaojun.Yang
+ * @author csgear
  */
 class P800Test {
 
@@ -16,5 +16,14 @@ class P800Test {
         int q = 1 ;
         int expected = 2 ;
         assertEquals(expected, mirrorReflection.mirrorReflection(p, q));
+    }
+
+    @Test
+    void numFactoredBinaryTrees() {
+        BinaryTreesWithFactors binaryTreesWithFactors = new BinaryTreesWithFactors() ;
+        int[] arr = {2,4,5,10} ;
+        int expected = 7 ;
+
+        assertEquals(expected, binaryTreesWithFactors.numFactoredBinaryTrees(arr));
     }
 }
