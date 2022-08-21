@@ -37,4 +37,14 @@ class P900Test {
             assertArrayEquals(expected[i], result[i]);
         }
     }
+
+    @Test
+    void movesToStamp() {
+        StampingSequence stampingSequence = new StampingSequence() ;
+        String stamp = "abc";
+        String target = "ababc" ;
+        int[] expected = {0,2} ;
+
+        assertArrayEquals(expected, stampingSequence.movesToStamp(stamp, target));
+    }
 }
