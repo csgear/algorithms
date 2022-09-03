@@ -11,6 +11,16 @@ import org.junit.jupiter.api.Test;
 class P900Test {
 
     @Test
+    void numsSameConsecDiff() {
+        int n = 3 ;
+        int k = 7 ;
+        int[] expected = {181,292,707,818,929} ;
+        NumbersSameConsecutiveDifferences numbersSameConsecutiveDifferences = new NumbersSameConsecutiveDifferences() ;
+
+        assertArrayEquals(expected, numbersSameConsecutiveDifferences.numsSameConsecDiff(n, k));
+    }
+
+    @Test
     void testWordSubsets() {
         String[] words1 = {"amazon","apple","facebook","google","leetcode"} ;
         String[] words2 = {"e","o"} ;
