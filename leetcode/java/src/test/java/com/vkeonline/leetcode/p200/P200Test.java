@@ -65,4 +65,12 @@ class P200Test {
         List<Integer> expected = List.of(1, 2, 4);
         assertEquals(expected, combinationSum3.combinationSum3(k, n).get(0));
     }
+
+    @Test
+    void missingNumber() {
+        MissingNumber missingNumber = new MissingNumber() ;
+        int[] nums = {9,6,4,2,3,5,7,0,1} ;
+        int expected = 8 ;
+        assertEquals(expected, missingNumber.missingNumber(nums));
+    }
 }

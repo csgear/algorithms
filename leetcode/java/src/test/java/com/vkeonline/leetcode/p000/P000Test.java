@@ -82,8 +82,8 @@ public class P000Test {
     @Test
     void maxSubArray() {
         MaximumSubarray maximumSubarray = new MaximumSubarray() ;
-        int[] nums = {2,1,1,2} ;
-        int expected = 4 ;
+        int[] nums = {-2,1,-3,4,-1,2,1,-5,4} ;
+        int expected = 6 ;
         assertEquals(expected, maximumSubarray.maxSubArray(nums));
     }
 
