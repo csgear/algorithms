@@ -68,4 +68,12 @@ class P100Test {
         int expected = 5;
         assertEquals(expected, candy.candy2(ratings));
     }
+
+    @Test
+    void rightSideView() {
+    }
+
+    @Test
+    void rightSideView1() {
+    }
 }
