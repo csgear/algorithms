@@ -5,7 +5,11 @@ import com.vkeonline.leetcode.common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _437 {
+/**
+ * Leetcode [M]: 437 Path Sum III
+ * @author csgear
+ */
+public class PathSum3 {
     class Solution {
         public List<List<Integer>> pathSum(TreeNode root, int sum) {
             List<List<Integer>> results = new ArrayList<List<Integer>>();
