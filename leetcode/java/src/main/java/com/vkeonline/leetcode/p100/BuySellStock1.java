@@ -2,24 +2,23 @@ package com.vkeonline.leetcode.p100;
 
 /**
  * Leetcode [E]: 121. Best Time to Buy and Sell Stock
- *
  * @author csgear
  */
-public class BuySellStock {
+public class BuySellStock1 {
 
     public int maxProfit(int[] prices) {
         int low = Integer.MAX_VALUE;
-        int max = 0;
+        int profit = 0;
 
         for (int price : prices) {
             if (price < low) {
                 low = price;
             }
-            if (price - low > max) {
-                max = price - low;
+            if (price - low > profit) {
+                profit = price - low;
             }
         }
-        return max;
+        return profit;
     }
 
     public int maxProfitDP(int[] prices) {

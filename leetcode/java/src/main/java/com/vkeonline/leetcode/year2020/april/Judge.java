@@ -11,7 +11,6 @@ public class Judge {
         judgeHappyNumber();
         judgeMaximumSubarray();
         judegMoveZeroes();
-        judgeSellStockII();
         judgeGroupAnagrams() ;
     }
 
@@ -40,13 +39,6 @@ public class Judge {
         int[] nums = {0, 1, 0, 3, 12};
         mz.moveZeroes(nums);
         List.of(nums).forEach(System.out::println);
-    }
-
-    static void judgeSellStockII() {
-        SellStockII stii = new SellStockII();
-        System.out.println(stii.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
-        System.out.println(stii.maxProfit(new int[]{1, 2, 3, 4, 5}));
-        System.out.println(stii.maxProfit(new int[]{7, 6, 4, 3, 1}));
     }
 
     static void judgeGroupAnagrams() {

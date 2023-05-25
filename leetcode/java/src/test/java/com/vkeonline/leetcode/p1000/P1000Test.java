@@ -7,6 +7,14 @@ import org.junit.jupiter.api.Test;
 class P1000Test {
 
     @Test
+    void confusingNumber() {
+        ConfusingNumber confusingNumber = new ConfusingNumber() ;
+        int input = 6 ;
+        boolean expected = true ;
+        assertEquals(expected, confusingNumber.confusingNumber(input));
+    }
+
+    @Test
     void largestValsFromLabels() {
         LargestValuesFromLabels largestValuesFromLabels = new LargestValuesFromLabels() ;
         int[] values = {5,4,3,2,1} ;
