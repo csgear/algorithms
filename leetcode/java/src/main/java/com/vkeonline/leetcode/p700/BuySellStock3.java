@@ -18,7 +18,7 @@ package com.vkeonline.leetcode.p700;
  * Leetcode [M]: 714. Best Time to Buy and Sell Stock with Transaction Fee
  * @author csgear
  */
-public class BuySellStockWithFee {
+public class BuySellStock3 {
     public int maxProfit(int[] prices, int fee) {
         int sell = 0;
         int own = -prices[0];
