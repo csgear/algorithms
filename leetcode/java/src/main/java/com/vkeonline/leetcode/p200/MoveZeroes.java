@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p200;
 
 /**
+ * Leetcode [E]: 283. Move Zeroes
  * @author csgear
  */
 public class MoveZeroes {

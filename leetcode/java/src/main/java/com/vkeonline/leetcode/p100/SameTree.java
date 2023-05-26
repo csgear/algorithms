@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p100;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [E]: 100. Same Tree
  * @author csgear
  */
 public class SameTree {

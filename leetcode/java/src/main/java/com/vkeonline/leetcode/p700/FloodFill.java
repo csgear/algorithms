@@ -1,7 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p700;
 
 /**
  * simple dfs
+ * Leetcode [M]: 733. Flood Fill
+ * @author csgear
  */
 public class FloodFill {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {

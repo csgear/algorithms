@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p000;
 
 /**
+ * Leetcode [E]: 66. Plus One
  * @author csgear
  */
 public class PlusOne {

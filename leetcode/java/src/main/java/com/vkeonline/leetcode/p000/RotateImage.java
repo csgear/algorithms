@@ -1,9 +1,13 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.p000;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class RotateImage48 {
+/**
+ * Leetcode [M]: 48. Rotate Image
+ * @author csgear
+ */
+public class RotateImage {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
 
