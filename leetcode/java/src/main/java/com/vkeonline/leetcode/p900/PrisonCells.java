@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p900;
 
 /**
+ * Leetcode [M]: 957. Prison Cells After N Days
  * @author csgear
  */
 public class PrisonCells {

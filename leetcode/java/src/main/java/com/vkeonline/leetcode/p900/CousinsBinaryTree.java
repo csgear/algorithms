@@ -1,7 +1,11 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p900;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
+/**
+ * Leetcode [E]: 993. Cousins in Binary Tree
+ * @author csgear
+ */
 public class CousinsBinaryTree {
     class Pair {
         TreeNode parent ;

@@ -1,7 +1,11 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p100;
 
 import java.util.LinkedHashMap;
 
+/**
+ * Leetcode [M]: 146. LRU Cache
+ * @author
+ */
 public class LRUCache {
     private LinkedHashMap<Integer, Integer> cache;
     private int N;
