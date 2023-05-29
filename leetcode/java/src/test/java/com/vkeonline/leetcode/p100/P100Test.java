@@ -10,6 +10,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P100Test {
 
     @Test
+    void buySellStock4() {
+        int k = 2 ;
+        int[] prices = {3,2,6,5,0,3} ;
+        int expected = 7 ;
+        BuySellStock4 buySellStock4 = new BuySellStock4() ;
+        assertEquals(expected, buySellStock4.maxProfit(k, prices));
+    }
+
+    @Test
+    void buySellStock3() {
+        int[] prices = {3,3,5,0,0,3,1,4} ;
+        int expected = 6 ;
+        BuySellStock3 buySellStock3 = new BuySellStock3() ;
+        assertEquals(expected, buySellStock3.maxProfit(prices));
+    }
+
+    @Test
     void findMin() {
         FindMinimumRotatedSortedArray findMinimumRotatedSortedArray = new FindMinimumRotatedSortedArray() ;
         int[] nums = {11,13,15,17} ;

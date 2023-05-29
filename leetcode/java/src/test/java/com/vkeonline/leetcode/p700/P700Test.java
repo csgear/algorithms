@@ -6,6 +6,24 @@ import org.junit.jupiter.api.Test;
 
 public class P700Test {
     @Test
+    void maxProfit() {
+        int[] prices = {1, 3, 2, 8, 4, 9} ;
+        int fee = 2 ;
+        BuySellStock6 buySellStock6 = new BuySellStock6() ;
+        int expected = 8 ;
+        assertEquals(expected, buySellStock6.maxProfit(prices, fee));
+    }
+
+    @Test
+    void maxProfit1() {
+        int[] prices = {1, 3, 2, 8, 4, 9} ;
+        int fee = 2 ;
+        BuySellStock6 buySellStock6 = new BuySellStock6() ;
+        int expected = 8 ;
+        assertEquals(expected, buySellStock6.maxProfit1(prices, fee));
+    }
+
+    @Test
     void numSubarrayProductLessThanK() {
         SubArrayProd subArrayProd = new SubArrayProd();
 
