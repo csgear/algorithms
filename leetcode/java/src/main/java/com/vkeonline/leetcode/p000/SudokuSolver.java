@@ -1,6 +1,3 @@
-/*
- * Copyright (c) 2023 HyTrust Inc. All rights reserved.
- */
 
 package com.vkeonline.leetcode.p000;
 
