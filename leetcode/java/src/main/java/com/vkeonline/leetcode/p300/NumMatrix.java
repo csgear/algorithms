@@ -1,10 +1,10 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.p300;
 
 /**
  * LeetCode: 304. Range Sum Query 2D - Immutable
+ * @author csgear
  */
-public class RangeSumQuery2D {
-}
+
 
 class NumMatrix {
     private int[][] dp = null;
@@ -26,9 +26,3 @@ class NumMatrix {
         return dp[row2 + 1][col2 + 1] - dp[row1][col2 + 1] - dp[row2 + 1][col1] + dp[row1][col1];
     }
 }
-
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * NumMatrix obj = new NumMatrix(matrix);
- * int param_1 = obj.sumRegion(row1,col1,row2,col2);
- */

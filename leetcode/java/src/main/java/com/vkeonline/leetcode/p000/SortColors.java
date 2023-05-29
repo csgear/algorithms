@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.june;
+package com.vkeonline.leetcode.p000;
 
 /**
+ * Leetcode [M]: 75. Sort Colors
  * @author csgear
  */
 public class SortColors {

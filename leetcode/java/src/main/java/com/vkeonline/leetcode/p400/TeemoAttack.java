@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.sept;
+package com.vkeonline.leetcode.p400;
 
 /**
+ * Leetcode [E]: 495. Teemo Attacking
  * @author csgear
  */
 public class TeemoAttack {

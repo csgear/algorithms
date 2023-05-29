@@ -10,18 +10,17 @@ package com.vkeonline.leetcode.p100;
  */
 public class BuySellStock2 {
     public int maxProfit(int[] prices) {
-        if (prices.length <= 1) {
-            return 0 ;
+        if (prices.length == 0) {
+            return 0;
         }
 
-        int profit = 0 ;
+        int buy = Integer.MIN_VALUE ;
+        int sell =  0 ;
 
-        for (int i = 1; i < prices.length; i++) {
-            if( prices[i] > prices[i-1]) {
-                profit += prices[i] - prices[i-1] ;
-            }
+        for(int price : prices) {
+            buy = Math.max(buy, sell - price);
+            sell = Math.max(sell, buy + price) ;
         }
-
-        return profit ;
+        return sell ;
     }
 }

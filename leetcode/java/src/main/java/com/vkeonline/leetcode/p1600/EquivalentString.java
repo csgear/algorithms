@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p1600;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
+ * Leetcode [E]: 1662. Check If Two String Arrays are Equivalent
  * @author csgear
  */
 public class EquivalentString {
@@ -15,11 +16,6 @@ public class EquivalentString {
         StringBuilder sb2 = new StringBuilder() ;
         Arrays.stream(word2).forEach(sb2::append);
         return sb1.toString().equals(sb2.toString()) ;
-
-        // this is the single line solution
-//        String result1 = Arrays.stream(word1).collect(StringBuilder::new,
-//                (builder, current)->builder.append(current.toString()),
-//                StringBuilder::append).toString() ;
 
 
     }

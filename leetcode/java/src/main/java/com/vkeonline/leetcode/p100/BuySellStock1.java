@@ -25,18 +25,13 @@ public class BuySellStock1 {
         if (prices.length == 0) {
             return 0;
         }
+        int buy = Integer.MIN_VALUE ;
+        int sell =  0 ;
 
-        int n = prices.length;
-        int[] minPrices = new int[n];
-        int[] maxProfits = new int[n];
-
-        minPrices[0] = prices[0];
-        maxProfits[0] = 0;
-
-        for (int i = 1; i < n; i++) {
-            minPrices[i] = Math.min(minPrices[i - 1], prices[i]);
-            maxProfits[i] = Math.max(maxProfits[i - 1], prices[i] - minPrices[i - 1]);
+        for(int price : prices) {
+            buy = Math.max(buy, 0 - price);
+            sell = Math.max(sell, buy + price) ;
         }
-        return maxProfits[n - 1];
+        return sell ;
     }
 }

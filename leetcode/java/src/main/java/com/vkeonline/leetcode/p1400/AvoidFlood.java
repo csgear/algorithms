@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2020.june;
+package com.vkeonline.leetcode.p1400;
 
 import java.util.HashMap;
 import java.util.TreeSet;
 
 /**
+ * Leetcode [M]: 1488. Avoid Flood in The City
  * @author csgear
  */
 public class AvoidFlood {

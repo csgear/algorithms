@@ -18,7 +18,10 @@ public class CloneNode {
         }
     }
 
-    private TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
+    private TreeNode getTargetCopy(
+            final TreeNode original,
+            final TreeNode cloned,
+            final TreeNode target) {
         this.target = target;
         inorder(original, cloned);
         return ans;
