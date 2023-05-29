@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.sept;
+package com.vkeonline.leetcode.p200;
 
 /**
+ * Leetcode [M]: 299. Bulls and Cows
  * @author csgear
  */
 public class BullsAndCows {

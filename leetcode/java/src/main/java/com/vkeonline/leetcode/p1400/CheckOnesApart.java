@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p1400;
 
 /**
+ * Leetcode [E]: 1437. Check If All 1's Are at Least Length K Places Away
  * @author csgear
  */
 public class CheckOnesApart {

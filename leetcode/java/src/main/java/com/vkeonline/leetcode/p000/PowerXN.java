@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p000;
 
 /**
+ * Leetcode [M]: 50. Pow(x, n)
  * @author csgear
  */
 public class PowerXN {

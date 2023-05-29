@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.sept;
+package com.vkeonline.leetcode.p900;
 
 /**
+ * Leetcode [M]: 949. Largest Time for Given Digits
  * @author csgear
  */
 public class LargestTime {

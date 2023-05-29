@@ -10,6 +10,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P100Test {
 
     @Test
+    void buySellStock1() {
+        int[] prices = {7,1,5,3,6,4} ;
+        int expected = 5 ;
+        BuySellStock1 buySellStock1 = new BuySellStock1() ;
+        assertEquals(expected, buySellStock1.maxProfitDP(prices));
+    }
+
+    @Test
+    void buySellStock2() {
+        int[] prices = {7,1,5,3,6,4} ;
+        int expected = 7 ;
+        BuySellStock2 buySellStock2 = new BuySellStock2() ;
+        assertEquals(expected, buySellStock2.maxProfit(prices));
+    }
+
+    @Test
     void buySellStock4() {
         int k = 2 ;
         int[] prices = {3,2,6,5,0,3} ;
