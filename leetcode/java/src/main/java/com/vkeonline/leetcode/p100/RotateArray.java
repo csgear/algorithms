@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.oct;
+package com.vkeonline.leetcode.p100;
 
 /**
+ * Leetcode [M]: 189. Rotate Array
  * @author csgear
  */
 public class RotateArray {

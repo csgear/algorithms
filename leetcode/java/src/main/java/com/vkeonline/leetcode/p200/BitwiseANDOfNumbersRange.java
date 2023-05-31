@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p200;
 
 /**
+ * Leetcode [M]: 201. Bitwise AND of Numbers Range
  * @author csgear
  */
 public class BitwiseANDOfNumbersRange {

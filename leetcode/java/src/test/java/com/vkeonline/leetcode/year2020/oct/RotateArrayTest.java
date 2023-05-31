@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.year2020.oct;
 
+import com.vkeonline.leetcode.p100.RotateArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

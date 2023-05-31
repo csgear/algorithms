@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p1400;
 
 import java.util.*;
 
 /**
+ * Leetcode [H]: 1345. Jump Game IV
  * @author csgear
  */
 public class JumpGame4 {

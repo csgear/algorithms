@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.oct;
+package com.vkeonline.leetcode.p000;
 
 import com.vkeonline.leetcode.common.ListNode;
 
 /**
+ * Leetcode [M]: 61. Rotate List
  * @author csgear
  */
 public class RotateList {

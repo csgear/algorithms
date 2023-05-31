@@ -2,6 +2,7 @@ package com.vkeonline.leetcode.year2020.april;
 
 import com.vkeonline.leetcode.p100.MaximumSubarray;
 import com.vkeonline.leetcode.p100.SingleNumber;
+import com.vkeonline.leetcode.p200.HappyNumber;
 import com.vkeonline.leetcode.p200.MoveZeroes;
 
 import java.util.Arrays;

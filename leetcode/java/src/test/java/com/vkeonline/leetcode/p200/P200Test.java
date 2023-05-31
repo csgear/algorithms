@@ -11,6 +11,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P200Test {
 
     @Test
+    void testGameOfLife1() {
+        int[][] board = {{0,1,0},{0,0,1},{1,1,1},{0,0,0}} ;
+        int[][] expected = {{0,0,0},{1,0,1},{0,1,1},{0,1,0}} ;
+        GameOfLife gameOfLife = new GameOfLife() ;
+        gameOfLife.gameOfLife1(board);
+        for (int i = 0; i < board.length; i++) {
+            assertArrayEquals(expected[i], board[i]);
+        }
+    }
+
+    @Test
+    void testGameOfLife() {
+        int[][] board = {{0,1,0},{0,0,1},{1,1,1},{0,0,0}} ;
+        int[][] expected = {{0,0,0},{1,0,1},{0,1,1},{0,1,0}} ;
+        GameOfLife gameOfLife = new GameOfLife() ;
+        gameOfLife.gameOfLife(board);
+        for (int i = 0; i < board.length; i++) {
+            assertArrayEquals(expected[i], board[i]);
+        }
+    }
+
+    @Test
+    void findKthLargest() {
+        KthLargestElement kthLargestElement = new KthLargestElement() ;
+        int[] nums = { 3, 2, 1, 5, 6, 4 };
+        int k = 2 ;
+        int expected = 5 ;
+        assertEquals(expected, kthLargestElement.findKthLargest(nums, k) );
+    }
+
+    @Test
     void searchMatrix() {
         int[][] matrix = {
                 { 1, 4, 7, 11, 15 },
