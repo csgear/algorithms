@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.year2020.oct;
+package com.vkeonline.leetcode.p300;
 
 /**
  * Leetcode [M]: 309. Best Time to Buy and Sell Stock with Cooldown

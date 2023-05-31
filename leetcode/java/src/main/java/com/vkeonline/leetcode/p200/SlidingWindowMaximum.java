@@ -2,9 +2,13 @@ package com.vkeonline.leetcode.p200;
 
 import java.util.*;
 
-public class _239 {
+/**
+ * Leetcode [M]: 239. Sliding Window Maximum
+ * @author csgear
+ */
+public class SlidingWindowMaximum {
     public static void main(String[] args) {
-        Solution solution = new _239().new Solution();
+        Solution solution = new SlidingWindowMaximum().new Solution();
 
         int nums[] = {1, -1};
         int k = 1;

@@ -2,7 +2,7 @@
 package com.vkeonline.leetcode.p1700;
 
 /**
- * Leetcode [M]: Maximum Score from Performing Multiplication Operations
+ * Leetcode [H]: 1770: Maximum Score from Performing Multiplication Operations
  * @author csgear
  */
 public class MaximumScore {

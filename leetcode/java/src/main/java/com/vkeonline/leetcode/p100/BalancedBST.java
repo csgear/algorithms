@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p100;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [M]: 110. Balanced Binary Tree
  * @author csgear
  */
 public class BalancedBST {

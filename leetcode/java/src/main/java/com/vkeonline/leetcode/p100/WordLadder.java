@@ -1,10 +1,11 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p100;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 /**
+ * Leetcode [H]: 127. Word Ladder
  * @author csgear
  */
 public class WordLadder {

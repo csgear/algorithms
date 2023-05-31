@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode;
+package com.vkeonline.leetcode.p000;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
+ * Leetcode [M]: 49. Group Anagrams
  * @author csgear
- * leetcode: 49. Group Anagrams
  */
 
 public class GroupAnagrams {

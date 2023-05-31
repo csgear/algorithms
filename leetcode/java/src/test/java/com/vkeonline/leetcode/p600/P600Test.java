@@ -12,6 +12,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class P600Test {
 
     @Test
+    void find24() {
+        int[] cards = {4, 1, 8, 7} ;
+        TwentyFourGame.find24(cards, "");
+    }
+
+    @Test
+    void judgePoint24() {
+        TwentyFourGame twentyFourGame = new TwentyFourGame() ;
+        int[] cards = {4, 1, 8, 7} ;
+        assertTrue(twentyFourGame.judgePoint24(cards));
+        cards = new int[]{ 1, 2, 1, 2 };
+        assertFalse(twentyFourGame.judgePoint24(cards));
+    }
+
+    @Test
     void topKFrequent() {
         String[] words = {"the","day","is","sunny","the","the","the","sunny","is","is"} ;
         int k = 4 ;

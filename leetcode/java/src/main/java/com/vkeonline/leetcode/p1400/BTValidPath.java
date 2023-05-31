@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p1400;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [M]: 1430. Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree
  * @author csgear
  */
 public class BTValidPath {

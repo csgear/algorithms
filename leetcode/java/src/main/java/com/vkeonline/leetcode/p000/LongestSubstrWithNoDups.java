@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p000;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Leetcode [M]: 3. Longest Substring Without Repeating Characters
  * @author csgear
  */
 public class LongestSubstrWithNoDups {

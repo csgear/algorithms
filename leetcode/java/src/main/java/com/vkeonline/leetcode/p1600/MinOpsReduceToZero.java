@@ -1,10 +1,9 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p1600;
 
 import java.util.Arrays;
 
 /**
- * Minimum Operations to Reduce X to Zero
- *
+ * Leetcode [M]: 1658. Minimum Operations to Reduce X to Zero
  * @author csgear
  */
 public class MinOpsReduceToZero {

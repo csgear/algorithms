@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.nov;
+package com.vkeonline.leetcode.p300;
 
 import java.util.Stack;
 
 /**
+ * Leetcode [M]: 394. Decode String
  * @author csgear
  */
 public class DecodeString {

@@ -7,22 +7,21 @@ package com.vkeonline.leetcode.p300;
 public class BurstBalloons {
     public int maxCoins(int[] nums) {
         int n = nums.length;
-        if (n <= 0) return 0;
-        int[][] DP = new int[n][n];
-        for (int len = 1; len <= n; len++) {
-            for (int i = 0; i <= n - len; i++) {
-                int j = i + len - 1;
-                int max = 0;
-                for (int k = i; k <= j; k++) {
-                    int left = i == 0 ? 1 : nums[i - 1];
-                    int right = j == n - 1 ? 1 : nums[j + 1];
-                    int leftVal = k == i ? 0 : DP[i][k - 1];
-                    int rightVal = k == j ? 0 : DP[k + 1][j];
-                    max = Math.max(max, left * nums[k] * right + leftVal + rightVal);
+        int[][] rec = new int[n + 2][n + 2];
+        int[] val = new int[n + 2];
+        val[0] = val[n + 1] = 1;
+        System.arraycopy(nums, 0, val, 1, n);
+
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i + 2; j <= n + 1; j++) {
+                for (int k = i + 1; k < j; k++) {
+                    int sum = val[i] * val[k] * val[j];
+                    sum += rec[i][k] + rec[k][j];
+                    rec[i][j] = Math.max(rec[i][j], sum);
                 }
-                DP[i][j] = max;
             }
         }
-        return DP[0][n - 1];
+        return rec[0][n + 1];
+
     }
 }

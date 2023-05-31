@@ -1,10 +1,10 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p100;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [E]: 104. Maximum Depth of Binary Tree
  * @author csgear
- * Leetcode: Maximum Depth of Binary Tree
  */
 public class MaxDepth {
     public int maxDepth(TreeNode root) {
