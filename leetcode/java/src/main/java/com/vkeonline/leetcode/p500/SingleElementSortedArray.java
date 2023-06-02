@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p500;
 
 /**
+ * Leetcode [E]: 540. Single Element in a Sorted Array
  * @author csgear
  */
 public class SingleElementSortedArray {

@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p900;
 
 import java.util.Arrays;
 
 /**
+ * Leetcode [M]: 918. Maximum Sum Circular Subarray
  * @author csgear
  */
 public class MaximumSumCircularSubarray {

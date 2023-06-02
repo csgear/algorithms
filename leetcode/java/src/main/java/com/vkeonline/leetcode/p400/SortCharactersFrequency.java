@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p400;
 
 import java.util.PriorityQueue;
 
 /**
+ * Leetcode [M]: 451. Sort Characters By Frequency
  * @author csgear
  */
 public class SortCharactersFrequency {

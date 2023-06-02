@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p000;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Leecode [M]: 78. Subsets
  * @author csgear
  */
 public class Subsets {

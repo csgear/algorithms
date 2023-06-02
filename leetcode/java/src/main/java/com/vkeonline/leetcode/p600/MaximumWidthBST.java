@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p600;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * Leetcode [M]: 662. Maximum Width of Binary Tree
  * @author csgear
  */
 public class MaximumWidthBST {

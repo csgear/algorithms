@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p1300;
 
 /**
+ * Leetcode [M]: 1344. Angle Between Hands of a Clock
  * @author csgear
  */
 public class AngleBetweenHandsClock {

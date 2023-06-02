@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p400;
 
 import com.vkeonline.leetcode.common.Node;
 
 /**
+ * Leetcode [M]: 430. Flatten a Multilevel Doubly Linked List
  * @author csgear
  */
 public class FlattenLinedList {

@@ -1,5 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p200;
 
+/**
+ * Leetcode [E]: 278. First Bad Version
+ * @author csgear
+ */
 class VersionControl {
     boolean isBadVersion(int n) {
         return false ;

@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p100;
 
 /**
+ * Leetcode [E]: 169. Majority Element
  * @author csgear
  */
 public class MajorityElement {

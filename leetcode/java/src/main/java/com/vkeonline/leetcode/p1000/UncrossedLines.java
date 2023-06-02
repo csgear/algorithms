@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p1000;
 
 /**
+ * Leetcode [M]: 1035. Uncrossed Lines
  * @author csgear
  */
 public class UncrossedLines {

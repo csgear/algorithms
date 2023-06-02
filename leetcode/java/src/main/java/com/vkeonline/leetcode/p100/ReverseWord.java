@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p100;
 
 /**
+ * Leetcode [M]: 151. Reverse Words in a String
  * @author csgear
  */
 public class ReverseWord {
