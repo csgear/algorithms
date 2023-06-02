@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p900;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
+ * Leetcode [M]: 973. K Closest Points to Origin
  * @author csgear
  */
 public class KClosestPointsOrigin {

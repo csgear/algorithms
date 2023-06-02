@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p300;
 
 import com.vkeonline.leetcode.common.ListNode;
 
@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
+ * Leetcode [M]: 382. Linked List Random Node
  * @author csgear
- * Leetcode: Linked List Random Node
  */
 public class RandomNodes {
     List<Integer> nodes = new ArrayList<>();

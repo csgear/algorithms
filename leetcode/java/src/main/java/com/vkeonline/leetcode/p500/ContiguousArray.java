@@ -3,8 +3,7 @@ package com.vkeonline.leetcode.p500;
 import java.util.HashMap;
 
 /**
- * Leetcode: 525 Contiguous Array
- *
+ * Leetcode [M]: 525 Contiguous Array
  * @author csgear
  */
 public class ContiguousArray {

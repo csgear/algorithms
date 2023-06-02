@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.year2021.jan;
 
+import com.vkeonline.leetcode.p1500.KthMissingPositiveNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

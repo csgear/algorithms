@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p1600;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Leetcode [M]: 1679. Max Number of K-Sum Pairs
  * @author csgear
  */
 public class MaxNumberPairs {

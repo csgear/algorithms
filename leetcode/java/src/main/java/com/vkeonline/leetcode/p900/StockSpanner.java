@@ -1,7 +1,11 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p900;
 
 import java.util.Stack;
 
+/**
+ * Leetcode [M]: 901. Online Stock Span
+ * @author csgear
+ */
 public class StockSpanner {
     Stack<int[] > spans ;
 

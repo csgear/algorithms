@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p1400;
 
 /**
+ * Leetcode [H]: 1463. Cherry Pickup II
  * @author csgear
  */
 public class CherryPickup2 {

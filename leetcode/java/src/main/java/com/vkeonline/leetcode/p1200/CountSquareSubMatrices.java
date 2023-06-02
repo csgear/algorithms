@@ -1,5 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p1200;
 
+/**
+ * Leetcode [M]: 1277. Count Square Submatrices with All Ones
+ * @author csgear
+ */
 public class CountSquareSubMatrices {
     public int countSquares(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;

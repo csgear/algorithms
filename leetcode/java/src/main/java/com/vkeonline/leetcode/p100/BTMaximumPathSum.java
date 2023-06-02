@@ -1,7 +1,11 @@
-package com.vkeonline.leetcode.year2020.april;
+package com.vkeonline.leetcode.p100;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
+/**
+ * Leetcode [H]: 124. Binary Tree Maximum Path Sum
+ * @author csgear
+ */
 public class BTMaximumPathSum {
     private int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {

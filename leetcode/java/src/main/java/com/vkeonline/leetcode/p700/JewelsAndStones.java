@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p700;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Leetcode [E]: 771. Jewels and Stones
  * @author csgear
  */
 public class JewelsAndStones {

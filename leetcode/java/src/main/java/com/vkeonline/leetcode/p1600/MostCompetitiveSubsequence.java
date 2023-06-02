@@ -1,9 +1,10 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p1600;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
 /**
+ * Leetcode [M]: 1673. Find the Most Competitive Subsequence
  * @author csgear
  */
 public class MostCompetitiveSubsequence {

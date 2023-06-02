@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.year2020.dec;
 
+import com.vkeonline.leetcode.p900.SquaresSortedArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

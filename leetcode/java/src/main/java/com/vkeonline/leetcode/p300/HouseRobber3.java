@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.nov;
+package com.vkeonline.leetcode.p300;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [M]: 337. House Robber III
  * @author csgear
  */
 public class HouseRobber3 {
@@ -17,6 +18,7 @@ public class HouseRobber3 {
         }
 
         int[] left = helper(node.left) ;
+
         int[] right = helper(node.right) ;
 
         int rob = node.val + left[1] + right[1] ;

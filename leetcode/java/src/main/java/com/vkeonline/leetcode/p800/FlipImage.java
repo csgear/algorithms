@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.nov;
+package com.vkeonline.leetcode.p800;
 
 /**
+ * Leetcode [E]: 832. Flipping an Image
  * @author csgear
  */
 public class FlipImage {

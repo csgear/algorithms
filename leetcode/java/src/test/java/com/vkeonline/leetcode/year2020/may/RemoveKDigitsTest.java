@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.year2020.may;
 
+import com.vkeonline.leetcode.p400.RemoveKDigits;
 import org.junit.jupiter.api.Test;
 
 class RemoveKDigitsTest {

@@ -4,7 +4,6 @@ import com.vkeonline.leetcode.common.TreeNode;
 
 /**
  * Leetcode [M]: 1008. Construct Binary Search Tree from Preorder Traversal
- *
  * @author csgear
  */
 public class BSTFromPreOrder {

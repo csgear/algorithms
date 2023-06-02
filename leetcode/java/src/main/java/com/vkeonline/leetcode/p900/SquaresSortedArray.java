@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p900;
 
 /**
+ * Leetcode [E]: 977. Squares of a Sorted Array
  * @author csgear
  */
 public class SquaresSortedArray {

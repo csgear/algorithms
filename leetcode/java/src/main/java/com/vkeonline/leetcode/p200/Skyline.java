@@ -1,10 +1,11 @@
-package com.vkeonline.leetcode.year2020.nov;
+package com.vkeonline.leetcode.p200;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
 /**
+ * Leetcode [H]: 218. The Skyline Problem
  * @author csgear
  */
 public class Skyline {

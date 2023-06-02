@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.year2020.nov;
+package com.vkeonline.leetcode.p000;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * Leetcode [M]: 56. Merge Intervals
  * @author csgear
  */
 public class MergeIntervals {

@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.year2020.oct;
 
+import com.vkeonline.leetcode.p200.HouseRobber2;
 import org.junit.jupiter.api.Test;
 
 class HouseRobber2Test {

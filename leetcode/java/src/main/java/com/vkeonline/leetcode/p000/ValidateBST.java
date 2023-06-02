@@ -1,12 +1,14 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p000;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
 /**
+ * Leetcode [M]: 98. Validate Binary Search Tree
  * @author csgear
  */
 public class ValidateBST {
     public boolean isValidBST(TreeNode root) {
+
         return validate(root, null, null);
     }
 

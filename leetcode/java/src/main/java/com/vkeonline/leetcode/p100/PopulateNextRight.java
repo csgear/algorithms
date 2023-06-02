@@ -1,10 +1,11 @@
-package com.vkeonline.leetcode.year2020.nov;
+package com.vkeonline.leetcode.p100;
 
 import com.vkeonline.leetcode.common.Node;
 
 import javax.swing.tree.TreeNode;
 
 /**
+ * Leetcode [M]: 116. Populating Next Right Pointers in Each Node
  * @author csgear
  */
 public class PopulateNextRight {

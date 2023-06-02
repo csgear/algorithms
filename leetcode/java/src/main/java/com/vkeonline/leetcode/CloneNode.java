@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode;
 
 import com.vkeonline.leetcode.common.TreeNode;
 

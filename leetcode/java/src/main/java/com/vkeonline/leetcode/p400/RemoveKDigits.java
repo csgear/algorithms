@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p400;
 
 import java.util.Stack;
 
 /**
+ * Leetcode [M]: 402. Remove K Digits
  * @author csgear
  */
 public class RemoveKDigits {

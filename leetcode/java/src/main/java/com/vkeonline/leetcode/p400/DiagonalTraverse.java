@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p400;
 
 /**
+ * Leetcode [M]: 498. Diagonal Traverse
  * @author csgear
  */
 public class DiagonalTraverse {

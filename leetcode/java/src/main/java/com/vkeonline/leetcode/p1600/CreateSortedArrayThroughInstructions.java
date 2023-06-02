@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2021.jan;
+package com.vkeonline.leetcode.p1600;
 
 /**
+ * Leetcode [H]: 1649. Create Sorted Array through Instructions
  * @author csgear
  */
 public class CreateSortedArrayThroughInstructions {

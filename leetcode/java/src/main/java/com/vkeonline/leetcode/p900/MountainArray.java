@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.dec;
+package com.vkeonline.leetcode.p900;
 
 /**
+ * Leetcode [E]: 941. Valid Mountain Array
  * @author csgear
  */
 public class MountainArray {
