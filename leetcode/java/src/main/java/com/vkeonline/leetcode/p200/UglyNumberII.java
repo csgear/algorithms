@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p200;
 
 /**
+ * Leetcode [M]: 264. Ugly Number II
  * @author csgear
  */
 public class UglyNumberII {

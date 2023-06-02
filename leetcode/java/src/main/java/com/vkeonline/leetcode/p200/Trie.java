@@ -1,8 +1,8 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p200;
 
 /**
+ * Leetcode [M]: 208. Implement Trie (Prefix Tree)
  * @author csgear
- * Implement Trie (Prefix Tree)
  */
 public class Trie {
     private class Node {

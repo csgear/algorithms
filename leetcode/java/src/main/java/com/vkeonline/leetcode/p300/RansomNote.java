@@ -1,10 +1,11 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p300;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author
+ * Leetcode [E]: 383. Ransom Note
+ * @author csgear
  */
 public class RansomNote {
     public boolean canConstruct(String ransomNote, String magazine) {

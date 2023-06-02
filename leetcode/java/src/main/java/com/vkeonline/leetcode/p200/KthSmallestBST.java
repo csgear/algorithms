@@ -1,4 +1,4 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p200;
 
 import com.vkeonline.leetcode.common.TreeNode;
 
@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Leetcode [M]: 230. Kth Smallest Element in a BST
  * @author csgear
  */
 public class KthSmallestBST {

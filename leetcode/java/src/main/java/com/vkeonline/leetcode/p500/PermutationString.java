@@ -1,10 +1,10 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p500;
 
 import java.util.Arrays;
 
 /**
+ * Leetcode [M]: 567. Permutation in String
  * @author csgear
- * Permutation in String
  */
 public class PermutationString {
     public boolean checkInclusion(String p, String s) {

@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p300;
 
 /**
+ * Leetcode [E]: 367. Valid Perfect Square
  * @author csgear
  */
 public class ValidPerfectSquare {

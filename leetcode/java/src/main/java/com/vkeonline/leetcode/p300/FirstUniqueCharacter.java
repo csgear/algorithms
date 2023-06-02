@@ -1,5 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p300;
 
+/**
+ * Leetcode [E]: 387. First Unique Character in a String
+ * @author csgear
+ */
 public class FirstUniqueCharacter {
     public int firstUniqChar(String s) {
         int[] cnt_arr = new int[26];

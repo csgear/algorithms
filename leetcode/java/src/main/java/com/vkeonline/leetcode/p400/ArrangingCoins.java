@@ -1,6 +1,7 @@
-package com.vkeonline.leetcode.year2020.july;
+package com.vkeonline.leetcode.p400;
 
 /**
+ * Leetcode [E]: 441. Arranging Coins
  * @author csgear
  */
 public class ArrangingCoins {

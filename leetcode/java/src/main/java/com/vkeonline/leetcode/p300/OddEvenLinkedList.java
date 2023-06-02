@@ -1,8 +1,9 @@
-package com.vkeonline.leetcode.year2020.may;
+package com.vkeonline.leetcode.p300;
 
 import com.vkeonline.leetcode.common.ListNode;
 
 /**
+ * Leetcode [M]: 328. Odd Even Linked List
  * @author csgear
  */
 public class OddEvenLinkedList {
