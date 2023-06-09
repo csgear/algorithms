@@ -1,41 +1,28 @@
 package com.vkeonline.leetcode.year2020.april;
 
+import com.vkeonline.leetcode.common.TreeNode;
+
 /**
  * @author csgear
  */
 public class DiameterOfBinaryTree {
 
-      public class TreeNode {
-          int val;
-          TreeNode left;
-          TreeNode right;
-          TreeNode(int x) { val = x; }
-      }
-
-    int ans;
+    private int ans = 0 ;
 
     public int diameterOfBinaryTree(TreeNode root) {
         ans = 1;
-        depth(root);
+        dfs(root);
         return ans - 1;
     }
 
-
-    public int depth(TreeNode node) {
+    public int dfs(TreeNode node) {
         if (node == null) {
             return 0;
         }
-        int L = depth(node.left);
-        int R = depth(node.right);
-        ans = Math.max(ans, L+R+1);
-        return Math.max(L, R) + 1;
+        int left = dfs(node.left);
+        int right = dfs(node.right);
+        ans = Math.max(ans, left+right+1);
+        return Math.max(left, right) + 1;
     }
 
-    static int height(TreeNode node) {
-          if(node == null) {
-              return 0 ;
-          }
-
-          return (1 + Math.max(height(node.left), height(node.right))) ;
-    }
 }

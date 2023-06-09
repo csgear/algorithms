@@ -10,6 +10,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class P800Test {
 
     @Test
+    void expressiveWords() {
+        String s = "zzzzzyyyyy" ;
+        String[] words = {"zzyy","zy","zyy"} ;
+        int expected = 3 ;
+        ExpressiveWord expressiveWord = new ExpressiveWord() ;
+        assertEquals(expected, expressiveWord.expressiveWords(s, words));
+    }
+
+    @Test
     void mirrorReflection() {
         MirrorReflection mirrorReflection = new MirrorReflection() ;
         int p = 2 ;
