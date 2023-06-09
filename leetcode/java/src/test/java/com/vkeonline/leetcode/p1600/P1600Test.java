@@ -7,6 +7,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P1600Test {
 
     @Test
+    void maxProfit() {
+        SellDiminishingValuedColoredBalls sellDiminishingValuedColoredBalls =
+                new SellDiminishingValuedColoredBalls() ;
+        int[] inventory = {2,8,4,10,6} ;
+        int order = 20 ;
+        int expected = 110 ;
+        assertEquals(expected, sellDiminishingValuedColoredBalls.maxProfit(inventory, 20));
+    }
+
+    @Test
     void furthestBuilding() {
         FurthestBuilding furthestBuilding = new FurthestBuilding();
         int[] heights = {4, 12, 2, 7, 3, 18, 20, 3, 19};
