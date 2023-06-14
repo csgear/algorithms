@@ -7,6 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P1400Test {
 
     @Test
+    void testMinReorder() {
+        ReorderRoutes reorderRoutes = new ReorderRoutes() ;
+        int n = 5 ;
+        int[][] connections = {{1,0},{1,2},{3,2},{3,4}} ;
+        int expected =2 ;
+        assertEquals(expected, reorderRoutes.minReorder(n, connections));
+    }
+
+    @Test
     void minJumps() {
         JumpGame4 jumpGame4 = new JumpGame4() ;
 

@@ -1,6 +1,7 @@
 package com.vkeonline.leetcode.p800;
 
 import java.util.ArrayDeque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
@@ -11,15 +12,17 @@ import java.util.Queue;
 public class KeysRooms {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         int n = rooms.size();
-        Queue<Integer> queue = new ArrayDeque<>();
+        boolean[] visited = new boolean[n] ;
+        Queue<Integer> queue = new LinkedList<>();
+        visited[0] = true ;
         queue.offer(0);
         while (!queue.isEmpty()) {
-            Integer header = queue.poll();
-            List<Integer> next = rooms.set(header, null);
-            if (next == null)
-                continue;
-            for (Integer keys : next) {
-                queue.offer(keys);
+            int node = queue.poll();
+            for (int key : rooms.get(node)) {
+                if(!visited[key]) {
+                    queue.offer(key) ;
+                    visited[key] = true ;
+                }
             }
             n = n - 1;
         }

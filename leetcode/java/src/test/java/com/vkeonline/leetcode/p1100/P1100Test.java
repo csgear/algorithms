@@ -10,6 +10,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class P1100Test {
 
     @Test
+    void testShortestAlternatingPaths() {
+        ShortestPathAlternatingColors shortestPathAlternatingColors = new ShortestPathAlternatingColors() ;
+        int n = 3 ;
+        int[][] redEdges = {{0,1}}, blueEdges = {{2,1}} ;
+        int[] expected = {0,1,-1} ;
+        assertArrayEquals(expected, shortestPathAlternatingColors.shortestAlternatingPaths(
+                n, redEdges, blueEdges
+        ));
+
+    }
+
+    @Test
     void testNumSmallerByFrequency() {
         CompareStringsByFreq compareStringsByFreq = new CompareStringsByFreq() ;
         String[] queries = {"bbb","cc"} ;

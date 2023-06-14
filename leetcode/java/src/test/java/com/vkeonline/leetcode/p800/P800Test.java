@@ -1,5 +1,8 @@
 package com.vkeonline.leetcode.p800;
 
+import java.util.List;
+
+import com.vkeonline.leetcode.utils.Utils;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +11,24 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author csgear
  */
 class P800Test {
+
+    @Test
+    void testCanVisitAllRooms() {
+        KeysRooms keysRooms = new KeysRooms() ;
+        int[][] rooms = {{1,3},{3,0,1},{2},{0}} ;
+        boolean expected = false ;
+        assertEquals(expected, keysRooms.canVisitAllRooms(
+                Utils.twoDimArrayToList(rooms)));
+
+    }
+
+    @Test
+    void testEventualSafeNodes() {
+        FindEventualSafeStates findEventualSafeStates = new FindEventualSafeStates() ;
+        int[][] graph = {{1,2},{2,3},{5},{0},{5},{},{}} ;
+        List<Integer> expected = List.of(2,4,5,6) ;
+        assertEquals(expected, findEventualSafeStates.eventualSafeNodes(graph));
+    }
 
     @Test
     void expressiveWords() {
