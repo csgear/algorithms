@@ -11,6 +11,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P200Test {
 
     @Test
+    void testValidTree() {
+        GraphValidTree graphValidTree = new GraphValidTree() ;
+        int n = 5 ;
+        int[][] edges = {{0,1},{0,2},{0,3},{1,4}} ;
+        boolean expected = true ;
+        assertEquals(expected, graphValidTree.validTree(n, edges));
+    }
+
+    @Test
     void testGameOfLife1() {
         int[][] board = {{0,1,0},{0,0,1},{1,1,1},{0,0,0}} ;
         int[][] expected = {{0,0,0},{1,0,1},{0,1,1},{0,1,0}} ;
