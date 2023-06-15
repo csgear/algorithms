@@ -1,5 +1,7 @@
 package com.vkeonline.leetcode.p1100;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +10,17 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author xiaojun.yang
  */
 class P1100Test {
+
+    @Test
+    void testCanMakePaliQueries() {
+        PalindromeFromSubstring palindromeFromSubstring = new PalindromeFromSubstring() ;
+        String s = "abcda" ;
+        int[][] queries = {{3,3,0},{1,2,0},{0,3,1},{0,3,2},{0,4,1}} ;
+        List<Boolean> expected = List.of(true,false,false,true,true) ;
+        assertEquals(expected, palindromeFromSubstring.canMakePaliQueries(
+                s, queries
+        ));
+    }
 
     @Test
     void testShortestAlternatingPaths() {

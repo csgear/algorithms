@@ -4,5 +4,5 @@
 
 ## Graph
 - detect a cycle, 3-color + dfs
-- find a connected component, dfs or union-find
+- find # of connected components, dfs or union-find
 - 

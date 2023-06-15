@@ -2,9 +2,19 @@ package com.vkeonline.leetcode.p700;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.vkeonline.leetcode.utils.Utils;
 import org.junit.jupiter.api.Test;
 
 public class P700Test {
+    @Test
+    void testAllPathsSourceTarget() {
+        AllPathFromSourceToTarget allPathFromSourceToTarget = new AllPathFromSourceToTarget() ;
+        int[][] graph = {{1,2},{3},{3},{}} ;
+        int[][] expected = {{0,1,3},{0,2,3}} ;
+        assertEquals(Utils.twoDimArrayToList(expected) ,
+                allPathFromSourceToTarget.allPathsSourceTarget(graph)) ;
+    }
+
     @Test
     void maxProfit() {
         int[] prices = {1, 3, 2, 8, 4, 9} ;
