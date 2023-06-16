@@ -11,6 +11,30 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P200Test {
 
     @Test
+    void testCourseScheduleIIDfs() {
+        CourseScheduleIIDfs courseScheduleIIDfs = new CourseScheduleIIDfs() ;
+        int numCourses = 4 ;
+        int[][] prerequisites = {{1,0},{2,0},{3,1},{3,2}} ;
+        int[] expected = {0,2,1,3} ;
+        assertArrayEquals(expected, courseScheduleIIDfs.findOrder(
+                numCourses, prerequisites
+        ));
+
+    }
+
+
+    @Test
+    void testCourseScheduleIIBfs() {
+        CourseScheduleIIBfs courseScheduleIIBfs = new CourseScheduleIIBfs() ;
+        int numCourses = 4 ;
+        int[][] prerequisites = {{1,0},{2,0},{3,1},{3,2}} ;
+        int[] expected = {0,1,2,3} ;
+        assertArrayEquals(expected, courseScheduleIIBfs.findOrder(
+                numCourses, prerequisites
+        ));
+    }
+
+    @Test
     void testValidTree() {
         GraphValidTree graphValidTree = new GraphValidTree() ;
         int n = 5 ;
@@ -77,12 +101,12 @@ class P200Test {
 
     @Test
     void findOrder() {
-        CourseScheduleII courseScheduleII = new CourseScheduleII() ;
+        CourseScheduleIIBfs courseScheduleIIBfs = new CourseScheduleIIBfs() ;
         int numCourses = 4 ;
         int[][] prerequisites = {{1,0},{2,0},{3,1},{3,2}} ;
         int[] expected = {0,2,1,3} ;
         Arrays.sort(expected) ;
-        int[] result = courseScheduleII.findOrder(numCourses, prerequisites) ;
+        int[] result = courseScheduleIIBfs.findOrder(numCourses, prerequisites) ;
         Arrays.sort(result);
         assertEquals(expected.length, result.length);
         assertArrayEquals(expected, result);

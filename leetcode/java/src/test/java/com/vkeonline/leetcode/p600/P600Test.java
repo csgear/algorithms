@@ -12,6 +12,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class P600Test {
 
     @Test
+    void scheduleCourse() {
+        CourseSchedule3 courseSchedule3 = new CourseSchedule3() ;
+
+        int[][] courses1 = {{100,200},{200,1300},{1000,1250},{2000,3200}} ;
+        int expected, result ;
+        expected= 3 ;
+        result = courseSchedule3.scheduleCourse(courses1) ;
+        assertEquals(expected, result);
+        int[][] courses2 = {{5,5},{4,6},{2,6}} ;
+        expected = 2 ;
+        result = courseSchedule3.scheduleCourse(courses2) ;
+        assertEquals(expected, result);
+    }
+
+    @Test
     void find24() {
         int[] cards = {4, 1, 8, 7} ;
         TwentyFourGame.find24(cards, "");
