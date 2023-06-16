@@ -7,6 +7,27 @@ import org.junit.jupiter.api.Test;
 
 public class P700Test {
     @Test
+    void testNetworkDelayTimeDijkstra() {
+        NetworkDelayTimeDijkstra networkDelayTimeDijkstra = new NetworkDelayTimeDijkstra() ;
+        int[][] times = {{2,1,1},{2,3,1},{3,4,1}} ;
+        int n = 4 ;
+        int k = 2 ;
+        int expected = 2;
+        assertEquals(expected, networkDelayTimeDijkstra.networkDelayTime(times, n, k));
+
+    }
+
+    @Test
+    void testNetworkDelayTimeBellmanFord() {
+        NetworkDelayTimeBellmanFord networkDelayTimeBellmanFord = new NetworkDelayTimeBellmanFord() ;
+        int[][] times = {{2,1,1},{2,3,1},{3,4,1}} ;
+        int n = 4 ;
+        int k = 2 ;
+        int expected = 2;
+        assertEquals(expected, networkDelayTimeBellmanFord.networkDelayTime(times, n, k));
+    }
+
+    @Test
     void testAllPathsSourceTarget() {
         AllPathFromSourceToTarget allPathFromSourceToTarget = new AllPathFromSourceToTarget() ;
         int[][] graph = {{1,2},{3},{3},{}} ;

@@ -5,13 +5,12 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * Leetcode: Course Schedule III
- *
+ * Leetcode [H]: 630. Course Schedule III
  * @author csgear
  */
-public class CourseScheduleIII {
+public class CourseSchedule3 {
     public int scheduleCourse(int[][] courses) {
-        Arrays.sort(courses, (a, b) -> a[1] - b[1]);
+        Arrays.sort(courses, Comparator.comparingInt(a -> a[1]));
         PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
         int time = 0;
         for (int[] c : courses) {
