@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.p100;
 
+import com.vkeonline.leetcode.utils.Utils;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -8,6 +9,15 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class P100Test {
+
+    @Test
+    void testTriangleMinimumTotal() {
+        TriangleMinimumCost triangleMinimumCost = new TriangleMinimumCost() ;
+        int[][] triangle = {{2},{3,4},{6,5,7},{4,1,8,3}};
+        int expected = 11 ;
+        assertEquals(expected, triangleMinimumCost.minimumTotal(
+                Utils.twoDimArrayToList(triangle)));
+    }
 
     @Test
     void buySellStock1() {

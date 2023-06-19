@@ -11,6 +11,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P200Test {
 
     @Test
+    void testSingleNumber() {
+        SingleNumber3 singleNumber3 = new SingleNumber3() ;
+        int[] nums = {1,2,1,3,2,5} ;
+        int[] expected = {3,5} ;
+        assertArrayEquals(expected, singleNumber3.singleNumber(nums));
+
+    }
+
+    @Test
     void testCourseScheduleIIDfs() {
         CourseScheduleIIDfs courseScheduleIIDfs = new CourseScheduleIIDfs() ;
         int numCourses = 4 ;
