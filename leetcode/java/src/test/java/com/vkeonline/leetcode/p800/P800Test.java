@@ -13,6 +13,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class P800Test {
 
     @Test
+    void shortestToChar() {
+        ShortestDistanceChar shortestDistanceChar = new ShortestDistanceChar() ;
+        String s = "loveleetcode" ;
+        char c = 'e' ;
+        int[] expected = {3,2,1,0,1,0,0,1,2,2,1,0} ;
+        assertArrayEquals(expected, shortestDistanceChar.shortestToChar(s, c)) ;
+
+    }
+    @Test
     void testCanVisitAllRooms() {
         KeysRooms keysRooms = new KeysRooms() ;
         int[][] rooms = {{1,3},{3,0,1},{2},{0}} ;

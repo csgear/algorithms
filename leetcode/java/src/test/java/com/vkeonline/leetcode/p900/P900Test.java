@@ -11,6 +11,23 @@ import org.junit.jupiter.api.Test;
 class P900Test {
 
     @Test
+    void superPalindromesInRange() {
+        SuperPalindromes superPalindromes = new SuperPalindromes() ;
+        String left = "4" ;
+        String right = "1000" ;
+        int expected = 4 ;
+        assertEquals(expected, superPalindromes.superpalindromesInRange(left, right));
+    }
+    @Test
+    void maxSubarraySumCircular() {
+        MaximumSumCircularSubarray maximumSumCircularSubarray = new MaximumSumCircularSubarray();
+        int[] A = {1, -2, 3, -2};
+        assertEquals(3, maximumSumCircularSubarray.maxSubarraySumCircular(A));
+        int[] B = {5, -3, 5};
+        assertEquals(10, maximumSumCircularSubarray.maxSubarraySumCircular(B));
+    }
+
+    @Test
     void numsSameConsecDiff() {
         int n = 3 ;
         int k = 7 ;

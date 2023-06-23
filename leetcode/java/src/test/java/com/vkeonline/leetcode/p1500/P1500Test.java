@@ -10,6 +10,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class P1500Test {
 
     @Test
+    void testMaxUniqueSplit() {
+        MaxUniqueSplit maxUniqueSplit = new MaxUniqueSplit() ;
+        String s = "ababccc" ;
+        int expected = 5 ;
+        assertEquals(expected,maxUniqueSplit.maxUniqueSplit(s));
+
+    }
+
+    @Test
     void testMinCostConnectPointsKruskal() {
         MinCostConnectAllPointsKruskal minCostConnectAllPointsKruskal = new MinCostConnectAllPointsKruskal() ;
         int[][] points = {{3,12},{-2,5},{-4,1}} ;

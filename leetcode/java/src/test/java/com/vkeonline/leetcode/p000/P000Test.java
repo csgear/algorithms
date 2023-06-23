@@ -1,23 +1,77 @@
 package com.vkeonline.leetcode.p000;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 import java.util.List;
+
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 public class P000Test {
     @Test
+    void simplifyPath() {
+        String path = "/a/./b/../../c/" ;
+        String expected = "/c" ;
+
+        SimplifyPath simplifyPath = new SimplifyPath() ;
+        assertEquals(expected, simplifyPath.simplifyPath(path));
+    }
+
+    @Test
+    void simplifyPathWithDoubleSlash() {
+
+        String path = "/home//foo/" ;
+        String expected =  "/home/foo" ;
+
+        SimplifyPath simplifyPath = new SimplifyPath() ;
+        assertEquals(expected, simplifyPath.simplifyPath(path));
+    }
+    @Test
+    void search() {
+        SearchingRotatedSortedArray sa = new SearchingRotatedSortedArray() ;
+        int[] nums = {4,5,6,7,0,1,2} ;
+        int  target = 0 ;
+        assertEquals(4,sa.Search(nums, 0)) ;
+    }
+
+    @Test
+    public void testGroupAnagrams() {
+        GroupAnagrams ga = new GroupAnagrams() ;
+        List<List<String>> result = ga.groupAnagrams(new String[]{ "eat", "tea", "tan", "ate", "nat", "bat"}) ;
+
+        // TODO: class casting won't work here, we shall pass new String[0] to toArray function
+        for(List<String> innerLs : result) {
+            String[] arr =  innerLs.toArray(new String[0]);
+            System.out.println(Arrays.deepToString(arr));
+        }
+    }
+
+    @Test
+    void checkValidString() {
+        ValidParenthesis vps = new ValidParenthesis() ;
+        boolean expected = true ;
+        assertEquals(expected, vps.checkValidString("((*)"));
+    }
+    @Test
+    void testCombinationSum2() {
+        CombinationSum2 combinationSum2 = new CombinationSum2() ;
+        int[] candidates = {2,5,2,1,2} ;
+        int target = 5 ;
+        var result = combinationSum2.combinationSum2(candidates, target) ;
+        for(var r: result) {
+            System.out.printf(r.toString()) ;
+        }
+    }
+
+    @Test
     void testSearchRangeCase1() {
-        FindFirstAndLast findFirstAndLast = new FindFirstAndLast() ;
+        FindFirstLast findFirstLast = new FindFirstLast() ;
         int target = 8 ;
         int[] nums = {5,7,7,8,8,10} ;
         int[] expected = {3,4} ;
         
-        assertArrayEquals(expected, findFirstAndLast.searchRange(nums, target)) ;
+        assertArrayEquals(expected, findFirstLast.searchRange(nums, target)) ;
 
     }
 

@@ -6,9 +6,30 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class P100Test {
+    @Test
+    void testRotateArray() {
+        RotateArray rotateArray = new RotateArray() ;
+        int[] nums = {1,2,3,4,5,6,7} ;
+        int k = 3 ;
+        int[] expected = {5,6,7,1,2,3,4} ;
+        rotateArray.rotate(nums, k);
+        assertArrayEquals(expected, nums);
+    }
+    @Test
+    void findRepeatedDnaSequences() {
+        RepeatedDnaSeq repeatedDNASeq = new RepeatedDnaSeq() ;
+        String s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT" ;
+        String[] expected = {"AAAAACCCCC", "CCCCCAAAAA"} ;
+        List<String> result = repeatedDNASeq.findRepeatedDnaSequences(s) ;
+        // compare 2 arrays
+        assertArrayEquals(expected, result.toArray());
+        // compare 2 lists
+        assertEquals(Arrays.asList(expected), result);
+    }
 
     @Test
     void testTriangleMinimumTotal() {

@@ -7,6 +7,14 @@ import org.junit.jupiter.api.Test;
 class P1000Test {
 
     @Test
+    void lastStoneWeight() {
+        LastStoneWeight lsw = new LastStoneWeight() ;
+        int[] stones = new int[] {2,7,4,1,8,1} ;
+        int result = lsw.lastStoneWeight(stones) ;
+        assertEquals(1, result);
+    }
+
+    @Test
     void confusingNumber() {
         ConfusingNumber confusingNumber = new ConfusingNumber() ;
         int input = 6 ;

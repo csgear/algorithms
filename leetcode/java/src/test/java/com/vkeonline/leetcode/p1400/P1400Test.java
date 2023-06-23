@@ -7,6 +7,30 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P1400Test {
 
     @Test
+    void stringShift() {
+        StringShifts ss = new StringShifts() ;
+        String s = "abc" ;
+        int[][] shift = {{0,1}, {1,2}} ;
+        assertEquals("cab", ss.stringShift(s, shift) ) ;
+    }
+
+    @Test
+    void showFirstUnique() {
+        int[] nums = {7,7,7,7,7,7} ;
+        FirstUnique firstUnique = new FirstUnique(nums) ;
+        assertEquals(-1, firstUnique.showFirstUnique()) ;
+    }
+    @Test
+    void countElements() {
+        CountingElements ce = new CountingElements() ;
+        int result  ;
+        result = ce.countElements(new int[]{1,1,3,3,5,5,7,7});
+        assertEquals(0, result);
+        result = ce.countElements(new int[]{1,3,2,3,5,0}) ;
+        assertEquals(3, result);
+    }
+
+    @Test
     void testMinReorder() {
         ReorderRoutes reorderRoutes = new ReorderRoutes() ;
         int n = 5 ;

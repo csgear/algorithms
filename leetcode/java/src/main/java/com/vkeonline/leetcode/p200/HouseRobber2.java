@@ -28,7 +28,7 @@ public class HouseRobber2 {
         return Math.max(maxExcludeFirst, maxExcludeLast);
     }
 
-    public int robHelper(int[] nums, int start, int end) {
+    private int robHelper(int[] nums, int start, int end) {
         int prevMax = 0;
         int currentMax = 0;
 
