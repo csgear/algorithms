@@ -11,6 +11,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P200Test {
 
     @Test
+    void rob() {
+        HouseRobber2 houseRobber2 = new HouseRobber2();
+        int[] nums = {2, 3, 2};
+        int expected = 3 ;
+        assertEquals(expected, houseRobber2.rob(nums));
+    }
+
+    @Test
     void testSingleNumber() {
         SingleNumber3 singleNumber3 = new SingleNumber3() ;
         int[] nums = {1,2,1,3,2,5} ;

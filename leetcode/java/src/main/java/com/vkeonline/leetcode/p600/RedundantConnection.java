@@ -1,6 +1,6 @@
 package com.vkeonline.leetcode.p600;
 
-import com.vkeonline.leetcode.UnionFindSet;
+import com.vkeonline.leetcode.boilerplate.UnionFindSet;
 
 /**
  * Leetcode [M]: 684: Redundant Connection

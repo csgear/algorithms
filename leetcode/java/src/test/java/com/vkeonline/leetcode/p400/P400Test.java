@@ -7,6 +7,24 @@ import org.junit.jupiter.api.Test;
 
 class P400Test {
 
+
+
+    @Test
+    void removeKdigits() {
+        RemoveKDigits removeKDigits = new RemoveKDigits() ;
+        String num = "10200" ;
+        int k = 1 ;
+        String expected = "200" ;
+        assertEquals(expected, removeKDigits.removeKdigits(num, k));
+    }
+    @Test
+    void testMatchsticksSquare() {
+        MatchsticksSquare matchsticksSquare = new MatchsticksSquare() ;
+        int[] matchsticks = {1,1,2,2,2} ;
+        boolean expected = true ;
+        assertEquals(expected, matchsticksSquare.makeSquare(matchsticks));
+    }
+
     @Test
     void fourSumCount() {
         FourSum2 fourSum2 = new FourSum2() ;

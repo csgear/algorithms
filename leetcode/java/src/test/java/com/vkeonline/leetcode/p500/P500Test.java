@@ -10,6 +10,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class P500Test {
 
     @Test
+    void findPairs() {
+        int[] nums = {1,2,3,4,5};
+        int k = 1 ;
+        KDiffPairs kDiffPairs = new KDiffPairs() ;
+        int expected = 4 ;
+        assertEquals(expected, kDiffPairs.findPairs(nums, k));
+    }
+
+    @Test
     void testNumberOfProvinces() {
         NumberOfProvinces numberOfProvinces = new NumberOfProvinces() ;
         int[][] isConnected = {{1,1,0},{1,1,0},{0,0,1}} ;

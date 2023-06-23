@@ -18,23 +18,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Leetcode [M]: 90 Subset II
+ * @author csgear
+ */
 public class SubsetsII {
     List<List<Integer>> result = new ArrayList<>() ;
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums) ;
-        backTracking( 0, nums, new ArrayList<>() );
+        dfs( 0, nums, new ArrayList<>() );
         return result ;
     }
 
-    private void backTracking(int index, int[] nums, List<Integer> list) {
+    private void dfs(int index, int[] nums, List<Integer> list) {
         result.add(new ArrayList<>(list)) ;
         for( int i = index;i < nums.length; i++ ) {
-            if (i != index && nums[i] == nums[i - 1]) //skip the duplicates, except for the first time
+            //skip the duplicates, except for the first time
+            if (i != index && nums[i] == nums[i - 1])
             {
                 continue;
             }
             list.add( nums[i]);
-            backTracking(i + 1, nums, list);
+            dfs(i + 1, nums, list);
             list.remove( list.size() - 1) ;
         }
     }

@@ -1,5 +1,6 @@
 package com.vkeonline.leetcode.p1200;
 
+import com.vkeonline.leetcode.p200.ProductOfArrayExceptSelf;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +9,21 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author xiaojun.yang
  */
 class P1200Test {
+
+    @Test
+    void removeCoveredIntervals() {
+        int[][] intervals = {{3,10},{4,10},{5,11}} ;
+        RemoveCoveredIntervals removeCoveredIntervals = new RemoveCoveredIntervals() ;
+        int expected = 2 ;
+        assertEquals(expected, removeCoveredIntervals.removeCoveredIntervals(intervals));
+     }
+    @Test
+    void productExceptSelf() {
+        ProductOfArrayExceptSelf poes = new ProductOfArrayExceptSelf() ;
+        int[] nums = {1,2,3,4} ;
+        int[] expected = {24,12,8,6} ;
+        assertArrayEquals(expected , poes.productExceptSelf(nums)) ;
+    }
 
     @Test
     void testMaxSumDivThree() {

@@ -7,6 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P1600Test {
 
     @Test
+    void minOperations() {
+        MinOpsReduceToZero minOpsReduceToZero = new MinOpsReduceToZero() ;
+        int[] nums = {1,1,4,2,3} ;
+        int x = 5 ;
+        int expected = 2 ;
+        assertEquals(expected, minOpsReduceToZero.minOperations(nums, x));
+    }
+
+    @Test
     void maxProfit() {
         SellDiminishingValuedColoredBalls sellDiminishingValuedColoredBalls =
                 new SellDiminishingValuedColoredBalls() ;

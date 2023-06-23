@@ -2,10 +2,20 @@ package com.vkeonline.leetcode.p700;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.vkeonline.leetcode.p300.BuySellStock5;
 import com.vkeonline.leetcode.utils.Utils;
 import org.junit.jupiter.api.Test;
 
 public class P700Test {
+
+    @Test
+    void convertToBase7() {
+        Base7 base7 = new Base7() ;
+        int num = -7 ;
+        String expected = "-10" ;
+        assertEquals(expected, base7.convertToBase7(num));
+    }
+
     @Test
     void testNetworkDelayTimeDijkstra() {
         NetworkDelayTimeDijkstra networkDelayTimeDijkstra = new NetworkDelayTimeDijkstra() ;
