@@ -12,6 +12,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class P1100Test {
 
     @Test
+    void testMaximumSubarraySum() {
+        MaximumSubarraySum maximumSubarraySum = new MaximumSubarraySum() ;
+
+        int[] arr = {1,-2,0,3} ;
+        int expected = 4 ;
+        assertEquals(expected, maximumSubarraySum.maximumSum(arr) );
+
+        arr = new int[]{-1, -1, -1, -1} ;
+        expected = -1 ;
+        assertEquals(expected, maximumSubarraySum.maximumSum(arr) );
+    }
+
+    @Test
     void testCanMakePaliQueries() {
         PalindromeFromSubstring palindromeFromSubstring = new PalindromeFromSubstring() ;
         String s = "abcda" ;

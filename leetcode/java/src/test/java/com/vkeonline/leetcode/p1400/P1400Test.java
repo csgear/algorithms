@@ -7,6 +7,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class P1400Test {
 
     @Test
+    void testPaintHouse3() {
+        PaintHouse3 paintHouse3 = new PaintHouse3() ;
+        int[] houses = {0,2,1,2,0} ;
+        int[][] cost = {{1,10},{10,1},{10,1},{1,10},{5,1}} ;
+        int m = 5, n = 2, target = 3 ;
+        int expected = 11 ;
+        assertEquals(expected, paintHouse3.minCost(
+                houses, cost, m, n, target
+        ));
+    }
+
+    @Test
     void stringShift() {
         StringShifts ss = new StringShifts() ;
         String s = "abc" ;
