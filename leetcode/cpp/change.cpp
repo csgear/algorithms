@@ -1,10 +1,12 @@
 
 // leetcode.com 518. Coin Change 2
 
+#include "vector"
+
 class Solution
 {
   public:
-    int change(int amount, vector<int> &coins)
+    static int change(int amount, std::vector<int> &coins)
     {
         vector<int> v(amount + 1);
 

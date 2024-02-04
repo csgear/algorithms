@@ -1,8 +1,11 @@
 
 
+#include "string"
+using std::string;
+
 class Solution {
 public:
-    string addBinary(string a, string b) {
+    static string addBinary(string a, string b) {
         int m = a.size() - 1, n = b.size() - 1 ;
         
         string s ;
